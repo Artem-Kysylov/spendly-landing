@@ -1,0 +1,36 @@
+import type { VariantProps } from "class-variance-authority"
+import { Button as UIButton, buttonVariants } from "@/components/ui/button"
+
+type ButtonVariant = VariantProps<typeof buttonVariants>["variant"]
+
+type ButtonProps = {
+  text: string
+  className?: string
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
+  isLoading?: boolean
+  icon?: React.ReactNode
+  variant?: ButtonVariant | 'primary'
+}
+
+const Button = ({ text, className = '', onClick, type = 'button', disabled, isLoading, icon, variant }: ButtonProps) => {
+  // Normalize alias: primary → default (shadcn)
+  const normalizedVariant = ((variant === 'primary' ? 'default' : (variant ?? 'default')) as ButtonVariant)
+
+  return (
+    <UIButton
+      className={className}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+      isLoading={isLoading}
+      icon={icon}
+      variant={normalizedVariant}
+    >
+      {text}
+    </UIButton>
+  )
+}
+
+export default Button
