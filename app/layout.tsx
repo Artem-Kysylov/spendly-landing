@@ -6,6 +6,7 @@ import "./globals.css";
 // Import components 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 
 
@@ -29,10 +30,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${montserrat.className} antialiased`}
+        style={{ backgroundImage: "url(/bg.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "top center" }}
       >
-        <Header />
+        <ThemeProvider>
+          <Header />
           {children}
-        <Footer />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

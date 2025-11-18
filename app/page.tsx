@@ -6,7 +6,7 @@ import Faq from "@/components/sections/Faq";
 import Cta from "@/components/sections/Cta";
 import Pricing from "@/components/sections/Pricing";
 import Features from "@/components/sections/Features";
-import Demo from "@/components/sections/Demo";
+// import Demo from "@/components/sections/Demo";
 import WhyChooseSpendly from "@/components/sections/WhyChooseSpendly";
 import Roadmap from "@/components/sections/Roadmap";
 
@@ -17,7 +17,7 @@ export default function Home() {
     <div>
       <Hero />
       <Features />
-      <Demo />
+      {/* <Demo /> */}
       <HowItWorks />
       <Pricing />
       <WhyChooseSpendly />

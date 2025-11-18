@@ -6,15 +6,15 @@ import Button from "../ui-elements/Button"
 const Cta = () => {
 
   return (
-    <section className='mt-[120px] mb-[120px]'>
+    <section className='mt-[120px] mb-[120px]' id='final-cta'>
       <div className='landing__container'>
         <div className='flex flex-col items-center gap-[15px]'>
-          <h2 className='text-[55px] font-semibold text-secondary-black text-center'>Take control of your finances today for FREE</h2>
+          <h2 className='text-[55px] font-semibold text-foreground text-center'>Start managing your money smarter — today.</h2>
           <Button
-            text='Sign in with Google'
-            className="btn-primary text-white w-[203px]"
+            text='Get started for FREE'
+            className="w-[250px]"
           />
-          <span className='text-center block text-[14px] text-secondary-black opacity-70'>No ads or hidden fees</span>
+          <span className='text-center block text-[14px] text-muted-foreground'>Free forever · No ads · AI-powered insights</span>
         </div>
       </div>
     </section>
