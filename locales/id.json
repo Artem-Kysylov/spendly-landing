@@ -1,0 +1,146 @@
+{
+  "common": {
+    "pagination": { "previous": "Sebelumnya", "next": "Berikutnya" },
+    "themeToggle": "Ubah tema",
+    "perMonthShort": "/bln"
+  },
+  "nav": {
+    "logoAlt": "Logo Spendly",
+    "features": "Fitur",
+    "howItWorks": "Cara kerja",
+    "pricing": "Harga",
+    "why": "Mengapa memilih kami",
+    "faq": "FAQ",
+    "cta": "Mulai gratis"
+  },
+  "footer": {
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan",
+    "copyright": "Hak cipta. Semua hak dilindungi",
+    "linkedin": "LinkedIn",
+    "x": "X"
+  },
+  "hero": {
+    "title": "Kendalikan keuangan tanpa spreadsheet, kekacauan, atau stres",
+    "subtitle_line1": "Catat pengeluaran, buat anggaran, analisis laporan, dan dapatkan wawasan dari AI.",
+    "subtitle_line2": "Dukung 7 bahasa, tema terang/gelap, siap dipakai dalam 30 detik.",
+    "cta_primary": "Mulai gratis",
+    "cta_secondary": "Masuk ke Spendly",
+    "image_alt": "Gambar dasbor"
+  },
+  "features": {
+    "title": "Fitur Spendly",
+    "tabs": { "ai": "AI‑first", "core": "Inti", "experience": "Pengalaman" },
+    "ai": {
+      "chat": { "title": "AI Chat untuk keuangan Anda", "desc": "Tanyakan apa saja — Spendly menjelaskan pengeluaran, pemborosan, dan pola." },
+      "insights": { "title": "Wawasan AI & analitik cerdas", "desc": "Ringkasan mingguan, prediksi, dan saran personal." }
+    },
+    "core": {
+      "add": { "title": "Tambah pengeluaran dalam hitungan detik", "desc": "Input manual atau kategorisasi instan oleh AI." },
+      "recurring": { "title": "Transaksi berulang", "desc": "Lacak langganan & tagihan bulanan secara otomatis." },
+      "budgets": { "title": "Anggaran, kategori & folder", "desc": "Atur keuangan sesuai kebutuhan Anda." }
+    },
+    "experience": {
+      "themes": { "title": "Tema terang & gelap", "desc": "UI indah dan konsisten." },
+      "languages": { "title": "7 bahasa", "desc": "EN · RU · UA · KR · HI · ID · JP" },
+      "notifications": { "title": "Notifikasi", "desc": "Peringatan pemborosan, pengingat anggaran, laporan mingguan." }
+    },
+    "imageAlt": { "ai": "Pratinjau Spendly — AI", "core": "Pratinjau Spendly — Core", "experience": "Pratinjau Spendly — Experience" }
+  },
+  "demo": {
+    "title": "Lihat Spendly beraksi",
+    "subtitle": "Minimal, cepat, dan fokus pada hal yang penting.",
+    "image_alt": "Pratinjau demo"
+  },
+  "howItWorks": {
+    "title": "Cara kerja?",
+    "step1_title": "Daftar cepat",
+    "step1_desc": "Masuk dengan Google atau email dalam beberapa klik",
+    "step2_title": "Tambah pengeluaran dalam detik",
+    "step2_desc": "Catat transaksi dengan cepat",
+    "step3_title": "Anggaran & kategori",
+    "step3_desc": "Atur keuangan ke dalam folder yang rapi",
+    "step4_title": "Wawasan AI",
+    "step4_desc": "Dapatkan saran personal dan tetap terkendali"
+  },
+  "pricing": {
+    "title": "Harga sederhana. Tanpa kejutan.",
+    "free": {
+      "title": "Gratis",
+      "features": [
+        "Pengeluaran manual tak terbatas",
+        "Kategori & folder tak terbatas",
+        "Tema terang & gelap",
+        "7 bahasa",
+        "Analitik dasar",
+        "Ringkasan mingguan",
+        "Tanpa iklan"
+      ],
+      "cta": "Mulai gratis"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$7/bln",
+      "features": [
+        "Semua fitur Free",
+        "AI Chat",
+        "Wawasan AI",
+        "Transaksi berulang",
+        "Notifikasi",
+        "Analitik & grafik lanjutan",
+        "Akses fitur prioritas"
+      ],
+      "cta": "Upgrade ke Pro"
+    }
+  },
+  "why": {
+    "title": "Mengapa memilih kami?",
+    "bullets": [
+      "Tanpa analitik berlebihan — hanya yang penting",
+      "AI yang membantu, bukan membebani",
+      "UI bersih dan modern",
+      "Paket gratis dengan fitur inti",
+      "Pengalaman tercepat di aplikasi finansial",
+      "Privasi diutamakan"
+    ],
+    "image_alt": "Pratinjau Spendly"
+  },
+  "founder": {
+    "title": "Dibuat oleh seseorang yang lelah dengan aplikasi finansial yang rumit",
+    "text": "Spendly lahir dari kebutuhan pribadi: kebanyakan pelacak pengeluaran terlalu rumit atau terlalu terbatas. Saya ingin alat yang cepat, sederhana, dan menyenangkan, yang membantu tetap terkendali tanpa grafik berlebihan. Proyek kecil ini tumbuh menjadi produk yang berguna bagi banyak orang. Tujuannya sederhana: membuat finansial pribadi mudah dan bebas stres.",
+    "image_alt": "Artem — pencipta Spendly"
+  },
+  "roadmap": {
+    "title": "Berikutnya",
+    "gmail": { "text": "Parsing struk Gmail", "desc": "Ekstrak struk dari email secara otomatis. Input lebih cepat, lebih sedikit kesalahan." },
+    "shared": { "text": "Anggaran bersama", "desc": "Buat anggaran dengan keluarga atau tim. Kolaborasi dengan mudah." },
+    "subs": { "text": "Manajer langganan lanjutan", "desc": "Lacak perpanjangan & pembatalan dengan pengingat. Tanpa biaya mengejutkan." },
+    "shopping": { "text": "Spendly Shopping", "desc": "Daftar belanja pintar dan pantau harga agar lebih hemat." }
+  },
+  "faq": {
+    "title": "Pertanyaan yang sering diajukan",
+    "q1": "Apakah Spendly gratis?",
+    "a1": "Ya. Paket Gratis mencakup fitur inti tanpa iklan.",
+    "q2": "Bisakah mendaftar tanpa Google?",
+    "a2": "Ya. Anda bisa mendaftar dengan email selain Google.",
+    "q3": "Bagaimana AI bekerja?",
+    "a3": "Spendly memberikan wawasan, ringkasan, dan kategorisasi menggunakan AI.",
+    "q4": "Apakah data saya aman?",
+    "a4": "Privasi diutamakan: kami melindungi data dan menghindari pelacakan yang tidak perlu.",
+    "q5": "Apakah ada aplikasi mobile?",
+    "a5": "Aplikasi mobile ada di roadmap."
+  },
+  "privacy": {
+    "title": "Spendly — Kebijakan Privasi",
+    "lastUpdated": "Terakhir diperbarui: {date}"
+  },
+  "terms": {
+    "title": "Syarat & Ketentuan — Spendly",
+    "lastUpdatedEffective": "Terakhir diperbarui: {last} · Tanggal berlaku: {effective}"
+  },
+  "cta": {
+    "title": "Mulai kelola uang Anda dengan lebih cerdas — hari ini.",
+    "button": "Mulai gratis",
+    "subtitle": "Gratis selamanya · Tanpa iklan · Wawasan berbasis AI"
+  }
+}

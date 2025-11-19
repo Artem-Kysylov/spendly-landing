@@ -1,19 +1,20 @@
 'use client'
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 const Roadmap = () => {
+  const t = useTranslations('roadmap')
   const items = [
-    { emoji: '📧', text: 'Gmail receipt parsing', desc: 'Automatically parse receipts from Gmail. Faster input, fewer mistakes.' },
-    { emoji: '👥', text: 'Shared budgets', desc: 'Create budgets with family or teammates. Collaborate and stay aligned.' },
-    // { emoji: '📱', text: 'Mobile apps', desc: 'iOS and Android apps for quick tracking on the go. Sync everywhere.' },
-    { emoji: '🧾', text: 'Advanced subscription manager', desc: 'Track renewals and cancellations with reminders. No more surprise charges.' },
-    { emoji: '🛍️', text: 'Spendly Shopping', desc: 'Smart shopping lists and price tracking to save more.' },
+    { emoji: '📧', text: t('gmail.text'), desc: t('gmail.desc') },
+    { emoji: '👥', text: t('shared.text'), desc: t('shared.desc') },
+    { emoji: '🧾', text: t('subs.text'), desc: t('subs.desc') },
+    { emoji: '🛍️', text: t('shopping.text'), desc: t('shopping.desc') },
   ]
 
   return (
     <section className='mt-[120px]' id='roadmap'>
       <div className='landing__container'>
-        <h2 className='text-[40px] font-semibold text-foreground text-center mb-[30px]'>What’s next</h2>
+        <h2 className='text-[40px] font-semibold text-foreground text-center mb-[30px]'>{t('title')}</h2>
         <div>
           <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[20px]'>
             {items.map((it, i) => (

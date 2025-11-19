@@ -4,6 +4,7 @@ import React from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { Switch } from '@/components/ui/switch'
 import { useTheme } from '@/context/ThemeContext'
+import { useTranslations } from 'next-intl'
 
 const ThemeSwitcher = () => {
   const { resolvedTheme, setTheme } = useTheme()
@@ -14,6 +15,7 @@ const ThemeSwitcher = () => {
     setTheme(next)
   }
 
+  const t = useTranslations('common')
   return (
     <div className="flex items-center gap-2">
       {/* Sun icon for light theme */}
@@ -27,7 +29,7 @@ const ThemeSwitcher = () => {
       <Switch 
         checked={isDark} 
         onCheckedChange={handleToggle} 
-        aria-label="Toggle theme"
+        aria-label={t('themeToggle')}
         className="border border-primary bg-background"
         thumbClassName="bg-primary"
       />

@@ -1,0 +1,146 @@
+{
+  "common": {
+    "pagination": { "previous": "Previous", "next": "Next" },
+    "themeToggle": "Toggle theme",
+    "perMonthShort": "/mo"
+  },
+  "nav": {
+    "logoAlt": "Spendly Logo",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "why": "Why choose us",
+    "faq": "FAQ",
+    "cta": "Get started for FREE"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "copyright": "Copyright. All rights reserved",
+    "linkedin": "LinkedIn",
+    "x": "X"
+  },
+  "hero": {
+    "title": "Take control of your money — without spreadsheets, chaos or stress.",
+    "subtitle_line1": "Track expenses, build budgets, analyze reports and get AI-powered insights.",
+    "subtitle_line2": "Supports 7 languages, light/dark themes, and takes 30 seconds to set up.",
+    "cta_primary": "Get started for FREE",
+    "cta_secondary": "Log in to Spendly",
+    "image_alt": "Dashboard image"
+  },
+  "features": {
+    "title": "Spendly Features",
+    "tabs": { "ai": "AI-first", "core": "Core", "experience": "Experience" },
+    "ai": {
+      "chat": { "title": "AI Chat for your finances", "desc": "Ask anything — Spendly explains your spending, overspending and patterns." },
+      "insights": { "title": "AI Insights & smart analytics", "desc": "Weekly summaries, predictions and personalized suggestions." }
+    },
+    "core": {
+      "add": { "title": "Add expenses in seconds", "desc": "Manual entry or instant AI categorization." },
+      "recurring": { "title": "Recurring transactions", "desc": "Automatically track subscriptions & monthly bills." },
+      "budgets": { "title": "Budgets, categories & folders", "desc": "Organize your money the way you like." }
+    },
+    "experience": {
+      "themes": { "title": "Light & dark themes", "desc": "Beautiful and consistent UI." },
+      "languages": { "title": "7 languages", "desc": "EN · RU · UA · KR · HI · ID · JP" },
+      "notifications": { "title": "Notifications", "desc": "Overspending alerts, budget reminders, weekly reports." }
+    },
+    "imageAlt": { "ai": "Spendly preview — AI", "core": "Spendly preview — Core", "experience": "Spendly preview — Experience" }
+  },
+  "demo": {
+    "title": "See Spendly in action",
+    "subtitle": "Minimal, fast and focused on what actually matters.",
+    "image_alt": "Demo preview"
+  },
+  "howItWorks": {
+    "title": "How it works?",
+    "step1_title": "Quick signup",
+    "step1_desc": "Sign up with Google or email in just a few clicks",
+    "step2_title": "Add expenses in seconds",
+    "step2_desc": "Record transactions in just a few clicks",
+    "step3_title": "Budgets & categories",
+    "step3_desc": "Organize your finances into folders for convenience",
+    "step4_title": "AI insights",
+    "step4_desc": "Get personalized suggestions and stay in control"
+  },
+  "pricing": {
+    "title": "Simple pricing. No surprises.",
+    "free": {
+      "title": "Free",
+      "features": [
+        "Unlimited manual expenses",
+        "Unlimited categories & folders",
+        "Light & dark themes",
+        "7 languages",
+        "Basic analytics",
+        "Weekly summaries",
+        "No ads"
+      ],
+      "cta": "Get started for FREE"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$7/mo",
+      "features": [
+        "All Free features",
+        "AI Chat",
+        "AI Insights",
+        "Recurring transactions",
+        "Notifications",
+        "Advanced analytics & charts",
+        "Priority feature access"
+      ],
+      "cta": "Upgrade to Pro"
+    }
+  },
+  "why": {
+    "title": "Why choose us?",
+    "bullets": [
+      "No bloated analytics — only essentials",
+      "AI that helps, not overwhelms",
+      "Clean, modern UI",
+      "Free plan with core functionality",
+      "Fastest experience among personal finance apps",
+      "Privacy-first"
+    ],
+    "image_alt": "Spendly preview"
+  },
+  "founder": {
+    "title": "Built by someone tired of overcomplicated finance apps",
+    "text": "I built Spendly because I kept facing the same problem: every expense tracker felt either too complicated or too limited. I wanted a tool that was fast, simple, and actually enjoyable to use — something that helps you stay in control without overwhelming you with charts, categories, or rules. What started as a small side project to organize my own finances grew into a clean, intuitive app that people around me began asking for. My goal is simple: make personal finance easy, clear, and stress-free for everyone.",
+    "image_alt": "Artem - Creator of Spendly"
+  },
+  "roadmap": {
+    "title": "What’s next",
+    "gmail": { "text": "Gmail receipt parsing", "desc": "Automatically parse receipts from Gmail. Faster input, fewer mistakes." },
+    "shared": { "text": "Shared budgets", "desc": "Create budgets with family or teammates. Collaborate and stay aligned." },
+    "subs": { "text": "Advanced subscription manager", "desc": "Track renewals and cancellations with reminders. No more surprise charges." },
+    "shopping": { "text": "Spendly Shopping", "desc": "Smart shopping lists and price tracking to save more." }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Is Spendly free?",
+    "a1": "Yes. The Free plan includes the core functionality without ads.",
+    "q2": "Can I sign up without Google?",
+    "a2": "Yes. You can sign up with email in addition to Google.",
+    "q3": "How does AI work?",
+    "a3": "Spendly provides insights, summaries and categorization using AI.",
+    "q4": "Is my data safe?",
+    "a4": "Privacy-first: we protect your data and avoid unnecessary tracking.",
+    "q5": "Is there a mobile app?",
+    "a5": "Mobile apps are on the roadmap."
+  },
+  "privacy": {
+    "title": "Spendly — Privacy Policy",
+    "lastUpdated": "Last updated: {date}"
+  },
+  "terms": {
+    "title": "Terms & Conditions — Spendly",
+    "lastUpdatedEffective": "Last updated: {last} · Effective date: {effective}"
+  },
+  "cta": {
+    "title": "Start managing your money smarter — today.",
+    "button": "Get started for FREE",
+    "subtitle": "Free forever · No ads · AI-powered insights"
+  }
+}

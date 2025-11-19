@@ -1,0 +1,146 @@
+{
+  "common": {
+    "pagination": { "previous": "前へ", "next": "次へ" },
+    "themeToggle": "テーマを切り替え",
+    "perMonthShort": "/月"
+  },
+  "nav": {
+    "logoAlt": "Spendly ロゴ",
+    "features": "機能",
+    "howItWorks": "使い方",
+    "pricing": "料金",
+    "why": "選ばれる理由",
+    "faq": "FAQ",
+    "cta": "無料で始める"
+  },
+  "footer": {
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "著作権. 無断転載禁止",
+    "linkedin": "LinkedIn",
+    "x": "X"
+  },
+  "hero": {
+    "title": "スプレッドシートも混乱もストレスもなく、お金を賢く管理",
+    "subtitle_line1": "支出を記録し、予算を作成し、レポートを分析。AI によるインサイトを取得。",
+    "subtitle_line2": "7言語対応、ライト/ダークテーマ、30秒でセットアップ。",
+    "cta_primary": "無料で始める",
+    "cta_secondary": "Spendly にログイン",
+    "image_alt": "ダッシュボード画像"
+  },
+  "features": {
+    "title": "Spendly の機能",
+    "tabs": { "ai": "AI‑first", "core": "コア", "experience": "体験" },
+    "ai": {
+      "chat": { "title": "家計のための AI チャット", "desc": "何でも質問 — Spendly が支出、浪費、パターンを解説。" },
+      "insights": { "title": "AI インサイト & スマート分析", "desc": "週次サマリー、予測、パーソナライズされた提案。" }
+    },
+    "core": {
+      "add": { "title": "数秒で支出を追加", "desc": "手動入力または AI による即時分類。" },
+      "recurring": { "title": "定期支払い", "desc": "サブスクリプションや月額請求を自動追跡。" },
+      "budgets": { "title": "予算・カテゴリ・フォルダ", "desc": "自分のやり方でお金を整理。" }
+    },
+    "experience": {
+      "themes": { "title": "ライト & ダークテーマ", "desc": "美しく一貫した UI。" },
+      "languages": { "title": "7言語対応", "desc": "EN · RU · UA · KR · HI · ID · JP" },
+      "notifications": { "title": "通知", "desc": "浪費アラート、予算リマインダー、週次レポート。" }
+    },
+    "imageAlt": { "ai": "Spendly プレビュー — AI", "core": "Spendly プレビュー — Core", "experience": "Spendly プレビュー — Experience" }
+  },
+  "demo": {
+    "title": "Spendly の動作をチェック",
+    "subtitle": "ミニマルで高速、本当に重要なことに集中。",
+    "image_alt": "デモプレビュー"
+  },
+  "howItWorks": {
+    "title": "使い方は？",
+    "step1_title": "かんたん登録",
+    "step1_desc": "Google またはメールで数クリック",
+    "step2_title": "数秒で支出追加",
+    "step2_desc": "数クリックで取引を記録",
+    "step3_title": "予算とカテゴリ",
+    "step3_desc": "便利なフォルダで整理",
+    "step4_title": "AI インサイト",
+    "step4_desc": "提案でコントロールを維持"
+  },
+  "pricing": {
+    "title": "シンプルな料金。驚きなし。",
+    "free": {
+      "title": "無料",
+      "features": [
+        "無制限の手動支出",
+        "無制限のカテゴリとフォルダ",
+        "ライト & ダークテーマ",
+        "7言語対応",
+        "基本的な分析",
+        "週次サマリー",
+        "広告なし"
+      ],
+      "cta": "無料で始める"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$7/月",
+      "features": [
+        "Free のすべての機能",
+        "AI チャット",
+        "AI インサイト",
+        "定期支払い",
+        "通知",
+        "高度な分析とチャート",
+        "優先機能アクセス"
+      ],
+      "cta": "Pro にアップグレード"
+    }
+  },
+  "why": {
+    "title": "選ばれる理由",
+    "bullets": [
+      "過剰な分析なし — 必要なものだけ",
+      "助けになる AI、負担ではない",
+      "クリーンでモダンな UI",
+      "コア機能を備えた無料プラン",
+      "個人会計アプリで最速の体験",
+      "プライバシー重視"
+    ],
+    "image_alt": "Spendly プレビュー"
+  },
+  "founder": {
+    "title": "複雑すぎる家計アプリに疲れた人が作りました",
+    "text": "Spendly は個人的な必要から始まりました。多くの支出トラッカーは複雑か制限が多すぎました。速く、シンプルで、使って楽しいツールが欲しかったのです。小さなプロジェクトが多くの人に役立つアプリに成長しました。目標はシンプル：家計管理を簡単でストレスフリーに。",
+    "image_alt": "Artem — Spendly の創作者"
+  },
+  "roadmap": {
+    "title": "今後の予定",
+    "gmail": { "text": "Gmail レシート解析", "desc": "メールからレシートを自動抽出。入力が速く、ミスが減る。" },
+    "shared": { "text": "共有予算", "desc": "家族やチームと予算を作成。協力して管理。" },
+    "subs": { "text": "高度なサブスク管理", "desc": "更新と解約をリマインダーで追跡。予期せぬ請求なし。" },
+    "shopping": { "text": "Spendly ショッピング", "desc": "スマート買い物リストと価格追跡で節約。" }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "q1": "Spendly は無料ですか？",
+    "a1": "はい。無料プランには広告なしで基本機能が含まれます。",
+    "q2": "Google なしで登録できますか？",
+    "a2": "はい。Google の他にメールでも登録できます。",
+    "q3": "AI はどう動作しますか？",
+    "a3": "Spendly は AI を使ってインサイト、サマリー、カテゴリ分けを提供します。",
+    "q4": "データは安全ですか？",
+    "a4": "プライバシー重視：データを保護し、不要な追跡を避けます。",
+    "q5": "モバイルアプリはありますか？",
+    "a5": "モバイルアプリはロードマップにあります。"
+  },
+  "privacy": {
+    "title": "Spendly — プライバシーポリシー",
+    "lastUpdated": "最終更新: {date}"
+  },
+  "terms": {
+    "title": "利用規約 — Spendly",
+    "lastUpdatedEffective": "最終更新: {last} · 施行日: {effective}"
+  },
+  "cta": {
+    "title": "今日から、より賢くお金を管理しましょう。",
+    "button": "無料で始める",
+    "subtitle": "ずっと無料 · 広告なし · AIによるインサイト"
+  }
+}

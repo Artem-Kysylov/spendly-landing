@@ -1,14 +1,18 @@
+'use client'
 // app/privacy-policy/page.tsx
 import React from 'react'
+import { useTranslations, useLocale } from 'next-intl'
 
 export default function PrivacyPolicyPage() {
-  const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  const locale = useLocale()
+  const t = useTranslations('privacy')
+  const lastUpdated = new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date())
   return (
     <section className='mt-[60px] mb-[120px]' id='privacy-policy'>
       <div className='landing__container'>
         <div className='flex flex-col items-center gap-2 mb-[20px]'>
-          <h1 className='text-[40px] font-semibold text-foreground text-center'>Spendly — Privacy Policy</h1>
-          <p className='text-[14px] text-muted-foreground'>Last updated: {lastUpdated}</p>
+          <h1 className='text-[40px] font-semibold text-foreground text-center'>{t('title')}</h1>
+          <p className='text-[14px] text-muted-foreground'>{t('lastUpdated', {date: lastUpdated})}</p>
         </div>
 
         <div className='space-y-6 [&>div]:space-y-4 [&>div>p]:mb-[30px]'>
