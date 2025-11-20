@@ -14,8 +14,8 @@ const Hero = () => {
           <p className="font-medium text-foreground text-center">{t('subtitle_line1')}
 {t('subtitle_line2')}</p>
           <div className='w-full flex flex-col sm:flex-row items-center justify-center gap-3'>
-            <Button text={t('cta_primary')} className='w-full sm:w-auto' />
-            <Button text={t('cta_secondary')} variant='outline' className='w-full sm:w-[203px]' />
+            <Button text={t('cta_primary')} className='w-full sm:w-auto' href='https://spendly-app-blue.vercel.app/en' />
+            <Button text={t('cta_secondary')} variant='outline' className='w-full sm:w-[203px]' href='https://spendly-app-blue.vercel.app/en' />
           </div>
         </div>
         <div className='flex justify-center'>

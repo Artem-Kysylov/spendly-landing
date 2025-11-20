@@ -3,7 +3,7 @@
 1. Базовая архитектура i18n (next-intl v4) — выполнено
    - Добавить middleware для локалей: en, ru, uk, hi, ko, id, ja; defaultLocale: en; поддержка поддоменов/сегмента `[locale]`
    - Перенести структуру в `app/[locale]/layout.tsx` и обернуть приложение в `NextIntlClientProvider`
-   - Сделать `<html lang={locale}>` динамическим в `app/[locale]/layout.tsx`
+   - Сделать `<html lang={locale}>` динамическим — выполнено
 
 2. Структура переводов (`/locales/*.json`)
    - Разбить на неймспейсы: `common`, `nav`, `hero`, `features`, `howItWorks`, `pricing`, `why`, `founder`, `roadmap`, `demo`, `cta`, `faq`, `footer`, `legal`, `metadata`
@@ -73,14 +73,14 @@
 14. FAQ — выполнено
    - Заголовок секции и 5 вопросов/ответов — `components/sections/Faq.tsx:8,12–47`
 
-15. Юридические страницы
+15. Юридические страницы — выполнено
    - Privacy Policy: заголовок, разделы, формулировки — `app/privacy-policy/page.tsx:10–56`
    - Terms & Conditions: заголовок, разделы — `app/terms-and-conditions/page.tsx:11–111`
    - Локализовать дату: заменить `'en-US'` на текущую локаль — `app/privacy-policy/page.tsx:5`, `app/terms-and-conditions/page.tsx:4`
    - Доработать переводы контента разделов для всех локалей (RU, UK, HI, KO, ID, JA): заполнить ключи `privacy.*` и `terms.*`, адаптировать формулировки
 
-16. SEO и метаданные
-   - Локализовать `title`/`description`/`openGraph`/`twitter` — `app/layout.tsx:21–76`
+16. SEO и метаданные — выполнено
+   - Локализовать `title`/`description`/`openGraph`/`twitter` — `app/[locale]/layout.tsx:added generateMetadata`
    - Вынести в `generateMetadata` в `app/[locale]/layout.tsx` и подставлять строки из `metadata` неймспейса
    - Добавить hreflang/alternates для всех локалей
 

@@ -14,7 +14,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
   const t = useTranslations('nav')
   
-  const handleGoogleClick = () => {}
+
 
   return (
     <header className='border-b'>
@@ -114,7 +114,7 @@ const Header = () => {
               <Button 
                 text={t('cta')}
                 className="w-full"
-                onClick={handleGoogleClick} 
+                href='https://spendly-app-blue.vercel.app/en'
               />       
             </div>
           </div>

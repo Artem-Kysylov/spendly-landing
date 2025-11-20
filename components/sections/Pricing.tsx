@@ -37,7 +37,7 @@ const Pricing = () => {
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('free.features.5')}</li>
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('free.features.6')}</li>
             </ul>
-            <Button text={t('free.cta')} className='w-full' variant='outline' />
+            <Button text={t('free.cta')} className='w-full' variant='outline' href='https://spendly-app-blue.vercel.app/en' />
           </div>
 
           <div className='bg-card border border-primary rounded-lg p-[30px] w-full md:w-[22rem] font-semibold'>
@@ -51,7 +51,7 @@ const Pricing = () => {
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('pro.features.5')}</li>
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('pro.features.6')}</li>
             </ul>
-            <Button text={t('pro.cta')} className='w-full' />
+            <Button text={t('pro.cta')} className='w-full' href='https://spendly-app-blue.vercel.app/en' />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from "react"
+import React, { createContext, useContext, useEffect, useMemo, useState, useSyncExternalStore } from "react"
 
 type Theme = "light" | "dark" | "system"
 
@@ -14,14 +14,20 @@ const ThemeContext = createContext<ThemeContextValue | null>(null)
 
 const STORAGE_KEY = "app-theme"
 
-function getSystemIsDark() {
+function subscribeSystemTheme(listener: () => void) {
+  if (typeof window === "undefined") return () => {}
+  const media = window.matchMedia("(prefers-color-scheme: dark)")
+  media.addEventListener?.("change", listener)
+  return () => media.removeEventListener?.("change", listener)
+}
+
+function getSystemIsDarkSnapshot() {
   if (typeof window === "undefined") return false
   return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
 }
 
-function resolveTheme(theme: Theme): "light" | "dark" {
-  if (theme === "system") return getSystemIsDark() ? "dark" : "light"
-  return theme
+function getServerSnapshot() {
+  return false
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -35,32 +41,23 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     return "system"
   })
 
-  const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">(resolveTheme(theme))
+  const systemIsDark = useSyncExternalStore(subscribeSystemTheme, getSystemIsDarkSnapshot, getServerSnapshot)
+  const resolvedTheme = theme === "system" ? (systemIsDark ? "dark" : "light") : theme
 
   useEffect(() => {
-    const r = resolveTheme(theme)
-    setResolvedTheme(r)
     if (typeof document !== "undefined") {
-      document.documentElement.classList.toggle("dark", r === "dark")
+      document.documentElement.classList.toggle("dark", resolvedTheme === "dark")
     }
     try {
       window.localStorage.setItem(STORAGE_KEY, theme)
     } catch {}
-  }, [theme])
+  }, [theme, resolvedTheme])
 
   useEffect(() => {
-    if (typeof window === "undefined") return
-    const media = window.matchMedia("(prefers-color-scheme: dark)")
-    const handler = () => {
-      if (theme === "system") {
-        const r = media.matches ? "dark" : "light"
-        setResolvedTheme(r)
-        document.documentElement.classList.toggle("dark", r === "dark")
-      }
-    }
-    media.addEventListener?.("change", handler)
-    return () => media.removeEventListener?.("change", handler)
-  }, [theme])
+    if (typeof document === "undefined") return
+    if (theme !== "system") return
+    document.documentElement.classList.toggle("dark", resolvedTheme === "dark")
+  }, [theme, resolvedTheme])
 
   // Слушаем «внешние» обновления темы (например, из AuthContext) через custom event
   useEffect(() => {

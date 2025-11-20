@@ -2,7 +2,9 @@
   "common": {
     "pagination": { "previous": "Previous", "next": "Next" },
     "themeToggle": "Toggle theme",
-    "perMonthShort": "/mo"
+    "perMonthShort": "/mo",
+    "dismiss": "Dismiss",
+    "close": "Close"
   },
   "nav": {
     "logoAlt": "Spendly Logo",
@@ -19,6 +21,12 @@
     "copyright": "Copyright. All rights reserved",
     "linkedin": "LinkedIn",
     "x": "X"
+  },
+  "metadata": {
+    "title": { "default": "Spendly — AI-first budget & expense tracker", "template": "%s — Spendly" },
+    "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads.",
+    "openGraph": { "title": "Spendly — AI-first budget & expense tracker", "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads.", "imagesAlt": "Spendly — AI-first budget & expense tracker" },
+    "twitter": { "title": "Spendly — AI-first budget & expense tracker", "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads." }
   },
   "hero": {
     "title": "Take control of your money — without spreadsheets, chaos or stress.",
@@ -132,11 +140,161 @@
   },
   "privacy": {
     "title": "Spendly — Privacy Policy",
-    "lastUpdated": "Last updated: {date}"
+    "lastUpdated": "Last updated: {date}",
+    "sections": {
+      "information": {
+        "title": "Information We Collect",
+        "youProvide": {
+          "title": "Information You Provide to Us",
+          "body": "We collect your email (including Google OAuth), hashed password, and any financial data you enter manually such as budgets, categories, goals, transaction amounts, and notes."
+        },
+        "auto": {
+          "title": "Automatically Collected Data",
+          "body": "We may collect device info, IP address, usage logs, cookies/local storage data, and anonymous analytics (e.g., privacy‑focused tools like Plausible or Umami)."
+        },
+        "ai": {
+          "title": "AI‑Generated or AI‑Processed Data",
+          "body": "If you use AI features, we process text you provide to the assistant and automatically generated categories or insights. We do not use your data to train third‑party AI models."
+        }
+      },
+      "use": {
+        "title": "How We Use Your Information",
+        "body": "We use your information to create and manage your account, store financial data securely, provide budgeting and tracking features, generate AI assistance and insights, personalize your experience, maintain and improve the Service, ensure security, and comply with legal obligations. We do not sell your personal data to third parties."
+      },
+      "storage": {
+        "title": "How Your Information Is Stored",
+        "body": "Your data is stored via Supabase with HTTPS during transfer and encrypted storage for sensitive information. Passwords are hashed using industry‑standard algorithms and cannot be recovered in readable form."
+      },
+      "aiPrivacy": {
+        "title": "AI Processing and Data Privacy",
+        "body": "When you use AI features, data you submit may be sent to trusted AI providers and is used only to generate the requested output. Data is not stored by these providers for training purposes, and we avoid retaining AI logs with sensitive information."
+      },
+      "cookies": {
+        "title": "Cookies and Similar Technologies",
+        "body": "We use cookies and local storage to maintain sessions, remember login state, improve performance, and analyze overall usage patterns. Disabling cookies may affect functionality."
+      },
+      "share": {
+        "title": "When We Share Information",
+        "body": "We share data only with service providers (hosting, analytics, authentication), AI processing providers when you request AI features, and legal authorities when required. We do not share your financial information for advertising purposes."
+      },
+      "retention": {
+        "title": "Data Retention",
+        "body": "We keep your data while your account is active. Upon deletion, all personal and financial data in Supabase is permanently removed, session and authentication tokens are revoked, and AI inputs are not retained after processing."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "body": "Depending on your location, you may have rights to access, correct, delete, export, or restrict processing of your data. Contact us to exercise these rights."
+      },
+      "children": {
+        "title": "Children’s Privacy",
+        "body": "Spendly is not intended for children under 16, and we do not knowingly collect information from children."
+      },
+      "changes": {
+        "title": "Changes to This Privacy Policy",
+        "body": "We may update this Privacy Policy. The “Last Updated” date reflects the latest version. Continued use of the Service constitutes acceptance of changes."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "body": "For questions about this Privacy Policy or your data, contact us at: support@spendly.app"
+      }
+    }
   },
   "terms": {
     "title": "Terms & Conditions — Spendly",
-    "lastUpdatedEffective": "Last updated: {last} · Effective date: {effective}"
+    "lastUpdatedEffective": "Last updated: {last} · Effective date: {effective}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "body": "By accessing or using Spendly (the Service), you agree to these Terms. If you do not agree, do not use the Service. Spendly is operated by TabXport OÜ (or your actual company name, may be updated)."
+      },
+      "eligibility": {
+        "title": "2. Eligibility",
+        "body": "You must be at least 16 years old to use Spendly. By using the Service, you confirm that you meet this requirement."
+      },
+      "description": {
+        "title": "3. Description of the Service",
+        "body": "Spendly is a personal finance management app. You can add expenses and income, create budgets and categories, receive insights and analytics, access optional AI features, and sync data across devices. Spendly does not connect to banks and does not provide official financial advice."
+      },
+      "accounts": {
+        "title": "4. User Accounts",
+        "registration": {
+          "title": "4.1 Registration",
+          "body": "Create an account using email/password or Google OAuth. Provide accurate information and keep it up to date."
+        },
+        "security": {
+          "title": "4.2 Account Security",
+          "body": "You are responsible for confidentiality of credentials and all activity under your account. Notify us immediately of unauthorized access."
+        }
+      },
+      "payments": {
+        "title": "5. Subscription & Payments",
+        "pricing": {
+          "title": "5.1 Pricing",
+          "body": "Spendly offers a Pro subscription billed at $7/month. Pro may include unlimited budgets, advanced analytics, AI insights, priority updates, and extra customization."
+        },
+        "billing": {
+          "title": "5.2 Billing",
+          "body": "Subscriptions renew automatically unless canceled before the next cycle."
+        },
+        "refunds": {
+          "title": "5.3 Refunds",
+          "body": "No refunds for partial or unused periods unless required by law."
+        }
+      },
+      "aiUse": {
+        "title": "6. Use of AI Features",
+        "body": "AI‑powered functions (insights, categorization, chat) are informational only. AI may produce incorrect or incomplete information; outputs are not financial, legal, or tax advice. You are responsible for decisions based on AI content."
+      },
+      "userContent": {
+        "title": "7. User Content",
+        "body": "You retain ownership of data you add (expenses, income, budgets, categories). You grant Spendly a limited, non‑exclusive license to process your data solely to provide the Service."
+      },
+      "storage": {
+        "title": "8. Data Storage & Security",
+        "body": "Spendly uses Supabase for storage with encryption in transit and at rest. No system is perfectly secure; we cannot guarantee absolute protection from unauthorized access. See our Privacy Policy for details."
+      },
+      "acceptableUse": {
+        "title": "9. Acceptable Use",
+        "list": [
+          "Do not misuse the Service for illegal purposes",
+          "Do not attempt to access other users’ data",
+          "Do not reverse‑engineer or interfere with servers/APIs",
+          "Do not use automated tools (scrapers/bots) without permission"
+        ]
+      },
+      "availability": {
+        "title": "10. Availability & Updates",
+        "body": "We may update, modify, or discontinue parts of the Service at any time (features, pricing, interface, AI functionality). We are not liable for downtime or interruptions."
+      },
+      "thirdParty": {
+        "title": "11. Third‑Party Services",
+        "body": "Spendly uses third parties including Supabase (auth & DB), Google OAuth (optional login), and AI providers (OpenAI or others). Your use is subject to their terms."
+      },
+      "termination": {
+        "title": "12. Termination",
+        "body": "We may suspend or terminate your account for violations, suspected fraud/abuse, or risks to others. You may delete your account at any time from settings."
+      },
+      "liability": {
+        "title": "13. Limitation of Liability",
+        "body": "Spendly is provided ‘AS IS’ without warranties. To the maximum extent permitted by law, Spendly is not liable for lost profits, inaccurate AI outputs, data loss, errors, or interruptions."
+      },
+      "disclaimer": {
+        "title": "14. Disclaimer",
+        "body": "Spendly does not provide financial, legal, accounting, or tax advice. All insights and analytics are informational only."
+      },
+      "law": {
+        "title": "15. Governing Law",
+        "body": "These Terms are governed by the laws of the jurisdiction where your company is registered (e.g., Estonia). This may be updated later."
+      },
+      "changes": {
+        "title": "16. Changes to Terms",
+        "body": "We may update these Terms at any time. If changes are significant, we may notify users via email or in‑app notification. Continued use after changes means acceptance."
+      },
+      "contact": {
+        "title": "17. Contact Us",
+        "body": "Questions about these Terms: support@spendly.app"
+      }
+    }
   },
   "cta": {
     "title": "Start managing your money smarter — today.",

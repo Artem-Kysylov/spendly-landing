@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { cn } from "@/lib/utils"
+import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 const buttonVariants = cva(
@@ -39,9 +40,10 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, isLoading, icon, children, ...props }, ref) => {
+  ({ className, variant, size, isLoading, icon, children, asChild, ...props }, ref) => {
+    const Component: any = asChild ? Slot : "button"
     return (
-      <button
+      <Component
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         aria-busy={isLoading ? true : undefined}
@@ -58,7 +60,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             {children}
           </>
         )}
-      </button>
+      </Component>
     )
   }
 )

@@ -1,3 +1,5 @@
+import type React from 'react'
+
 export type ButtonProps = {
   text: string
   className?: string
@@ -7,4 +9,5 @@ export type ButtonProps = {
   isLoading?: boolean
   icon?: React.ReactNode
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'primary'
+  href?: string
 }
