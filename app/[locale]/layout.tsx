@@ -11,6 +11,7 @@ import hi from '@/locales/hi.json';
 import ko from '@/locales/ko.json';
 import id from '@/locales/id.json';
 import ja from '@/locales/ja.json';
+import { MotionConfig, LazyMotion, domAnimation } from 'framer-motion';
 
 const MESSAGES: Record<string, typeof en> = { en, ru, uk, hi, ko, id, ja };
 
@@ -89,12 +90,16 @@ export default async function LocaleLayout({
   const messages = MESSAGES[locale] ?? en;
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <ThemeProvider>
-        <SmoothScroll />
-        <Header />
-        {children}
-        <Footer />
-      </ThemeProvider>
+      <MotionConfig reducedMotion='user'>
+        <LazyMotion features={domAnimation}>
+          <ThemeProvider>
+            <SmoothScroll />
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </LazyMotion>
+      </MotionConfig>
     </NextIntlClientProvider>
   );
 }

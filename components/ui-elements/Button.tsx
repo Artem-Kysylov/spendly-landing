@@ -11,8 +11,9 @@ const Button = ({ text, className = '', onClick, type = 'button', disabled, isLo
 
   if (href) {
     const classes = buttonVariants({ variant: normalizedVariant, className })
+    const isExternal = /^https?:\/\//.test(href)
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
         {icon && <span className="mr-2 inline-flex">{icon}</span>}
         {text}
       </Link>
