@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
@@ -73,17 +73,42 @@ const Features = () => {
             <div className='flex justify-center'>
               <TabsContent value='ai'>
                 <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <Image src='/landing-img-1.png' alt={t('imageAlt.ai')} width={875} height={500} className='w-full max-w-[875px] h-auto rounded-lg border border-border' />
+                  <div className='w-full max-w-[875px] aspect-video rounded-[10px] border border-border overflow-hidden'>
+                    <video
+                      src='/Spendly-Features-AI-first.mp4'
+                      className='w-full h-full object-cover lg:object-left lg:scale-[1.08] lg:origin-left lg:translate-x-[-6%]'
+                      muted
+                      autoPlay
+                      loop
+                      playsInline
+                    />
+                  </div>
                 </motion.div>
               </TabsContent>
               <TabsContent value='core'>
                 <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <Image src='/landing-img-1.png' alt={t('imageAlt.core')} width={875} height={500} className='w-full max-w-[875px] h-auto rounded-lg border border-border' />
+                  <video
+                    src='/Spendly-Features-Core.mp4'
+                    className='w-full max-w-[875px] h-auto rounded-lg border border-border'
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                  />
                 </motion.div>
               </TabsContent>
               <TabsContent value='experience'>
                 <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <Image src='/landing-img-1.png' alt={t('imageAlt.experience')} width={875} height={500} className='w-full max-w-[875px] h-auto rounded-lg border border-border' />
+                  <div className='w-full max-w-[875px] aspect-video rounded-[10px] border border-border overflow-hidden'>
+                    <video
+                      src='/Spendly-features-Experience.mp4'
+                      className='w-full h-full object-cover'
+                      muted
+                      autoPlay
+                      loop
+                      playsInline
+                    />
+                  </div>
                 </motion.div>
               </TabsContent>
             </div>

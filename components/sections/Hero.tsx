@@ -1,6 +1,6 @@
 'use client'
 import Button from "../ui-elements/Button"
-import Image from 'next/image'
+
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { fadeUp, fadeUpDelayed, fadeUpScale, containerStagger, viewportDefault } from '@/components/utils/motion'
@@ -22,12 +22,13 @@ const Hero = () => {
         </motion.div>
         <motion.div className='flex justify-center' initial='hidden' whileInView='visible' viewport={viewportDefault}>
           <motion.div variants={fadeUpScale(0.15)}>
-            <Image
-              src="/landing-img-1.png" 
-              alt={t('image_alt')} 
-              width={875}
-              height={500}
-              className="w-full max-w-[875px] h-auto" 
+            <video
+              src="/Hero-screen-video.mp4"
+              className="w-full max-w-[875px] lg:max-w-[1200px] h-auto rounded-[10px]"
+              muted
+              autoPlay
+              loop
+              playsInline
             />
           </motion.div>
         </motion.div>

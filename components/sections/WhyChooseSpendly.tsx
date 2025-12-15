@@ -12,9 +12,9 @@ const WhyChooseUs = () => {
       <div className='landing__container'>
         <motion.h2 className='text-[40px] font-semibold text-foreground text-center mb-[30px]'
           initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUp(0)}>{t('title')}</motion.h2>
-        <motion.div className='flex flex-col xl:flex-row items-center justify-center gap-[30px]'
+        <motion.div className='flex flex-col xl:flex-row items-center justify-center gap-[20px]'
           initial='hidden' whileInView='visible' viewport={viewportDefault} variants={containerStagger(0.08)}>
-            <motion.ul className='flex flex-col items-start gap-[30px] w-full xl:w-[50vw]' variants={containerStagger(0.08)}>
+            <motion.ul className='flex flex-col items-start gap-[20px] w-full xl:w-[40%]' variants={containerStagger(0.08)}>
               {[0,1,2,3,4,5].map((i) => (
                 <motion.li key={i} className='flex items-center w-full' variants={fadeUp(i*0.05)}>
                   <CircleCheck className="mr-2 text-primary" size={20} />
@@ -22,11 +22,14 @@ const WhyChooseUs = () => {
                 </motion.li>
               ))}
             </motion.ul>
-          <motion.div className='flex justify-center' variants={fadeUpScale(0.15)}>
-            <img 
-              src="/landing-img-1.png" 
-              alt={t('image_alt')} 
-              className="w-full max-w-[581px] h-auto rounded-lg border border-border"
+          <motion.div className='flex justify-center xl:justify-end w-full xl:w-[60%]' variants={fadeUpScale(0.15)}>
+            <video
+              src="/Why%20choose%20us%3F.mp4"
+              className="w-full h-auto rounded-[10px] border border-border"
+              muted
+              autoPlay
+              loop
+              playsInline
             />
           </motion.div>
         </motion.div>
