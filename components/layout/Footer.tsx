@@ -34,7 +34,10 @@ const Footer = () => {
         </div>
         {/* Row 2: email + socials */}
         <div className='flex flex-col md:flex-row md:items-center md:justify-between w-full items-center gap-6 md:gap-0 mb-6'>
-          <a href='mailto:tabxport@gmail.com' className='text-[18px] font-semibold text-foreground hover:text-primary transition-colors duration-200 order-1'>hello@spendly.com</a>
+          <div className='flex flex-col items-center md:items-start order-1'>
+            <a href='mailto:hello@getspendly.net' className='text-[18px] font-semibold text-foreground hover:text-primary transition-colors duration-200'>hello@getspendly.net</a>
+            <a href='mailto:support@getspendly.net' className='text-[16px] text-foreground hover:text-primary transition-colors duration-200'>support@getspendly.net</a>
+          </div>
           <div className='flex items-center gap-8 order-2'>
             <a href='https://www.linkedin.com/in/artem-k-3392b3366/' target='_blank' rel='noopener noreferrer' className='text-[16px] font-semibold text-primary transition-all duration-200 ease-in-out hover:opacity-50'>
               {t('linkedin')}
