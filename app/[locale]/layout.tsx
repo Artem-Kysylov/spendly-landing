@@ -23,7 +23,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const messages = MESSAGES[locale] ?? en;
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://spendly.app"),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL ? "https://getspendly.net" : "http://localhost:3000")),
     title: {
       default: messages.metadata.title.default,
       template: messages.metadata.title.template
