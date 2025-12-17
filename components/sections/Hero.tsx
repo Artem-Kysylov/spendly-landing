@@ -23,8 +23,8 @@ const Hero = () => {
         <motion.div className='flex justify-center' initial='hidden' whileInView='visible' viewport={viewportDefault}>
           <motion.div variants={fadeUpScale(0.15)}>
             <video
-              src="/Hero-screen-video.mp4"
-              className="w-full max-w-[875px] lg:max-w-[1200px] h-auto rounded-[10px]"
+              src="/hero-screen.mp4"
+              className="w-full max-w-[250px] h-auto rounded-[28px] border-[5px] border-neutral-400 dark:border-neutral-600"
               muted
               autoPlay
               loop

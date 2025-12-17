@@ -73,23 +73,21 @@ const Features = () => {
             <div className='flex justify-center'>
               <TabsContent value='ai'>
                 <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <div className='w-full max-w-[875px] aspect-video rounded-[10px] border border-border overflow-hidden'>
-                    <video
-                      src='/Spendly-Features-AI-first.mp4'
-                      className='w-full h-full object-cover lg:object-left lg:scale-[1.08] lg:origin-left lg:translate-x-[-6%]'
-                      muted
-                      autoPlay
-                      loop
-                      playsInline
-                    />
-                  </div>
+                  <video
+                    src="/features-ai-first-tab.mp4"
+                    className="w-full max-w-[250px] h-auto rounded-[28px] border-[5px] border-neutral-400 dark:border-neutral-600"
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                  />
                 </motion.div>
               </TabsContent>
               <TabsContent value='core'>
                 <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
                   <video
-                    src='/Spendly-Features-Core.mp4'
-                    className='w-full max-w-[875px] h-auto rounded-lg border border-border'
+                    src="/features-core-tab.mp4"
+                    className="w-full max-w-[250px] h-auto rounded-[28px] border-[5px] border-neutral-400 dark:border-neutral-600"
                     muted
                     autoPlay
                     loop
@@ -99,16 +97,14 @@ const Features = () => {
               </TabsContent>
               <TabsContent value='experience'>
                 <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <div className='w-full max-w-[875px] aspect-video rounded-[10px] border border-border overflow-hidden'>
-                    <video
-                      src='/Spendly-features-Experience.mp4'
-                      className='w-full h-full object-cover'
-                      muted
-                      autoPlay
-                      loop
-                      playsInline
-                    />
-                  </div>
+                  <video
+                    src="/features-experience-tab.mp4"
+                    className="w-full max-w-[250px] h-auto rounded-[28px] border-[5px] border-neutral-400 dark:border-neutral-600"
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                  />
                 </motion.div>
               </TabsContent>
             </div>
