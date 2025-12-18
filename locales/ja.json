@@ -120,10 +120,25 @@
   },
   "roadmap": {
     "title": "今後の予定",
-    "gmail": { "text": "Gmail レシート解析", "desc": "メールからレシートを自動抽出。入力が速く、ミスが減る。" },
-    "shared": { "text": "共有予算", "desc": "家族やチームと予算を作成。協力して管理。" },
-    "subs": { "text": "高度なサブスク管理", "desc": "更新と解約をリマインダーで追跡。予期せぬ請求なし。" },
-    "shopping": { "text": "Spendly ショッピング", "desc": "スマート買い物リストと価格追跡で節約。" }
+    "comingSoon": "近日公開",
+    "cards": {
+      "bank": {
+        "title": "銀行連携とインポート",
+        "description": "PlaidやMono経由で銀行口座を接続。CSVインポートやGmailレシート解析で支出を完全網羅。"
+      },
+      "family": {
+        "title": "役割付きファミリーモード",
+        "description": "管理者/メンバーの役割で家計を管理。個人の支出は非公開にしつつ、共通の目標を追跡できます。"
+      },
+      "voice": {
+        "title": "Siriと音声入力",
+        "description": "ハンズフリーで記録。Siriショートカット、ウィジェット、Telegramボットを使って数秒で取引を記録。"
+      },
+      "aiDefender": {
+        "title": "AI衝動買いディフェンダー",
+        "description": "Gemini Lensで値札をスキャン。この買い物が将来の目標にどう影響するか、AIが即座にアドバイス。"
+      }
+    }
   },
   "faq": {
     "title": "よくある質問",

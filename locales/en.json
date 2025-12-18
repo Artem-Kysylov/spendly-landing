@@ -120,10 +120,25 @@
   },
   "roadmap": {
     "title": "What’s next",
-    "gmail": { "text": "Gmail receipt parsing", "desc": "Automatically parse receipts from Gmail. Faster input, fewer mistakes." },
-    "shared": { "text": "Shared budgets", "desc": "Create budgets with family or teammates. Collaborate and stay aligned." },
-    "subs": { "text": "Advanced subscription manager", "desc": "Track renewals and cancellations with reminders. No more surprise charges." },
-    "shopping": { "text": "Spendly Shopping", "desc": "Smart shopping lists and price tracking to save more." }
+    "comingSoon": "Coming soon",
+    "cards": {
+      "bank": {
+        "title": "Bank Sync & Import",
+        "description": "Connect bank accounts via Plaid or Mono. Smart CSV import and Gmail receipt parsing for full coverage."
+      },
+      "family": {
+        "title": "Family Mode with Roles",
+        "description": "Manage household budget with Admin/Member roles. Keep personal expenses private while tracking shared goals."
+      },
+      "voice": {
+        "title": "Siri & Voice Input",
+        "description": "Hands-free tracking. Use Siri Shortcuts, Widgets, or our Telegram Bot to log transactions in seconds."
+      },
+      "aiDefender": {
+        "title": "AI Impulse Defender",
+        "description": "Scan price tags with Gemini Lens. Get instant AI advice on how this purchase impacts your future goals."
+      }
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",

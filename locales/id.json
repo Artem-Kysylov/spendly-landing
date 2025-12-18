@@ -120,10 +120,25 @@
   },
   "roadmap": {
     "title": "Berikutnya",
-    "gmail": { "text": "Parsing struk Gmail", "desc": "Ekstrak struk dari email secara otomatis. Input lebih cepat, lebih sedikit kesalahan." },
-    "shared": { "text": "Anggaran bersama", "desc": "Buat anggaran dengan keluarga atau tim. Kolaborasi dengan mudah." },
-    "subs": { "text": "Manajer langganan lanjutan", "desc": "Lacak perpanjangan & pembatalan dengan pengingat. Tanpa biaya mengejutkan." },
-    "shopping": { "text": "Spendly Shopping", "desc": "Daftar belanja pintar dan pantau harga agar lebih hemat." }
+    "comingSoon": "Coming soon",
+    "cards": {
+      "bank": {
+        "title": "Sinkronisasi & Impor Bank",
+        "description": "Hubungkan rekening bank via Plaid atau Mono. Impor CSV cerdas dan parsing resi Gmail untuk cakupan penuh."
+      },
+      "family": {
+        "title": "Mode Keluarga dengan Peran",
+        "description": "Kelola anggaran rumah tangga dengan peran Admin/Anggota. Jaga pengeluaran pribadi tetap privat sambil melacak tujuan bersama."
+      },
+      "voice": {
+        "title": "Siri & Input Suara",
+        "description": "Pelacakan hands-free. Gunakan Pintasan Siri, Widget, atau Bot Telegram kami untuk mencatat transaksi dalam hitungan detik."
+      },
+      "aiDefender": {
+        "title": "AI Pencegah Impulsif",
+        "description": "Pindai label harga dengan Gemini Lens. Dapatkan saran AI instan tentang dampak pembelian ini terhadap tujuan masa depan Anda."
+      }
+    }
   },
   "faq": {
     "title": "Pertanyaan yang sering diajukan",
