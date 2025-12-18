@@ -8,6 +8,11 @@ import { fadeUp, fadeUpDelayed, viewportDefault, containerStagger } from '@/comp
 
 const Cta = () => {
   const t = useTranslations('cta')
+  
+  const handleDevAlert = () => {
+    alert("The application is currently under development. Thank you for your understanding.")
+  }
+
   return (
     <section className='mt-[120px] mb-[120px]' id='final-cta'>
       <div className='landing__container'>
@@ -18,6 +23,7 @@ const Cta = () => {
             <Button
               text={t('button')}
               className="w/[250px]"
+              onClick={handleDevAlert}
             />
           </motion.div>
           <motion.span className='text-center block text-[14px] text-muted-foreground' variants={fadeUp(0.15)}>{t('subtitle')}</motion.span>

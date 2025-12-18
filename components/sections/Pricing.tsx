@@ -22,6 +22,11 @@ const Pricing = () => {
   const resolved = localeMap[locale] || 'en-US'
   const priceUSD = new Intl.NumberFormat(resolved, { style: 'currency', currency: 'USD' }).format(7)
   const perMonth = tc('perMonthShort')
+
+  const handleDevAlert = () => {
+    alert("The application is currently under development. Thank you for your understanding.")
+  }
+
   return (
     <section className='mt-[120px]' id='pricing'>
       <div className='landing__container'>
@@ -41,7 +46,7 @@ const Pricing = () => {
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('free.features.5')}</li>
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('free.features.6')}</li>
             </ul>
-            <Button text={t('free.cta')} className='w-full' variant='outline' href='https://spendly-app-blue.vercel.app/en' />
+            <Button text={t('free.cta')} className='w-full' variant='outline' onClick={handleDevAlert} />
           </motion.div>
 
           <motion.div className='bg-card border border-primary rounded-lg p-[30px] w-full md:w-[26rem] font-semibold' variants={fadeUp(0.1)}>
@@ -55,7 +60,7 @@ const Pricing = () => {
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('pro.features.5')}</li>
               <li className='flex items-center gap-2'><Check className='size-4 text-primary' />{t('pro.features.6')}</li>
             </ul>
-            <Button text={t('pro.cta')} className='w-full' href='https://spendly-app-blue.vercel.app/en' />
+            <Button text={t('pro.cta')} className='w-full' onClick={handleDevAlert} />
           </motion.div>
         </motion.div>
       </div>

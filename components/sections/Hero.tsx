@@ -7,6 +7,11 @@ import { fadeUp, fadeUpDelayed, fadeUpScale, containerStagger, viewportDefault }
 
 const Hero = () => {
   const t = useTranslations('hero')
+
+  const handleDevAlert = () => {
+    alert("The application is currently under development. Thank you for your understanding.")
+  }
+
   return (
     <section className='mt-[120px]'>
       <div className='landing__container'>
@@ -16,8 +21,8 @@ const Hero = () => {
           <motion.p className="font-medium text-foreground text-center" variants={fadeUp(0.05)}>{t('subtitle_line1')}
 {t('subtitle_line2')}</motion.p>
           <motion.div className='w-full flex flex-col sm:flex-row items-center justify-center gap-3' variants={fadeUpDelayed(0.1)}>
-            <Button text={t('cta_primary')} className='w-full sm:w-auto' href='https://spendly-app-blue.vercel.app/en' />
-            <Button text={t('cta_secondary')} variant='outline' className='w-full sm:w-[203px]' href='https://spendly-app-blue.vercel.app/en' />
+            <Button text={t('cta_primary')} className='w-full sm:w-auto' onClick={handleDevAlert} />
+            <Button text={t('cta_secondary')} variant='outline' className='w-full sm:w-[203px]' onClick={handleDevAlert} />
           </motion.div>
         </motion.div>
         <motion.div className='flex justify-center' initial='hidden' whileInView='visible' viewport={viewportDefault}>

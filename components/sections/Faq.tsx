@@ -45,14 +45,14 @@ const Faq = () => {
               {t('a4')}
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='q5'>
+          {/* <AccordionItem value='q5'>
             <AccordionTrigger className='text-[20px] font-semibold hover:no-underline transition-colors duration-200 hover:text-primary data-[state=open]:text-primary'>
               {t('q5')}
             </AccordionTrigger>
             <AccordionContent className='text-[16px]'>
               {t('a5')}
             </AccordionContent>
-          </AccordionItem>
+          </AccordionItem> */}
         </Accordion>
       </div>
     </section>
