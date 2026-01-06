@@ -1,6 +1,9 @@
 {
   "common": {
-    "pagination": { "previous": "Previous", "next": "Next" },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
     "themeToggle": "Toggle theme",
     "perMonthShort": "/mo",
     "dismiss": "Dismiss",
@@ -23,10 +26,20 @@
     "x": "X"
   },
   "metadata": {
-    "title": { "default": "Spendly — AI-first budget & expense tracker", "template": "%s — Spendly" },
+    "title": {
+      "default": "Spendly — AI-first budget & expense tracker",
+      "template": "%s — Spendly"
+    },
     "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads.",
-    "openGraph": { "title": "Spendly — AI-first budget & expense tracker", "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads.", "imagesAlt": "Spendly — AI-first budget & expense tracker" },
-    "twitter": { "title": "Spendly — AI-first budget & expense tracker", "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads." }
+    "openGraph": {
+      "title": "Spendly — AI-first budget & expense tracker",
+      "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads.",
+      "imagesAlt": "Spendly — AI-first budget & expense tracker"
+    },
+    "twitter": {
+      "title": "Spendly — AI-first budget & expense tracker",
+      "description": "Manage budgets, track expenses, and get AI insights. Free forever, no ads."
+    }
   },
   "hero": {
     "title": "Take control of your money — without spreadsheets, chaos or stress.",
@@ -38,22 +51,54 @@
   },
   "features": {
     "title": "Spendly Features",
-    "tabs": { "ai": "AI-first", "core": "Core", "experience": "Experience" },
+    "tabs": {
+      "ai": "AI-first",
+      "core": "Core",
+      "experience": "Experience"
+    },
     "ai": {
-      "chat": { "title": "AI Chat for your finances", "desc": "Ask anything — Spendly explains your spending, overspending and patterns." },
-      "insights": { "title": "AI Insights & smart analytics", "desc": "Weekly summaries, predictions and personalized suggestions." }
+      "chat": {
+        "title": "AI Chat for your finances",
+        "desc": "Ask anything — Spendly explains your spending, overspending and patterns."
+      },
+      "insights": {
+        "title": "AI Insights & smart analytics",
+        "desc": "Weekly summaries, predictions and personalized suggestions."
+      }
     },
     "core": {
-      "add": { "title": "Add expenses in seconds", "desc": "Manual entry or instant AI categorization." },
-      "recurring": { "title": "Recurring transactions", "desc": "Automatically track subscriptions & monthly bills." },
-      "budgets": { "title": "Budgets, categories & folders", "desc": "Organize your money the way you like." }
+      "add": {
+        "title": "Add expenses in seconds",
+        "desc": "Manual entry or instant AI categorization."
+      },
+      "recurring": {
+        "title": "Recurring transactions",
+        "desc": "Automatically track subscriptions & monthly bills."
+      },
+      "budgets": {
+        "title": "Budgets, categories & folders",
+        "desc": "Organize your money the way you like."
+      }
     },
     "experience": {
-      "themes": { "title": "Light & dark themes", "desc": "Beautiful and consistent UI." },
-      "languages": { "title": "7 languages", "desc": "EN · RU · UA · KR · HI · ID · JP" },
-      "notifications": { "title": "Notifications", "desc": "Overspending alerts, budget reminders, weekly reports." }
+      "themes": {
+        "title": "Light & dark themes",
+        "desc": "Beautiful and consistent UI."
+      },
+      "languages": {
+        "title": "7 languages",
+        "desc": "EN · RU · UA · KR · HI · ID · JP"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "desc": "Overspending alerts, budget reminders, weekly reports."
+      }
     },
-    "imageAlt": { "ai": "Spendly preview — AI", "core": "Spendly preview — Core", "experience": "Spendly preview — Experience" }
+    "imageAlt": {
+      "ai": "Spendly preview — AI",
+      "core": "Spendly preview — Core",
+      "experience": "Spendly preview — Experience"
+    }
   },
   "demo": {
     "title": "See Spendly in action",
@@ -73,32 +118,60 @@
   },
   "pricing": {
     "title": "Simple pricing. No surprises.",
+    "badges": {
+      "recommended": "Best Value",
+      "exclusive": "Founder's Edition"
+    },
     "free": {
       "title": "Free",
+      "price": "$0",
       "features": [
         "Unlimited manual expenses",
-        "Unlimited categories & folders",
+        "Basic categories",
         "Light & dark themes",
-        "7 languages",
         "Basic analytics",
-        "Weekly summaries",
-        "No ads"
+        "7 languages"
       ],
-      "cta": "Get started for FREE"
+      "cta": "Get Started"
     },
-    "pro": {
-      "title": "Pro",
-      "price": "$7/mo",
+    "monthly": {
+      "title": "Monthly",
+      "price": "$7",
+      "period": "/mo",
       "features": [
-        "All Free features",
-        "AI Chat",
-        "AI Insights",
-        "Recurring transactions",
-        "Notifications",
-        "Advanced analytics & charts",
-        "Priority feature access"
+        "Unlimited Budgets",
+        "Custom AI Tones",
+        "No Banners",
+        "Advanced Analytics",
+        "Everything in Free"
       ],
-      "cta": "Upgrade to Pro"
+      "cta": "Go Pro"
+    },
+    "yearly": {
+      "title": "Yearly",
+      "price": "$49",
+      "period": "/yr",
+      "features": [
+        "Save 42% vs Monthly",
+        "Unlimited Budgets",
+        "Custom AI Tones",
+        "No Banners",
+        "Advanced Analytics"
+      ],
+      "cta": "Go Pro"
+    },
+    "lifetime": {
+      "title": "Lifetime",
+      "price": "$99",
+      "period": "one-time",
+      "features": [
+        "Everything in Yearly",
+        "Early Adopter Badge",
+        "Lifetime updates",
+        "Founder's Edition",
+        "Pay once, own forever"
+      ],
+      "cta": "Get Lifetime"
     }
   },
   "why": {

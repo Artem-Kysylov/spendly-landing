@@ -1,6 +1,9 @@
 {
   "common": {
-    "pagination": { "previous": "Sebelumnya", "next": "Berikutnya" },
+    "pagination": {
+      "previous": "Sebelumnya",
+      "next": "Berikutnya"
+    },
     "themeToggle": "Ubah tema",
     "perMonthShort": "/bln",
     "dismiss": "Tutup",
@@ -23,10 +26,20 @@
     "x": "X"
   },
   "metadata": {
-    "title": { "default": "Spendly — AI‑first pelacak anggaran & pengeluaran", "template": "%s — Spendly" },
+    "title": {
+      "default": "Spendly — AI‑first pelacak anggaran & pengeluaran",
+      "template": "%s — Spendly"
+    },
     "description": "Kelola anggaran, catat pengeluaran, dan dapatkan wawasan AI. Gratis selamanya, tanpa iklan.",
-    "openGraph": { "title": "Spendly — AI‑first pelacak anggaran & pengeluaran", "description": "Kelola anggaran, catat pengeluaran, dan dapatkan wawasan AI. Gratis selamanya, tanpa iklan.", "imagesAlt": "Spendly — AI‑first pelacak anggaran & pengeluaran" },
-    "twitter": { "title": "Spendly — AI‑first pelacak anggaran & pengeluaran", "description": "Kelola anggaran, catat pengeluaran, dan dapatkan wawasan AI. Gratis selamanya, tanpa iklan." }
+    "openGraph": {
+      "title": "Spendly — AI‑first pelacak anggaran & pengeluaran",
+      "description": "Kelola anggaran, catat pengeluaran, dan dapatkan wawasan AI. Gratis selamanya, tanpa iklan.",
+      "imagesAlt": "Spendly — AI‑first pelacak anggaran & pengeluaran"
+    },
+    "twitter": {
+      "title": "Spendly — AI‑first pelacak anggaran & pengeluaran",
+      "description": "Kelola anggaran, catat pengeluaran, dan dapatkan wawasan AI. Gratis selamanya, tanpa iklan."
+    }
   },
   "hero": {
     "title": "Kendalikan keuangan tanpa spreadsheet, kekacauan, atau stres",
@@ -38,22 +51,54 @@
   },
   "features": {
     "title": "Fitur Spendly",
-    "tabs": { "ai": "AI‑first", "core": "Inti", "experience": "Pengalaman" },
+    "tabs": {
+      "ai": "AI‑first",
+      "core": "Inti",
+      "experience": "Pengalaman"
+    },
     "ai": {
-      "chat": { "title": "AI Chat untuk keuangan Anda", "desc": "Tanyakan apa saja — Spendly menjelaskan pengeluaran, pemborosan, dan pola." },
-      "insights": { "title": "Wawasan AI & analitik cerdas", "desc": "Ringkasan mingguan, prediksi, dan saran personal." }
+      "chat": {
+        "title": "AI Chat untuk keuangan Anda",
+        "desc": "Tanyakan apa saja — Spendly menjelaskan pengeluaran, pemborosan, dan pola."
+      },
+      "insights": {
+        "title": "Wawasan AI & analitik cerdas",
+        "desc": "Ringkasan mingguan, prediksi, dan saran personal."
+      }
     },
     "core": {
-      "add": { "title": "Tambah pengeluaran dalam hitungan detik", "desc": "Input manual atau kategorisasi instan oleh AI." },
-      "recurring": { "title": "Transaksi berulang", "desc": "Lacak langganan & tagihan bulanan secara otomatis." },
-      "budgets": { "title": "Anggaran, kategori & folder", "desc": "Atur keuangan sesuai kebutuhan Anda." }
+      "add": {
+        "title": "Tambah pengeluaran dalam hitungan detik",
+        "desc": "Input manual atau kategorisasi instan oleh AI."
+      },
+      "recurring": {
+        "title": "Transaksi berulang",
+        "desc": "Lacak langganan & tagihan bulanan secara otomatis."
+      },
+      "budgets": {
+        "title": "Anggaran, kategori & folder",
+        "desc": "Atur keuangan sesuai kebutuhan Anda."
+      }
     },
     "experience": {
-      "themes": { "title": "Tema terang & gelap", "desc": "UI indah dan konsisten." },
-      "languages": { "title": "7 bahasa", "desc": "EN · RU · UA · KR · HI · ID · JP" },
-      "notifications": { "title": "Notifikasi", "desc": "Peringatan pemborosan, pengingat anggaran, laporan mingguan." }
+      "themes": {
+        "title": "Tema terang & gelap",
+        "desc": "UI indah dan konsisten."
+      },
+      "languages": {
+        "title": "7 bahasa",
+        "desc": "EN · RU · UA · KR · HI · ID · JP"
+      },
+      "notifications": {
+        "title": "Notifikasi",
+        "desc": "Peringatan pemborosan, pengingat anggaran, laporan mingguan."
+      }
     },
-    "imageAlt": { "ai": "Pratinjau Spendly — AI", "core": "Pratinjau Spendly — Core", "experience": "Pratinjau Spendly — Experience" }
+    "imageAlt": {
+      "ai": "Pratinjau Spendly — AI",
+      "core": "Pratinjau Spendly — Core",
+      "experience": "Pratinjau Spendly — Experience"
+    }
   },
   "demo": {
     "title": "Lihat Spendly beraksi",
@@ -73,30 +118,58 @@
   },
   "pricing": {
     "title": "Harga sederhana. Tanpa kejutan.",
+    "badges": {
+      "recommended": "Recommended",
+      "exclusive": "Exclusive"
+    },
     "free": {
-      "title": "Gratis",
+      "title": "Free",
+      "price": "$0",
       "features": [
-        "Pengeluaran manual tak terbatas",
-        "Kategori & folder tak terbatas",
-        "Tema terang & gelap",
-        "7 bahasa",
-        "Analitik dasar",
-        "Ringkasan mingguan",
-        "Tanpa iklan"
+        "Unlimited manual expenses",
+        "Basic categories",
+        "Light & dark themes",
+        "Basic analytics",
+        "7 languages"
       ],
       "cta": "Mulai gratis"
     },
-    "pro": {
-      "title": "Pro",
-      "price": "$7/bln",
+    "monthly": {
+      "title": "Monthly",
+      "price": "$7",
+      "period": "/mo",
       "features": [
-        "Semua fitur Free",
-        "AI Chat",
-        "Wawasan AI",
-        "Transaksi berulang",
-        "Notifikasi",
-        "Analitik & grafik lanjutan",
-        "Akses fitur prioritas"
+        "Unlimited Budgets",
+        "Custom AI Tones",
+        "No Banners",
+        "Advanced Analytics",
+        "Everything in Free"
+      ],
+      "cta": "Upgrade ke Pro"
+    },
+    "yearly": {
+      "title": "Yearly",
+      "price": "$49",
+      "period": "/yr",
+      "features": [
+        "Save 42% vs Monthly",
+        "Unlimited Budgets",
+        "Custom AI Tones",
+        "No Banners",
+        "Advanced Analytics"
+      ],
+      "cta": "Upgrade ke Pro"
+    },
+    "lifetime": {
+      "title": "Lifetime",
+      "price": "$99",
+      "period": "once",
+      "features": [
+        "Pay once, own forever",
+        "Unlimited Budgets",
+        "Custom AI Tones",
+        "No Banners",
+        "Advanced Analytics"
       ],
       "cta": "Upgrade ke Pro"
     }
@@ -159,43 +232,156 @@
     "sections": {
       "information": {
         "title": "Informasi yang Kami Kumpulkan",
-        "youProvide": { "title": "Informasi yang Anda berikan", "body": "Kami mengumpulkan email Anda (termasuk Google OAuth), kata sandi yang di‑hash, dan data finansial yang Anda masukkan secara manual seperti anggaran, kategori, tujuan, jumlah transaksi, dan catatan." },
-        "auto": { "title": "Data yang dikumpulkan otomatis", "body": "Kami dapat mengumpulkan info perangkat, alamat IP, log penggunaan, data cookie/penyimpanan lokal, dan analitik anonim (misalnya Plausible atau Umami)." },
-        "ai": { "title": "Data yang dihasilkan/diproses AI", "body": "Jika Anda menggunakan fitur AI, kami memproses teks yang Anda berikan serta kategori atau wawasan yang dihasilkan otomatis. Kami tidak menggunakan data Anda untuk melatih model AI pihak ketiga." }
+        "youProvide": {
+          "title": "Informasi yang Anda berikan",
+          "body": "Kami mengumpulkan email Anda (termasuk Google OAuth), kata sandi yang di‑hash, dan data finansial yang Anda masukkan secara manual seperti anggaran, kategori, tujuan, jumlah transaksi, dan catatan."
+        },
+        "auto": {
+          "title": "Data yang dikumpulkan otomatis",
+          "body": "Kami dapat mengumpulkan info perangkat, alamat IP, log penggunaan, data cookie/penyimpanan lokal, dan analitik anonim (misalnya Plausible atau Umami)."
+        },
+        "ai": {
+          "title": "Data yang dihasilkan/diproses AI",
+          "body": "Jika Anda menggunakan fitur AI, kami memproses teks yang Anda berikan serta kategori atau wawasan yang dihasilkan otomatis. Kami tidak menggunakan data Anda untuk melatih model AI pihak ketiga."
+        }
       },
-      "use": { "title": "Bagaimana Kami Menggunakan Informasi Anda", "body": "Kami menggunakan informasi untuk membuat dan mengelola akun, menyimpan data finansial dengan aman, menyediakan fitur anggaran dan pelacakan, menghasilkan bantuan dan wawasan AI, mempersonalisasi pengalaman, memelihara dan meningkatkan layanan, memastikan keamanan, serta mematuhi kewajiban hukum. Kami tidak menjual data pribadi Anda kepada pihak ketiga." },
-      "storage": { "title": "Penyimpanan Informasi", "body": "Data Anda disimpan melalui Supabase dengan HTTPS saat transfer dan penyimpanan terenkripsi untuk informasi sensitif. Kata sandi di‑hash menggunakan algoritma standar industri dan tidak dapat dipulihkan dalam bentuk teks." },
-      "aiPrivacy": { "title": "Pemrosesan AI dan Privasi Data", "body": "Saat menggunakan fitur AI, data yang Anda kirim dapat diteruskan ke penyedia AI tepercaya dan digunakan hanya untuk menghasilkan output yang diminta. Data tidak disimpan oleh penyedia tersebut untuk pelatihan, dan kami menghindari menyimpan log AI yang sensitif." },
-      "cookies": { "title": "Cookie dan Teknologi Serupa", "body": "Kami menggunakan cookie dan penyimpanan lokal untuk menjaga sesi, mengingat status login, meningkatkan kinerja, dan menganalisis pola penggunaan. Menonaktifkan cookie dapat memengaruhi fungsi." },
-      "share": { "title": "Kapan Kami Membagikan Informasi", "body": "Kami hanya membagikan data dengan penyedia layanan (hosting, analitik, autentikasi), penyedia pemrosesan AI saat Anda meminta fitur AI, dan otoritas hukum bila diperlukan. Kami tidak membagikan informasi finansial Anda untuk tujuan iklan." },
-      "retention": { "title": "Penyimpanan Data", "body": "Kami menyimpan data selama akun Anda aktif. Setelah dihapus, semua data pribadi dan finansial di Supabase dihapus permanen, token sesi dan autentikasi dicabut, dan input AI tidak disimpan setelah pemrosesan." },
-      "rights": { "title": "Hak Anda", "body": "Bergantung pada lokasi Anda, Anda mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, mengekspor, atau membatasi pemrosesan data Anda. Hubungi kami untuk menggunakan hak tersebut." },
-      "children": { "title": "Privasi Anak", "body": "Spendly tidak ditujukan untuk anak di bawah 16 tahun, dan kami tidak dengan sengaja mengumpulkan informasi dari anak‑anak." },
-      "changes": { "title": "Perubahan Kebijakan", "body": "Kami dapat memperbarui Kebijakan Privasi ini. Tanggal ‘Terakhir diperbarui’ mencerminkan versi terbaru. Penggunaan layanan secara terus‑menerus berarti Anda menerima perubahan." },
-      "contact": { "title": "Hubungi Kami", "body": "Pertanyaan tentang Kebijakan Privasi atau data Anda: support@spendly.app" }
+      "use": {
+        "title": "Bagaimana Kami Menggunakan Informasi Anda",
+        "body": "Kami menggunakan informasi untuk membuat dan mengelola akun, menyimpan data finansial dengan aman, menyediakan fitur anggaran dan pelacakan, menghasilkan bantuan dan wawasan AI, mempersonalisasi pengalaman, memelihara dan meningkatkan layanan, memastikan keamanan, serta mematuhi kewajiban hukum. Kami tidak menjual data pribadi Anda kepada pihak ketiga."
+      },
+      "storage": {
+        "title": "Penyimpanan Informasi",
+        "body": "Data Anda disimpan melalui Supabase dengan HTTPS saat transfer dan penyimpanan terenkripsi untuk informasi sensitif. Kata sandi di‑hash menggunakan algoritma standar industri dan tidak dapat dipulihkan dalam bentuk teks."
+      },
+      "aiPrivacy": {
+        "title": "Pemrosesan AI dan Privasi Data",
+        "body": "Saat menggunakan fitur AI, data yang Anda kirim dapat diteruskan ke penyedia AI tepercaya dan digunakan hanya untuk menghasilkan output yang diminta. Data tidak disimpan oleh penyedia tersebut untuk pelatihan, dan kami menghindari menyimpan log AI yang sensitif."
+      },
+      "cookies": {
+        "title": "Cookie dan Teknologi Serupa",
+        "body": "Kami menggunakan cookie dan penyimpanan lokal untuk menjaga sesi, mengingat status login, meningkatkan kinerja, dan menganalisis pola penggunaan. Menonaktifkan cookie dapat memengaruhi fungsi."
+      },
+      "share": {
+        "title": "Kapan Kami Membagikan Informasi",
+        "body": "Kami hanya membagikan data dengan penyedia layanan (hosting, analitik, autentikasi), penyedia pemrosesan AI saat Anda meminta fitur AI, dan otoritas hukum bila diperlukan. Kami tidak membagikan informasi finansial Anda untuk tujuan iklan."
+      },
+      "retention": {
+        "title": "Penyimpanan Data",
+        "body": "Kami menyimpan data selama akun Anda aktif. Setelah dihapus, semua data pribadi dan finansial di Supabase dihapus permanen, token sesi dan autentikasi dicabut, dan input AI tidak disimpan setelah pemrosesan."
+      },
+      "rights": {
+        "title": "Hak Anda",
+        "body": "Bergantung pada lokasi Anda, Anda mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, mengekspor, atau membatasi pemrosesan data Anda. Hubungi kami untuk menggunakan hak tersebut."
+      },
+      "children": {
+        "title": "Privasi Anak",
+        "body": "Spendly tidak ditujukan untuk anak di bawah 16 tahun, dan kami tidak dengan sengaja mengumpulkan informasi dari anak‑anak."
+      },
+      "changes": {
+        "title": "Perubahan Kebijakan",
+        "body": "Kami dapat memperbarui Kebijakan Privasi ini. Tanggal ‘Terakhir diperbarui’ mencerminkan versi terbaru. Penggunaan layanan secara terus‑menerus berarti Anda menerima perubahan."
+      },
+      "contact": {
+        "title": "Hubungi Kami",
+        "body": "Pertanyaan tentang Kebijakan Privasi atau data Anda: support@spendly.app"
+      }
     }
   },
   "terms": {
     "title": "Syarat & Ketentuan — Spendly",
     "lastUpdatedEffective": "Terakhir diperbarui: {last} · Tanggal berlaku: {effective}",
     "sections": {
-      "acceptance": { "title": "1. Penerimaan Syarat", "body": "Dengan mengakses atau menggunakan Spendly (Layanan), Anda menyetujui Syarat ini. Jika tidak setuju, jangan gunakan Layanan. Spendly dioperasikan oleh TabXport OÜ (atau nama perusahaan sebenarnya, dapat diperbarui)." },
-      "eligibility": { "title": "2. Kelayakan", "body": "Anda harus berusia setidaknya 16 tahun untuk menggunakan Spendly. Dengan menggunakan Layanan, Anda mengonfirmasi memenuhi syarat ini." },
-      "description": { "title": "3. Deskripsi Layanan", "body": "Spendly adalah aplikasi manajemen keuangan pribadi. Anda dapat menambah pengeluaran/pemasukan, membuat anggaran dan kategori, menerima wawasan dan analitik, menggunakan fitur AI opsional, serta sinkronisasi data di berbagai perangkat. Spendly tidak terhubung ke bank dan tidak memberikan nasihat finansial resmi." },
-      "accounts": { "title": "4. Akun Pengguna", "registration": { "title": "4.1 Pendaftaran", "body": "Buat akun menggunakan email/kata sandi atau Google OAuth. Berikan informasi yang akurat dan selalu perbarui." }, "security": { "title": "4.2 Keamanan Akun", "body": "Anda bertanggung jawab menjaga kerahasiaan kredensial dan semua aktivitas di akun Anda. Segera beri tahu kami jika ada akses tidak sah." } },
-      "payments": { "title": "5. Langganan & Pembayaran", "pricing": { "title": "5.1 Harga", "body": "Spendly menawarkan langganan Pro seharga $7/bulan. Pro dapat mencakup anggaran tak terbatas, analitik lanjutan, wawasan AI, pembaruan prioritas, dan penyesuaian tambahan." }, "billing": { "title": "5.2 Penagihan", "body": "Langganan diperpanjang otomatis kecuali dibatalkan sebelum siklus berikutnya." }, "refunds": { "title": "5.3 Pengembalian Dana", "body": "Tidak ada pengembalian untuk periode sebagian atau tidak terpakai kecuali diwajibkan oleh hukum." } },
-      "aiUse": { "title": "6. Penggunaan Fitur AI", "body": "Fungsi berbasis AI (wawasan, kategorisasi, chat) bersifat informasional. AI dapat menghasilkan informasi yang tidak akurat atau tidak lengkap; hasil bukanlah nasihat finansial, legal, atau pajak. Keputusan menjadi tanggung jawab Anda." },
-      "userContent": { "title": "7. Konten Pengguna", "body": "Anda tetap memiliki kepemilikan atas data yang Anda tambahkan (pengeluaran, pemasukan, anggaran, kategori). Anda memberikan lisensi terbatas non‑eksklusif kepada Spendly untuk memproses data hanya guna menyediakan Layanan." },
-      "storage": { "title": "8. Penyimpanan & Keamanan Data", "body": "Spendly menggunakan Supabase untuk penyimpanan dengan enkripsi saat transit dan saat tersimpan. Tidak ada sistem yang sepenuhnya aman — kami tidak dapat menjamin perlindungan mutlak dari akses tidak sah. Lihat Kebijakan Privasi untuk detail." },
-      "acceptableUse": { "title": "9. Penggunaan yang Diperbolehkan", "list": ["Jangan gunakan Layanan untuk tujuan ilegal","Jangan mencoba mengakses data pengguna lain","Jangan melakukan reverse‑engineering atau mengganggu server/API","Jangan gunakan bot/scraper tanpa izin"] },
-      "availability": { "title": "10. Ketersediaan & Pembaruan", "body": "Kami dapat memperbarui, mengubah, atau menghentikan sebagian Layanan kapan saja (fitur, harga, antarmuka, AI). Kami tidak bertanggung jawab atas downtime atau gangguan." },
-      "thirdParty": { "title": "11. Layanan Pihak Ketiga", "body": "Spendly menggunakan layanan pihak ketiga termasuk Supabase (auth & DB), Google OAuth (login opsional), dan penyedia AI (OpenAI atau lainnya). Penggunaan tunduk pada syarat mereka." },
-      "termination": { "title": "12. Penghentian", "body": "Kami dapat menangguhkan atau mengakhiri akun Anda karena pelanggaran, dugaan penipuan/penyalahgunaan, atau risiko bagi orang lain. Anda dapat menghapus akun kapan saja dari pengaturan." },
-      "liability": { "title": "13. Batasan Tanggung Jawab", "body": "Spendly disediakan ‘SEADANYA’ tanpa jaminan. Sejauh diizinkan hukum, Spendly tidak bertanggung jawab atas kehilangan keuntungan, keluaran AI yang tidak akurat, kehilangan data, kesalahan, atau gangguan." },
-      "disclaimer": { "title": "14. Penyangkalan", "body": "Spendly tidak memberikan nasihat finansial, legal, akuntansi, atau pajak. Semua wawasan dan analitik hanya untuk informasi." },
-      "law": { "title": "15. Hukum yang Berlaku", "body": "Syarat ini diatur oleh hukum yurisdiksi tempat perusahaan Anda terdaftar (misal, Estonia). Dapat diperbarui kemudian." },
-      "changes": { "title": "16. Perubahan Syarat", "body": "Kami dapat memperbarui Syarat kapan saja. Jika perubahan signifikan, kami dapat memberi tahu melalui email atau notifikasi dalam aplikasi. Penggunaan berkelanjutan setelah perubahan berarti setuju." },
-      "contact": { "title": "17. Hubungi Kami", "body": "Pertanyaan tentang Syarat: support@spendly.app" }
+      "acceptance": {
+        "title": "1. Penerimaan Syarat",
+        "body": "Dengan mengakses atau menggunakan Spendly (Layanan), Anda menyetujui Syarat ini. Jika tidak setuju, jangan gunakan Layanan. Spendly dioperasikan oleh TabXport OÜ (atau nama perusahaan sebenarnya, dapat diperbarui)."
+      },
+      "eligibility": {
+        "title": "2. Kelayakan",
+        "body": "Anda harus berusia setidaknya 16 tahun untuk menggunakan Spendly. Dengan menggunakan Layanan, Anda mengonfirmasi memenuhi syarat ini."
+      },
+      "description": {
+        "title": "3. Deskripsi Layanan",
+        "body": "Spendly adalah aplikasi manajemen keuangan pribadi. Anda dapat menambah pengeluaran/pemasukan, membuat anggaran dan kategori, menerima wawasan dan analitik, menggunakan fitur AI opsional, serta sinkronisasi data di berbagai perangkat. Spendly tidak terhubung ke bank dan tidak memberikan nasihat finansial resmi."
+      },
+      "accounts": {
+        "title": "4. Akun Pengguna",
+        "registration": {
+          "title": "4.1 Pendaftaran",
+          "body": "Buat akun menggunakan email/kata sandi atau Google OAuth. Berikan informasi yang akurat dan selalu perbarui."
+        },
+        "security": {
+          "title": "4.2 Keamanan Akun",
+          "body": "Anda bertanggung jawab menjaga kerahasiaan kredensial dan semua aktivitas di akun Anda. Segera beri tahu kami jika ada akses tidak sah."
+        }
+      },
+      "payments": {
+        "title": "5. Langganan & Pembayaran",
+        "pricing": {
+          "title": "5.1 Harga",
+          "body": "Spendly menawarkan langganan Pro seharga $7/bulan. Pro dapat mencakup anggaran tak terbatas, analitik lanjutan, wawasan AI, pembaruan prioritas, dan penyesuaian tambahan."
+        },
+        "billing": {
+          "title": "5.2 Penagihan",
+          "body": "Langganan diperpanjang otomatis kecuali dibatalkan sebelum siklus berikutnya."
+        },
+        "refunds": {
+          "title": "5.3 Pengembalian Dana",
+          "body": "Tidak ada pengembalian untuk periode sebagian atau tidak terpakai kecuali diwajibkan oleh hukum."
+        }
+      },
+      "aiUse": {
+        "title": "6. Penggunaan Fitur AI",
+        "body": "Fungsi berbasis AI (wawasan, kategorisasi, chat) bersifat informasional. AI dapat menghasilkan informasi yang tidak akurat atau tidak lengkap; hasil bukanlah nasihat finansial, legal, atau pajak. Keputusan menjadi tanggung jawab Anda."
+      },
+      "userContent": {
+        "title": "7. Konten Pengguna",
+        "body": "Anda tetap memiliki kepemilikan atas data yang Anda tambahkan (pengeluaran, pemasukan, anggaran, kategori). Anda memberikan lisensi terbatas non‑eksklusif kepada Spendly untuk memproses data hanya guna menyediakan Layanan."
+      },
+      "storage": {
+        "title": "8. Penyimpanan & Keamanan Data",
+        "body": "Spendly menggunakan Supabase untuk penyimpanan dengan enkripsi saat transit dan saat tersimpan. Tidak ada sistem yang sepenuhnya aman — kami tidak dapat menjamin perlindungan mutlak dari akses tidak sah. Lihat Kebijakan Privasi untuk detail."
+      },
+      "acceptableUse": {
+        "title": "9. Penggunaan yang Diperbolehkan",
+        "list": [
+          "Jangan gunakan Layanan untuk tujuan ilegal",
+          "Jangan mencoba mengakses data pengguna lain",
+          "Jangan melakukan reverse‑engineering atau mengganggu server/API",
+          "Jangan gunakan bot/scraper tanpa izin"
+        ]
+      },
+      "availability": {
+        "title": "10. Ketersediaan & Pembaruan",
+        "body": "Kami dapat memperbarui, mengubah, atau menghentikan sebagian Layanan kapan saja (fitur, harga, antarmuka, AI). Kami tidak bertanggung jawab atas downtime atau gangguan."
+      },
+      "thirdParty": {
+        "title": "11. Layanan Pihak Ketiga",
+        "body": "Spendly menggunakan layanan pihak ketiga termasuk Supabase (auth & DB), Google OAuth (login opsional), dan penyedia AI (OpenAI atau lainnya). Penggunaan tunduk pada syarat mereka."
+      },
+      "termination": {
+        "title": "12. Penghentian",
+        "body": "Kami dapat menangguhkan atau mengakhiri akun Anda karena pelanggaran, dugaan penipuan/penyalahgunaan, atau risiko bagi orang lain. Anda dapat menghapus akun kapan saja dari pengaturan."
+      },
+      "liability": {
+        "title": "13. Batasan Tanggung Jawab",
+        "body": "Spendly disediakan ‘SEADANYA’ tanpa jaminan. Sejauh diizinkan hukum, Spendly tidak bertanggung jawab atas kehilangan keuntungan, keluaran AI yang tidak akurat, kehilangan data, kesalahan, atau gangguan."
+      },
+      "disclaimer": {
+        "title": "14. Penyangkalan",
+        "body": "Spendly tidak memberikan nasihat finansial, legal, akuntansi, atau pajak. Semua wawasan dan analitik hanya untuk informasi."
+      },
+      "law": {
+        "title": "15. Hukum yang Berlaku",
+        "body": "Syarat ini diatur oleh hukum yurisdiksi tempat perusahaan Anda terdaftar (misal, Estonia). Dapat diperbarui kemudian."
+      },
+      "changes": {
+        "title": "16. Perubahan Syarat",
+        "body": "Kami dapat memperbarui Syarat kapan saja. Jika perubahan signifikan, kami dapat memberi tahu melalui email atau notifikasi dalam aplikasi. Penggunaan berkelanjutan setelah perubahan berarti setuju."
+      },
+      "contact": {
+        "title": "17. Hubungi Kami",
+        "body": "Pertanyaan tentang Syarat: support@spendly.app"
+      }
     }
   },
   "cta": {
