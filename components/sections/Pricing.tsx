@@ -34,7 +34,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('free.cta')} className='w-full mt-auto' variant='outline' href={`/${locale}/sign-up`} />
+            <Button text={t('free.cta')} className='w-full mt-auto' variant='outline' href='https://app.getspendly.net/signup' />
           </motion.div>
 
           {/* MONTHLY PLAN */}
