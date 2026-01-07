@@ -55,7 +55,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('monthly.cta')} className='w-full mt-auto' href={`/${locale}/paywall`} />
+            <Button text={t('monthly.cta')} className='w-full mt-auto' href='https://app.getspendly.net/signup?plan=monthly' />
           </motion.div>
 
           {/* YEARLY PLAN (Best Value) */}
@@ -79,7 +79,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('yearly.cta')} className='w-full mt-auto font-bold shadow-md' href={`/${locale}/paywall`} />
+            <Button text={t('yearly.cta')} className='w-full mt-auto font-bold shadow-md' href='https://app.getspendly.net/signup?plan=yearly' />
           </motion.div>
 
           {/* LIFETIME PLAN (Gold/Founder's Edition) */}
@@ -106,7 +106,7 @@ const Pricing = () => {
             <Button
               text={t('lifetime.cta')}
               className='w-full mt-auto bg-[#EAB308] hover:bg-[#CA8A04] text-black border-none font-bold shadow-md'
-              href={`/${locale}/paywall`}
+              href='https://app.getspendly.net/signup?plan=lifetime'
             />
           </motion.div>
         </motion.div>
