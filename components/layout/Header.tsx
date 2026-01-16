@@ -15,6 +15,11 @@ const Header = () => {
   const t = useTranslations('nav')
   
 
+  const handleDevAlert = () => {
+    alert("The application is currently under development. Thank you for your understanding.")
+  }
+
+
 
   return (
     <header className='border-b'>
@@ -114,7 +119,7 @@ const Header = () => {
               <Button 
                 text={t('cta')}
                 className="w-full"
-                href='https://spendly-app-blue.vercel.app/en'
+                onClick={handleDevAlert}
               />       
             </div>
           </div>

@@ -2,13 +2,16 @@
 import React from 'react'
 import { Check } from 'lucide-react'
 import Button from '@/components/ui-elements/Button'
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { fadeUp, containerStagger, viewportDefault } from '@/components/utils/motion'
 
 const Pricing = () => {
   const t = useTranslations('pricing')
-  const locale = useLocale()
+
+  const handleDevAlert = () => {
+    alert("The application is currently under development. Thank you for your understanding.")
+  }
 
   return (
     <section className='mt-[120px]' id='pricing'>
@@ -34,7 +37,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('free.cta')} className='w-full mt-auto' variant='outline' href='https://app.getspendly.net/signup' />
+            <Button text={t('free.cta')} className='w-full mt-auto' variant='outline' onClick={handleDevAlert} />
           </motion.div>
 
           {/* MONTHLY PLAN */}
@@ -55,7 +58,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('monthly.cta')} className='w-full mt-auto' href='https://app.getspendly.net/signup?plan=monthly' />
+            <Button text={t('monthly.cta')} className='w-full mt-auto' onClick={handleDevAlert} />
           </motion.div>
 
           {/* YEARLY PLAN (Best Value) */}
@@ -79,7 +82,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('yearly.cta')} className='w-full mt-auto font-bold shadow-md' href='https://app.getspendly.net/signup?plan=yearly' />
+            <Button text={t('yearly.cta')} className='w-full mt-auto font-bold shadow-md' onClick={handleDevAlert} />
           </motion.div>
 
           {/* LIFETIME PLAN (Gold/Founder's Edition) */}
@@ -106,7 +109,7 @@ const Pricing = () => {
             <Button
               text={t('lifetime.cta')}
               className='w-full mt-auto bg-[#EAB308] hover:bg-[#CA8A04] text-black border-none font-bold shadow-md'
-              href='https://app.getspendly.net/signup?plan=lifetime'
+              onClick={handleDevAlert}
             />
           </motion.div>
         </motion.div>
