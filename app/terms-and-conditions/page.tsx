@@ -42,6 +42,8 @@ export default function TermsPage() {
 
           <div className='bg-card border border-border rounded-lg p-6'>
             <h2 className='text-[22px] font-semibold text-foreground'>{t('sections.payments.title')}</h2>
+            <h3 className='text-[18px] font-semibold text-foreground'>{t('sections.payments.orderProcess.title')}</h3>
+            <p className='text-[16px] text-foreground'>{t('sections.payments.orderProcess.body')}</p>
             <h3 className='text-[18px] font-semibold text-foreground'>{t('sections.payments.pricing.title')}</h3>
             <p className='text-[16px] text-foreground'>{t('sections.payments.pricing.body')}</p>
             <h3 className='text-[18px] font-semibold text-foreground'>{t('sections.payments.billing.title')}</h3>

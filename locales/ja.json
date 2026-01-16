@@ -20,6 +20,7 @@
   },
   "footer": {
     "privacy": "プライバシーポリシー",
+    "refund": "Refund Policy",
     "terms": "利用規約",
     "copyright": "著作権. 無断転載禁止",
     "linkedin": "LinkedIn",
@@ -263,7 +264,11 @@
       },
       "share": {
         "title": "情報を共有する場合",
-        "body": "ホスティング/分析/認証などのサービス提供者、AI 機能を要求した際の AI プロバイダー、法的要請がある当局に限り、データを共有します。広告目的で財務情報を共有することはありません。"
+        "body": "ホスティング/分析/認証などのサービス提供者、AI 機能を要求した際の AI プロバイダー、法的要請がある当局に限り、データを共有します。広告目的で財務情報を共有することはありません。",
+        "payments": {
+          "title": "Payments",
+          "body": "We use Paddle.com for payments and subscriptions. Paddle acts as the Merchant of Record. When you make a purchase, you agree to Paddle’s Terms and Privacy Policy. We do not store your full credit card information on our servers."
+        }
       },
       "retention": {
         "title": "データ保存期間",
@@ -316,6 +321,10 @@
       },
       "payments": {
         "title": "5. サブスクリプションと支払い",
+        "orderProcess": {
+          "title": "Order Process & Merchant of Record",
+          "body": "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns."
+        },
         "pricing": {
           "title": "5.1 料金",
           "body": "Spendly の Pro サブスクリプションは $7/月です。Pro には無制限の予算、高度な分析、AI インサイト、優先的な更新、追加のカスタマイズが含まれる場合があります。"
@@ -381,6 +390,29 @@
       "contact": {
         "title": "17. お問い合わせ",
         "body": "本規約に関するお問い合わせ: support@spendly.app"
+      }
+    }
+  },
+  "refundPolicy": {
+    "title": "返金ポリシー",
+    "lastUpdated": "最終更新: 2026年1月16日",
+    "sections": {
+      "digitalProducts": {
+        "title": "1. デジタル製品",
+        "body": "Spendly はデジタルサービス（ソフトウェアとしてのサービス）を提供します。デジタルコンテンツの性質上、サブスクリプション期間が開始されサービスにアクセスした後は、通常返金しません。"
+      },
+      "moneyBack": {
+        "title": "2. 14日間の返金保証",
+        "body": "Spendly Pro に満足できない場合は、初回購入後 14 日以内に返金を要求できます。注文番号を記載の上、hello@getspendly.net までお問い合わせください。",
+        "note": "注: 初回請求サイクルにのみ適用されます。"
+      },
+      "cancellations": {
+        "title": "3. 解約",
+        "body": "アカウント設定からいつでもサブスクリプションを解約できます。Pro 機能へのアクセスは現在の請求期間終了まで継続します。未使用期間の部分返金はありません。"
+      },
+      "merchantOfRecord": {
+        "title": "4. Merchant of Record",
+        "body": "すべての返金要求は、当社の Merchant of Record である Paddle.com によって処理されます。"
       }
     }
   },

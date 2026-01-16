@@ -52,6 +52,7 @@ const Footer = () => {
           <div className='flex items-center gap-6 order-1 md:order-none'>
             <Link href={`/${locale}/privacy-policy`} className='text-[14px] text-foreground transition-colors duration-200 hover:text-primary'>{t('privacy')}</Link>
             <Link href={`/${locale}/terms-and-conditions`} className='text-[14px] text-foreground transition-colors duration-200 hover:text-primary'>{t('terms')}</Link>
+            <Link href={`/${locale}/refund-policy`} className='text-[14px] text-foreground transition-colors duration-200 hover:text-primary'>{t('refund')}</Link>
           </div>
           <span className='text-[14px] text-muted-foreground order-2 md:order-none'>{t('copyright')}</span>
         </div>

@@ -20,6 +20,7 @@
   },
   "footer": {
     "privacy": "गोपनीयता नीति",
+    "refund": "Refund Policy",
     "terms": "नियम व शर्तें",
     "copyright": "कॉपीराइट. सर्वाधिकार सुरक्षित",
     "linkedin": "LinkedIn",
@@ -263,7 +264,11 @@
       },
       "share": {
         "title": "हम कब डेटा साझा करते हैं",
-        "body": "हम केवल सेवा प्रदाताओं (होस्टिंग, एनालिटिक्स, ऑथेंटिकेशन), AI प्रोसेसिंग प्रदाताओं (जब आप AI सुविधाएँ मांगते हैं) और आवश्यक होने पर कानूनी प्राधिकरणों के साथ डेटा साझा करते हैं। हम आपके वित्तीय डेटा को विज्ञापन के उद्देश्यों के लिए साझा नहीं करते।"
+        "body": "हम केवल सेवा प्रदाताओं (होस्टिंग, एनालिटिक्स, ऑथेंटिकेशन), AI प्रोसेसिंग प्रदाताओं (जब आप AI सुविधाएँ मांगते हैं) और आवश्यक होने पर कानूनी प्राधिकरणों के साथ डेटा साझा करते हैं। हम आपके वित्तीय डेटा को विज्ञापन के उद्देश्यों के लिए साझा नहीं करते।",
+        "payments": {
+          "title": "Payments",
+          "body": "We use Paddle.com for payments and subscriptions. Paddle acts as the Merchant of Record. When you make a purchase, you agree to Paddle’s Terms and Privacy Policy. We do not store your full credit card information on our servers."
+        }
       },
       "retention": {
         "title": "डेटा रिटेंशन",
@@ -316,6 +321,10 @@
       },
       "payments": {
         "title": "5. सब्सक्रिप्शन और भुगतान",
+        "orderProcess": {
+          "title": "Order Process & Merchant of Record",
+          "body": "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns."
+        },
         "pricing": {
           "title": "5.1 मूल्य",
           "body": "Spendly में Pro सब्सक्रिप्शन $7/माह है। Pro में अनलिमिटेड बजट, एडवांस्ड एनालिटिक्स, AI इनसाइट्स, प्रायोरिटी अपडेट और अतिरिक्त कस्टमाइज़ेशन शामिल हो सकते हैं।"
@@ -381,6 +390,29 @@
       "contact": {
         "title": "17. संपर्क करें",
         "body": "इन शर्तों से संबंधित प्रश्न: support@spendly.app"
+      }
+    }
+  },
+  "refundPolicy": {
+    "title": "रिफंड नीति",
+    "lastUpdated": "अंतिम अपडेट: 16 जनवरी, 2026",
+    "sections": {
+      "digitalProducts": {
+        "title": "1. डिजिटल उत्पाद",
+        "body": "Spendly डिजिटल सेवाएँ प्रदान करता है (सॉफ़्टवेयर के रूप में सेवा)। डिजिटल सामग्री की प्रकृति के कारण, हम आमतौर पर सदस्यता अवधि शुरू होने के बाद और सेवा तक पहुँच प्राप्त करने के बाद रिफंड नहीं देते हैं।"
+      },
+      "moneyBack": {
+        "title": "2. 14‑दिन की मनी बैक गारंटी",
+        "body": "यदि आप Spendly Pro से संतुष्ट नहीं हैं, तो आप अपनी प्रारंभिक खरीदारी के 14 दिनों के भीतर पूर्ण रिफंड का अनुरोध कर सकते हैं। कृपया अपने ऑर्डर नंबर के साथ hello@getspendly.net पर हमसे संपर्क करें।",
+        "note": "नोट: यह केवल पहले बिलिंग चक्र पर लागू होता है।"
+      },
+      "cancellations": {
+        "title": "3. रद्दीकरण",
+        "body": "आप अपने अकाउंट सेटिंग्स में कभी भी अपनी सदस्यता रद्द कर सकते हैं। आपको वर्तमान बिलिंग अवधि के अंत तक प्रो सुविधाओं तक पहुँच मिलती रहेगी। अप्रयुक्त समय के लिए आंशिक रिफंड नहीं दिया जाता है।"
+      },
+      "merchantOfRecord": {
+        "title": "4. मर्चेंट ऑफ रिकॉर्ड",
+        "body": "हमारे मर्चेंट ऑफ रिकॉर्ड, Paddle.com द्वारा सभी रिफंड अनुरोधों को संसाधित किया जाता है।"
       }
     }
   },

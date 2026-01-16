@@ -64,6 +64,10 @@ export default function PrivacyPolicyPage() {
             <p className='text-[16px] text-foreground'>
               {t('sections.share.body')}
             </p>
+            <h3 className='text-[18px] font-semibold text-foreground mt-4 mb-1'>{t('sections.share.payments.title')}</h3>
+            <p className='text-[16px] text-foreground'>
+              {t('sections.share.payments.body')}
+            </p>
           </div>
 
           <div className='bg-card border border-border rounded-lg p-6'>

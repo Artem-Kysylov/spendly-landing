@@ -20,6 +20,7 @@
   },
   "footer": {
     "privacy": "Политика конфиденциальности",
+    "refund": "Refund Policy",
     "terms": "Условия использования",
     "copyright": "Copyright. Все права защищены",
     "linkedin": "LinkedIn",
@@ -263,7 +264,11 @@
       },
       "share": {
         "title": "Передача данных",
-        "body": "Мы делимся данными только с сервис‑провайдерами (хостинг, аналитика, аутентификация), провайдерами ИИ при запросе функций ИИ и с госорганами при необходимости. Мы не передаём финансовые данные для рекламы."
+        "body": "Мы делимся данными только с сервис‑провайдерами (хостинг, аналитика, аутентификация), провайдерами ИИ при запросе функций ИИ и с госорганами при необходимости. Мы не передаём финансовые данные для рекламы.",
+        "payments": {
+          "title": "Payments",
+          "body": "We use Paddle.com for payments and subscriptions. Paddle acts as the Merchant of Record. When you make a purchase, you agree to Paddle’s Terms and Privacy Policy. We do not store your full credit card information on our servers."
+        }
       },
       "retention": {
         "title": "Срок хранения",
@@ -316,6 +321,10 @@
       },
       "payments": {
         "title": "5. Подписка и платежи",
+        "orderProcess": {
+          "title": "Order Process & Merchant of Record",
+          "body": "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns."
+        },
         "pricing": {
           "title": "5.1 Стоимость",
           "body": "Pro‑подписка — $7/мес. Pro включает безлимитные бюджеты, расширенную аналитику, ИИ‑инсайты, приоритетные обновления и расширенную настройку."
@@ -381,6 +390,29 @@
       "contact": {
         "title": "17. Контакты",
         "body": "Вопросы по Условиям: support@spendly.app"
+      }
+    }
+  },
+  "refundPolicy": {
+    "title": "Refund Policy",
+    "lastUpdated": "Last updated: January 16, 2026",
+    "sections": {
+      "digitalProducts": {
+        "title": "1. Digital Products",
+        "body": "Spendly provides digital services (software as a service). Due to the nature of digital content, we generally do not offer refunds once the subscription period has started and the service has been accessed."
+      },
+      "moneyBack": {
+        "title": "2. 14-Day Money-Back Guarantee",
+        "body": "If you are not satisfied with Spendly Pro, you may request a full refund within 14 days of your initial purchase. Please contact us at hello@getspendly.net with your order number.",
+        "note": "Note: This applies only to the first billing cycle."
+      },
+      "cancellations": {
+        "title": "3. Cancellations",
+        "body": "You can cancel your subscription at any time in your account settings. Your access to Pro features will continue until the end of the current billing period. No partial refunds are given for unused time."
+      },
+      "merchantOfRecord": {
+        "title": "4. Merchant of Record",
+        "body": "All refund requests are processed by our Merchant of Record, Paddle.com."
       }
     }
   },

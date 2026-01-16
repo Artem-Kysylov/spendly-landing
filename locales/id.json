@@ -20,6 +20,7 @@
   },
   "footer": {
     "privacy": "Kebijakan Privasi",
+    "refund": "Refund Policy",
     "terms": "Syarat & Ketentuan",
     "copyright": "Hak cipta. Semua hak dilindungi",
     "linkedin": "LinkedIn",
@@ -263,7 +264,11 @@
       },
       "share": {
         "title": "Kapan Kami Membagikan Informasi",
-        "body": "Kami hanya membagikan data dengan penyedia layanan (hosting, analitik, autentikasi), penyedia pemrosesan AI saat Anda meminta fitur AI, dan otoritas hukum bila diperlukan. Kami tidak membagikan informasi finansial Anda untuk tujuan iklan."
+        "body": "Kami hanya membagikan data dengan penyedia layanan (hosting, analitik, autentikasi), penyedia pemrosesan AI saat Anda meminta fitur AI, dan otoritas hukum bila diperlukan. Kami tidak membagikan informasi finansial Anda untuk tujuan iklan.",
+        "payments": {
+          "title": "Payments",
+          "body": "We use Paddle.com for payments and subscriptions. Paddle acts as the Merchant of Record. When you make a purchase, you agree to Paddle’s Terms and Privacy Policy. We do not store your full credit card information on our servers."
+        }
       },
       "retention": {
         "title": "Penyimpanan Data",
@@ -316,6 +321,10 @@
       },
       "payments": {
         "title": "5. Langganan & Pembayaran",
+        "orderProcess": {
+          "title": "Order Process & Merchant of Record",
+          "body": "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns."
+        },
         "pricing": {
           "title": "5.1 Harga",
           "body": "Spendly menawarkan langganan Pro seharga $7/bulan. Pro dapat mencakup anggaran tak terbatas, analitik lanjutan, wawasan AI, pembaruan prioritas, dan penyesuaian tambahan."
@@ -381,6 +390,29 @@
       "contact": {
         "title": "17. Hubungi Kami",
         "body": "Pertanyaan tentang Syarat: support@spendly.app"
+      }
+    }
+  },
+  "refundPolicy": {
+    "title": "Kebijakan Pengembalian Dana",
+    "lastUpdated": "Terakhir diperbarui: 16 Januari 2026",
+    "sections": {
+      "digitalProducts": {
+        "title": "1. Produk Digital",
+        "body": "Spendly menyediakan layanan digital (perangkat lunak sebagai layanan). Karena sifat konten digital, kami umumnya tidak menawarkan pengembalian dana setelah periode langganan dimulai dan layanan diakses."
+      },
+      "moneyBack": {
+        "title": "2. Jaminan Uang Kembali 14 Hari",
+        "body": "Jika Anda tidak puas dengan Spendly Pro, Anda dapat meminta pengembalian dana penuh dalam waktu 14 hari sejak pembelian awal. Silakan hubungi kami di hello@getspendly.net dengan nomor pesanan Anda.",
+        "note": "Catatan: Ini hanya berlaku untuk siklus penagihan pertama."
+      },
+      "cancellations": {
+        "title": "3. Pembatalan",
+        "body": "Anda dapat membatalkan langganan kapan saja di pengaturan akun. Akses Anda ke fitur Pro akan berlanjut hingga akhir periode penagihan saat ini. Tidak ada pengembalian sebagian untuk waktu yang tidak digunakan."
+      },
+      "merchantOfRecord": {
+        "title": "4. Merchant of Record",
+        "body": "Semua permintaan pengembalian dana diproses oleh Merchant of Record kami, Paddle.com."
       }
     }
   },
