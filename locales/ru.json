@@ -298,11 +298,11 @@
     "sections": {
       "acceptance": {
         "title": "1. Принятие условий",
-        "body": "Используя Spendly (Сервис), вы соглашаетесь с данными Условиями. Если вы не согласны, не используйте Сервис. Spendly управляется TabXport OÜ (или фактическим юрлицом, может обновляться)."
+        "body": "Используя Spendly (Сервис), вы соглашаетесь с данными Условиями. Если вы не согласны, не используйте Сервис. Spendly управляется Spendly."
       },
       "eligibility": {
         "title": "2. Допуск",
-        "body": "Использовать Spendly можно с 16 лет. Используя Сервис, вы подтверждаете соответствие этому требованию."
+        "body": "Вам должно быть не менее 16 лет, чтобы использовать Spendly. Используя Сервис, вы подтверждаете, что соответствуете этому требованию."
       },
       "description": {
         "title": "3. Описание сервиса",
@@ -403,8 +403,8 @@
       },
       "moneyBack": {
         "title": "2. 14-Day Money-Back Guarantee",
-        "body": "If you are not satisfied with Spendly Pro, you may request a full refund within 14 days of your initial purchase. Please contact us at hello@getspendly.net with your order number.",
-        "note": "Note: This applies only to the first billing cycle."
+        "body": "If you are not satisfied with Spendly Pro, you may request a no-questions-asked full refund within 14 days of your initial purchase (monthly $7, yearly $49, or lifetime $99). Please contact us at hello@getspendly.net with your order number.",
+        "note": "Note: This applies only to your first purchase."
       },
       "cancellations": {
         "title": "3. Cancellations",

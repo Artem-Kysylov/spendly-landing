@@ -23,7 +23,8 @@ Effective date: November 2025
 By accessing or using Spendly (“the Service”), you agree to be bound by these Terms & Conditions (“Terms”).
 If you do not agree, please do not use the Service.
 
-Spendly is operated by TabXport OÜ (or your actual company name, можно изменить позже).
+Spendly is operated by Spendly.
+
 
 ⸻
 

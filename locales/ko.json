@@ -298,11 +298,11 @@
     "sections": {
       "acceptance": {
         "title": "1. 약관 동의",
-        "body": "Spendly(서비스)를 이용함으로써 본 약관에 동의한 것으로 간주됩니다. 동의하지 않으면 서비스를 이용하지 마세요. Spendly는 TabXport OÜ(또는 실제 회사명, 변경 가능)가 운영합니다."
+        "body": "Spendly(서비스)를 이용함으로써 본 약관에 동의한 것으로 간주됩니다. 동의하지 않으면 서비스를 이용하지 마세요. Spendly는 Spendly가 운영합니다."
       },
       "eligibility": {
         "title": "2. 이용 자격",
-        "body": "Spendly 이용을 위해서는 최소 16세 이상이어야 합니다. 서비스 이용으로 해당 요건 충족을 확인합니다."
+        "body": "Spendly를 사용하려면 최소 16세 이상이어야 합니다. 서비스를 이용함으로써 이 요건을 충족함을 확인합니다."
       },
       "description": {
         "title": "3. 서비스 설명",
@@ -403,8 +403,8 @@
       },
       "moneyBack": {
         "title": "2. 14-Day Money-Back Guarantee",
-        "body": "If you are not satisfied with Spendly Pro, you may request a full refund within 14 days of your initial purchase. Please contact us at hello@getspendly.net with your order number.",
-        "note": "Note: This applies only to the first billing cycle."
+        "body": "If you are not satisfied with Spendly Pro, you may request a no-questions-asked full refund within 14 days of your initial purchase (monthly $7, yearly $49, or lifetime $99). Please contact us at hello@getspendly.net with your order number.",
+        "note": "Note: This applies only to your first purchase."
       },
       "cancellations": {
         "title": "3. Cancellations",

@@ -298,7 +298,7 @@
     "sections": {
       "acceptance": {
         "title": "1. Acceptance of Terms",
-        "body": "By accessing or using Spendly (the Service), you agree to these Terms. If you do not agree, do not use the Service. Spendly is operated by TabXport OÜ (or your actual company name, may be updated)."
+        "body": "By accessing or using Spendly (the Service), you agree to these Terms. If you do not agree, do not use the Service. Spendly is operated by Spendly."
       },
       "eligibility": {
         "title": "2. Eligibility",
@@ -403,8 +403,8 @@
       },
       "moneyBack": {
         "title": "2. 14-Day Money-Back Guarantee",
-        "body": "If you are not satisfied with Spendly Pro, you may request a full refund within 14 days of your initial purchase. Please contact us at hello@getspendly.net with your order number.",
-        "note": "Note: This applies only to the first billing cycle."
+        "body": "If you are not satisfied with Spendly Pro, you may request a no-questions-asked full refund within 14 days of your initial purchase (monthly $7, yearly $49, or lifetime $99). Please contact us at hello@getspendly.net with your order number.",
+        "note": "Note: This applies only to your first purchase."
       },
       "cancellations": {
         "title": "3. Cancellations",

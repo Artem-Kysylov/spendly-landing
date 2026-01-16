@@ -298,11 +298,11 @@
     "sections": {
       "acceptance": {
         "title": "1. Penerimaan Syarat",
-        "body": "Dengan mengakses atau menggunakan Spendly (Layanan), Anda menyetujui Syarat ini. Jika tidak setuju, jangan gunakan Layanan. Spendly dioperasikan oleh TabXport OÜ (atau nama perusahaan sebenarnya, dapat diperbarui)."
+        "body": "Dengan mengakses atau menggunakan Spendly (Layanan), Anda menyetujui Syarat ini. Jika tidak setuju, jangan gunakan Layanan. Spendly dioperasikan oleh Spendly."
       },
       "eligibility": {
         "title": "2. Kelayakan",
-        "body": "Anda harus berusia setidaknya 16 tahun untuk menggunakan Spendly. Dengan menggunakan Layanan, Anda mengonfirmasi memenuhi syarat ini."
+        "body": "Anda harus berusia setidaknya 16 tahun untuk menggunakan Spendly. Dengan menggunakan Layanan, Anda mengonfirmasi bahwa Anda memenuhi persyaratan ini."
       },
       "description": {
         "title": "3. Deskripsi Layanan",
@@ -403,8 +403,8 @@
       },
       "moneyBack": {
         "title": "2. Jaminan Uang Kembali 14 Hari",
-        "body": "Jika Anda tidak puas dengan Spendly Pro, Anda dapat meminta pengembalian dana penuh dalam waktu 14 hari sejak pembelian awal. Silakan hubungi kami di hello@getspendly.net dengan nomor pesanan Anda.",
-        "note": "Catatan: Ini hanya berlaku untuk siklus penagihan pertama."
+        "body": "Jika Anda tidak puas dengan Spendly Pro, Anda dapat meminta pengembalian dana penuh tanpa pertanyaan dalam 14 hari sejak pembelian awal (bulanan $7, tahunan $49, atau seumur hidup $99). Silakan hubungi kami di hello@getspendly.net dengan nomor pesanan Anda.",
+        "note": "Catatan: Ini hanya berlaku untuk pembelian pertama Anda."
       },
       "cancellations": {
         "title": "3. Pembatalan",

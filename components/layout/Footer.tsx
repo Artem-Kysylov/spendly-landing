@@ -42,7 +42,7 @@ const Footer = () => {
             <a href='https://www.linkedin.com/in/artem-k-3392b3366/' target='_blank' rel='noopener noreferrer' className='text-[16px] font-semibold text-primary transition-all duration-200 ease-in-out hover:opacity-50'>
               {t('linkedin')}
             </a>
-            <a href='https://x.com/tabXport' target='_blank' rel='noopener noreferrer' className='text-[16px] font-semibold text-primary transition-all duration-200 ease-in-out hover:opacity-50'>
+            <a href='https://x.com/' target='_blank' rel='noopener noreferrer' className='text-[16px] font-semibold text-primary transition-all duration-200 ease-in-out hover:opacity-50'>
               {t('x')}
             </a>
           </div>
