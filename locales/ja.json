@@ -168,7 +168,6 @@
       "period": "one-time",
       "features": [
         "Everything in Yearly",
-        "Early Adopter Badge",
         "Lifetime updates",
         "Founder's Edition",
         "Pay once, own forever"
@@ -418,8 +417,14 @@
     }
   },
   "cta": {
-    "title": "今日から、より賢くお金を管理しましょう。",
+    "title": "今日からもっとスマートにお金を管理しましょう。",
     "button": "無料で始める",
-    "subtitle": "ずっと無料 · 広告なし · AIによるインサイト"
+    "subtitle": "永続無料 · 広告なし · AI駆動のインサイト"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "ページが見つかりません",
+    "description": "お探しのページは存在しないか、移動されました。",
+    "button": "ホームページに戻る"
   }
 }

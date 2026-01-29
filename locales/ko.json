@@ -168,7 +168,6 @@
       "period": "one-time",
       "features": [
         "Everything in Yearly",
-        "Early Adopter Badge",
         "Lifetime updates",
         "Founder's Edition",
         "Pay once, own forever"
@@ -418,8 +417,14 @@
     }
   },
   "cta": {
-    "title": "오늘 바로 더 똑똑하게 돈을 관리하세요.",
-    "button": "무료로 시작",
-    "subtitle": "영원히 무료 · 광고 없음 · AI 인사이트"
+    "title": "오늘부터 더 스마트하게 돈을 관리하세요.",
+    "button": "무료로 시작하기",
+    "subtitle": "영원히 무료 · 광고 없음 · AI 기반 인사이트"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "페이지를 찾을 수 없습니다",
+    "description": "찾으시는 페이지가 존재하지 않거나 이동되었습니다.",
+    "button": "홈페이지로 돌아가기"
   }
 }

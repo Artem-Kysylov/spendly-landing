@@ -168,7 +168,6 @@
       "period": "one-time",
       "features": [
         "Everything in Yearly",
-        "Early Adopter Badge",
         "Lifetime updates",
         "Founder's Edition",
         "Pay once, own forever"
@@ -421,5 +420,11 @@
     "title": "Start managing your money smarter — today.",
     "button": "Get started for FREE",
     "subtitle": "Free forever · No ads · AI-powered insights"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "button": "Back to Home Page"
   }
 }

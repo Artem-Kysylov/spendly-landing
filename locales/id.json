@@ -418,8 +418,14 @@
     }
   },
   "cta": {
-    "title": "Mulai kelola uang Anda dengan lebih cerdas — hari ini.",
+    "title": "Mulai mengelola uang Anda dengan lebih cerdas — hari ini.",
     "button": "Mulai gratis",
-    "subtitle": "Gratis selamanya · Tanpa iklan · Wawasan berbasis AI"
+    "subtitle": "Gratis selamanya · Tanpa iklan · Wawasan bertenaga AI"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Halaman tidak ditemukan",
+    "description": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "button": "Kembali ke Beranda"
   }
 }

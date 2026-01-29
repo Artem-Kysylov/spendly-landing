@@ -31,7 +31,7 @@ export const handleAuthRedirect = () => {
   // For now, always redirect to signup since no auth system is in place
   // Later: if (!user) -> signup, else if (!isPro) -> paywall, else -> ai-assistant
   if (typeof window !== 'undefined') {
-    window.location.href = `/${locale}/auth/signup`
+    window.location.href = `https://app.getspendly.net/${locale}/auth/signup`
   }
 }
 
@@ -60,12 +60,12 @@ export const createAuthRedirect = (
     
     if (typeof window !== 'undefined') {
       if (type === 'login') {
-        window.location.href = `/${locale}/${loginPath}`
+        window.location.href = `https://app.getspendly.net/${locale}/${loginPath}`
       } else if (type === 'signup') {
-        window.location.href = `/${locale}/${signupPath}`
+        window.location.href = `https://app.getspendly.net/${locale}/${signupPath}`
       } else {
         // Default to signup for auth-flow until auth system is implemented
-        window.location.href = `/${locale}/${signupPath}`
+        window.location.href = `https://app.getspendly.net/${locale}/${signupPath}`
       }
     }
   }
@@ -75,6 +75,6 @@ export const createAuthRedirect = (
 export const handleLoginRedirect = () => {
   const locale = getCurrentLocale()
   if (typeof window !== 'undefined') {
-    window.location.href = `/${locale}/auth/login`
+    window.location.href = `https://app.getspendly.net/${locale}/auth/login`
   }
 }
