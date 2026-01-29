@@ -1,5 +1,6 @@
 'use client'
 import Button from "../ui-elements/Button"
+import { handleAuthRedirect, handleLoginRedirect } from '@/lib/auth-redirect'
 
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
@@ -8,9 +9,8 @@ import { fadeUp, fadeUpDelayed, fadeUpScale, containerStagger, viewportDefault }
 const Hero = () => {
   const t = useTranslations('hero')
 
-  const handleDevAlert = () => {
-    alert("The application is currently under development. Thank you for your understanding.")
-  }
+  const handleGetStarted = handleAuthRedirect
+  const handleLogin = handleLoginRedirect
 
   return (
     <section className='mt-[120px]'>
@@ -21,8 +21,8 @@ const Hero = () => {
           <motion.p className="font-medium text-foreground text-center" variants={fadeUp(0.05)}>{t('subtitle_line1')}
 {t('subtitle_line2')}</motion.p>
           <motion.div className='w-full flex flex-col sm:flex-row items-center justify-center gap-3' variants={fadeUpDelayed(0.1)}>
-            <Button text={t('cta_primary')} className='w-full sm:w-auto' onClick={handleDevAlert} />
-            <Button text={t('cta_secondary')} variant='outline' className='w-full sm:w-[203px]' onClick={handleDevAlert} />
+            <Button text={t('cta_primary')} className='w-full sm:w-auto' onClick={handleGetStarted} />
+            <Button text={t('cta_secondary')} variant='outline' className='w-full sm:w-[203px]' onClick={handleLogin} />
           </motion.div>
         </motion.div>
         <motion.div className='flex justify-center' initial='hidden' whileInView='visible' viewport={viewportDefault}>

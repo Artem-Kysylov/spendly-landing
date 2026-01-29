@@ -2,6 +2,7 @@
 import React from 'react'
 import { Check } from 'lucide-react'
 import Button from '@/components/ui-elements/Button'
+import { handleAuthRedirect } from '@/lib/auth-redirect'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { fadeUp, containerStagger, viewportDefault } from '@/components/utils/motion'
@@ -9,9 +10,7 @@ import { fadeUp, containerStagger, viewportDefault } from '@/components/utils/mo
 const Pricing = () => {
   const t = useTranslations('pricing')
 
-  const handleDevAlert = () => {
-    alert("The application is currently under development. Thank you for your understanding.")
-  }
+  const handleGetStarted = handleAuthRedirect
 
   return (
     <section className='mt-[120px]' id='pricing'>
@@ -37,7 +36,6 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('free.cta')} className='w-full mt-auto' variant='outline' onClick={handleDevAlert} />
           </motion.div>
 
           {/* MONTHLY PLAN */}
@@ -58,7 +56,6 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('monthly.cta')} className='w-full mt-auto' onClick={handleDevAlert} />
           </motion.div>
 
           {/* YEARLY PLAN (Best Value) */}
@@ -82,7 +79,6 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button text={t('yearly.cta')} className='w-full mt-auto font-bold shadow-md' onClick={handleDevAlert} />
           </motion.div>
 
           {/* LIFETIME PLAN (Gold/Founder's Edition) */}
@@ -106,12 +102,17 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button
-              text={t('lifetime.cta')}
-              className='w-full mt-auto bg-[#EAB308] hover:bg-[#CA8A04] text-black border-none font-bold shadow-md'
-              onClick={handleDevAlert}
-            />
           </motion.div>
+        </motion.div>
+        
+        {/* Central CTA Button */}
+        <motion.div className='flex justify-center mt-[40px]'
+          initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUp(0.4)}>
+          <Button
+            text={t('centralCta')}
+            className='px-8 py-4 text-lg font-semibold'
+            onClick={handleGetStarted}
+          />
         </motion.div>
       </div>
     </section>

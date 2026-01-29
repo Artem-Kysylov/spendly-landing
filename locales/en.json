@@ -119,6 +119,7 @@
   },
   "pricing": {
     "title": "Simple pricing. No surprises.",
+    "centralCta": "Get Started Now",
     "badges": {
       "recommended": "Best Value",
       "exclusive": "Founder's Edition"

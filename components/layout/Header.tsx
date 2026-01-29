@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react"
 import Button from '../ui-elements/Button'
 import ThemeSwitcher from '../ui-elements/ThemeSwitcher'
 import LanguageSwitcher from '../ui-elements/LanguageSwitcher'
+import { handleAuthRedirect } from '@/lib/auth-redirect'
 import { useTranslations } from 'next-intl'
 
 const Header = () => {
@@ -15,9 +16,7 @@ const Header = () => {
   const t = useTranslations('nav')
   
 
-  const handleDevAlert = () => {
-    alert("The application is currently under development. Thank you for your understanding.")
-  }
+  const handleGetStarted = handleAuthRedirect
 
 
 
@@ -119,7 +118,7 @@ const Header = () => {
               <Button 
                 text={t('cta')}
                 className="w-full"
-                onClick={handleDevAlert}
+                onClick={handleGetStarted}
               />       
             </div>
           </div>

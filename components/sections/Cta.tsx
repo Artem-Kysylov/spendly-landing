@@ -3,15 +3,14 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import Button from "../ui-elements/Button"
+import { handleAuthRedirect } from '@/lib/auth-redirect'
 import { motion } from 'framer-motion'
 import { fadeUp, fadeUpDelayed, viewportDefault, containerStagger } from '@/components/utils/motion'
 
 const Cta = () => {
   const t = useTranslations('cta')
   
-  const handleDevAlert = () => {
-    alert("The application is currently under development. Thank you for your understanding.")
-  }
+  const handleGetStarted = handleAuthRedirect
 
   return (
     <section className='mt-[120px] mb-[120px]' id='final-cta'>
@@ -23,7 +22,7 @@ const Cta = () => {
             <Button
               text={t('button')}
               className="w/[250px]"
-              onClick={handleDevAlert}
+              onClick={handleGetStarted}
             />
           </motion.div>
           <motion.span className='text-center block text-[14px] text-muted-foreground' variants={fadeUp(0.15)}>{t('subtitle')}</motion.span>
