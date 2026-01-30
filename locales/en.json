@@ -416,6 +416,10 @@
       }
     }
   },
+  "blog": {
+    "title": "Financial Insights",
+    "minRead": "min read"
+  },
   "cta": {
     "title": "Start managing your money smarter — today.",
     "button": "Get started for FREE",

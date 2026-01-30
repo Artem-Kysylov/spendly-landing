@@ -7,8 +7,17 @@ import Pricing from "@/components/sections/Pricing";
 import Features from "@/components/sections/Features";
 import WhyChooseSpendly from "@/components/sections/WhyChooseSpendly";
 import Roadmap from "@/components/sections/Roadmap";
+import BlogSection from "@/components/sections/BlogSection";
 
-export default function Home() {
+interface HomeProps {
+  params: Promise<{
+    locale: string;
+  }>;
+}
+
+export default async function Home({ params }: HomeProps) {
+  const { locale } = await params;
+  
   return (
     <div>
       <Hero />
@@ -18,8 +27,9 @@ export default function Home() {
       <WhyChooseSpendly />
       <Founder />
       <Roadmap />
-      <Cta />
+      <BlogSection locale={locale} />
       <Faq />
+      <Cta />
     </div>
   );
 }

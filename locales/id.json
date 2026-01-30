@@ -417,6 +417,10 @@
       }
     }
   },
+  "blog": {
+    "title": "Wawasan Keuangan",
+    "minRead": "menit baca"
+  },
   "cta": {
     "title": "Mulai mengelola uang Anda dengan lebih cerdas — hari ini.",
     "button": "Mulai gratis",
