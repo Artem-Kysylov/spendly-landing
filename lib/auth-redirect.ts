@@ -41,24 +41,18 @@ export const handleAuthRedirect = () => {
   }
 }
 
-// Pricing CTA redirect - should lead to paywall after auth
+// Pricing CTA redirect - always leads to paywall with locale awareness
 export const handlePricingRedirect = () => {
-  // TODO: Add Supabase auth check here when authentication is implemented
-  // const { data: { user } } = await supabase.auth.getUser()
-  // const isPro = await checkProStatus(user)
-  
   const locale = getCurrentLocale()
   
-  // For pricing CTA, we want users to go to paywall after auth
-  // Later implementation:
-  // if (!user) -> `${APP_BASE_URL}/${locale}` (will handle auth then redirect to paywall)
-  // else if (!isPro) -> `${APP_BASE_URL}/${locale}/paywall`
-  // else -> `${APP_BASE_URL}/${locale}/ai-assistant`
+  // Always redirect to paywall page with current locale
+  // The app will handle authentication flow and redirect back to paywall:
+  // - If user not registered -> registration -> paywall
+  // - If user registered but not logged in -> login -> paywall  
+  // - If user already logged in -> directly to paywall
   
   if (typeof window !== 'undefined') {
-    // For now, redirect to base URL which will handle auth flow
-    // The app should redirect to paywall after successful auth
-    window.location.href = `${APP_BASE_URL}/${locale}`
+    window.location.href = `${APP_BASE_URL}/${locale}/paywall`
   }
 }
 
