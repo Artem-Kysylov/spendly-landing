@@ -52,7 +52,9 @@ export const handlePricingRedirect = () => {
   // - If user already logged in -> directly to paywall
   
   if (typeof window !== 'undefined') {
-    window.location.href = `${APP_BASE_URL}/${locale}/paywall`
+    const redirectTo = `/${locale}/paywall`
+    const params = new URLSearchParams({ tab: 'signin', redirectTo })
+    window.location.href = `${APP_BASE_URL}/${locale}?${params.toString()}`
   }
 }
 
