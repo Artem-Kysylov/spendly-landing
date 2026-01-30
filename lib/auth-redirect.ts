@@ -1,12 +1,14 @@
 'use client'
 
-import { useLocale } from 'next-intl'
-
 /**
- * Authentication-based redirect logic for CTA buttons
- * - If user is NOT logged in → Redirect to /{locale}/auth/signup
- * - If user is logged in → Redirect to /{locale}/paywall (or /{locale}/ai-assistant if PRO)
+ * Cross-subdomain authentication redirect logic for CTA buttons
+ * - If user is NOT authenticated → Redirect to https://app.getspendly.net/${locale}
+ * - If user IS authenticated but NOT Pro → Redirect to https://app.getspendly.net/${locale}/paywall
+ * - If user IS Pro → Redirect to https://app.getspendly.net/${locale}/ai-assistant
  */
+
+// App base URL configuration
+const APP_BASE_URL = 'https://app.getspendly.net'
 
 // Get the current locale from the URL path
 const getCurrentLocale = (): string => {
@@ -20,7 +22,7 @@ const getCurrentLocale = (): string => {
   return validLocales.includes(locale) ? locale : 'en'
 }
 
-// Main auth redirect with locale awareness
+// Main auth redirect with cross-subdomain strategy
 export const handleAuthRedirect = () => {
   // TODO: Add Supabase auth check here when authentication is implemented
   // const { data: { user } } = await supabase.auth.getUser()
@@ -28,53 +30,43 @@ export const handleAuthRedirect = () => {
   
   const locale = getCurrentLocale()
   
-  // For now, always redirect to signup since no auth system is in place
-  // Later: if (!user) -> signup, else if (!isPro) -> paywall, else -> ai-assistant
+  // For now, always redirect to app base URL since no auth system is in place
+  // Later implementation:
+  // if (!user) -> `${APP_BASE_URL}/${locale}`
+  // else if (!isPro) -> `${APP_BASE_URL}/${locale}/paywall`
+  // else -> `${APP_BASE_URL}/${locale}/ai-assistant`
+  
   if (typeof window !== 'undefined') {
-    window.location.href = `https://app.getspendly.net/${locale}/auth/signup`
+    window.location.href = `${APP_BASE_URL}/${locale}`
   }
 }
 
-// Create custom auth redirect with specific paths
-export const createAuthRedirect = (
-  signupPath: string = 'auth/signup', 
-  loginPath: string = 'auth/login',
-  paywallPath: string = 'paywall',
-  dashboardPath: string = 'ai-assistant'
-) => {
-  return (type: 'signup' | 'login' | 'auth-flow' = 'auth-flow') => {
-    const locale = getCurrentLocale()
-    
-    // TODO: Add Supabase auth check here for auth-flow type
-    // if (type === 'auth-flow') {
-    //   const { data: { user } } = await supabase.auth.getUser()
-    //   const isPro = await checkProStatus(user)
-    //   if (!user) {
-    //     window.location.href = `/${locale}/${signupPath}`
-    //   } else if (!isPro) {
-    //     window.location.href = `/${locale}/${paywallPath}`
-    //   } else {
-    //     window.location.href = `/${locale}/${dashboardPath}`
-    //   }
-    // } else
-    
-    if (typeof window !== 'undefined') {
-      if (type === 'login') {
-        window.location.href = `https://app.getspendly.net/${locale}/${loginPath}`
-      } else if (type === 'signup') {
-        window.location.href = `https://app.getspendly.net/${locale}/${signupPath}`
-      } else {
-        // Default to signup for auth-flow until auth system is implemented
-        window.location.href = `https://app.getspendly.net/${locale}/${signupPath}`
-      }
-    }
-  }
-}
-
-// Specific handlers for different button types
+// Login redirect handler (points to app base URL)
 export const handleLoginRedirect = () => {
   const locale = getCurrentLocale()
   if (typeof window !== 'undefined') {
-    window.location.href = `https://app.getspendly.net/${locale}/auth/login`
+    window.location.href = `${APP_BASE_URL}/${locale}`
+  }
+}
+
+// Create custom auth redirect for future use
+export const createAuthRedirect = (
+  baseUrl: string = APP_BASE_URL,
+  paywallPath: string = 'paywall',
+  dashboardPath: string = 'ai-assistant'
+) => {
+  return (type: 'base' | 'paywall' | 'dashboard' = 'base') => {
+    const locale = getCurrentLocale()
+    
+    if (typeof window !== 'undefined') {
+      if (type === 'paywall') {
+        window.location.href = `${baseUrl}/${locale}/${paywallPath}`
+      } else if (type === 'dashboard') {
+        window.location.href = `${baseUrl}/${locale}/${dashboardPath}`
+      } else {
+        // Default to base app URL
+        window.location.href = `${baseUrl}/${locale}`
+      }
+    }
   }
 }
