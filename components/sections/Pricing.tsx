@@ -2,7 +2,7 @@
 import React from 'react'
 import { Check } from 'lucide-react'
 import Button from '@/components/ui-elements/Button'
-import { handleAuthRedirect } from '@/lib/auth-redirect'
+import { handlePricingRedirect } from '@/lib/auth-redirect'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { fadeUp, containerStagger, viewportDefault } from '@/components/utils/motion'
@@ -10,7 +10,7 @@ import { fadeUp, containerStagger, viewportDefault } from '@/components/utils/mo
 const Pricing = () => {
   const t = useTranslations('pricing')
 
-  const handleGetStarted = handleAuthRedirect
+  const handleGetStarted = handlePricingRedirect
 
   return (
     <section className='mt-[120px]' id='pricing'>
@@ -95,7 +95,7 @@ const Pricing = () => {
             </div>
 
             <ul className='space-y-3 mb-6 flex-1'>
-              {['0', '1', '2', '3', '4'].map((i) => (
+              {['0', '1', '2', '3'].map((i) => (
                 <li key={i} className='flex items-start gap-2 text-sm dark:text-foreground/90 text-amber-950 font-medium'>
                   <Check className='size-4 dark:text-[#EAB308] text-[#B45309] mt-0.5 shrink-0' />
                   <span className='break-words'>{t(`lifetime.features.${i}`)}</span>
