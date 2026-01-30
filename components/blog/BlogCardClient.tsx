@@ -26,7 +26,7 @@ export default function BlogCardClient({ post, locale }: BlogCardClientProps) {
     <motion.div variants={fadeUp(0)}>
       <Link 
         href={`/${locale}/blog/${post.slug}`}
-        className="group block bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg dark:hover:bg-card/80 transition-all duration-300 hover:-translate-y-1"
+        className="group block bg-card border border-border rounded-2xl overflow-hidden dark:hover:bg-card/80 transition-all duration-300 hover:-translate-y-1"
       >
         {/* Cover Image */}
         <div className="relative aspect-video overflow-hidden rounded-t-2xl">
