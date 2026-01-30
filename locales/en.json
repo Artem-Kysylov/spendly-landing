@@ -15,6 +15,7 @@
     "howItWorks": "How it works",
     "pricing": "Pricing",
     "why": "Why choose us",
+    "blog": "Financial Insights",
     "faq": "FAQ",
     "cta": "Get started for FREE"
   },
@@ -419,6 +420,15 @@
   "blog": {
     "title": "Financial Insights",
     "minRead": "min read"
+  },
+  "blogPost": {
+    "onThisPage": "On this page",
+    "home": "Home",
+    "blog": "Blog",
+    "shareArticle": "Share this article",
+    "share": "Share",
+    "copyLink": "Copy Link",
+    "copied": "Copied!"
   },
   "cta": {
     "title": "Start managing your money smarter — today.",

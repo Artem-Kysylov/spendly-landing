@@ -28,6 +28,7 @@ const Footer = () => {
                 <li><a href="#how-it-works" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{nav('howItWorks')}</a></li>
                 <li><a href="#pricing" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{nav('pricing')}</a></li>
                 <li><a href="#why-choose-us" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{nav('why')}</a></li>
+                <li><a href="#blog" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{nav('blog')}</a></li>
                 <li><a href="#faq" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{nav('faq')}</a></li>
               </ul>
             </nav>

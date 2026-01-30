@@ -15,6 +15,7 @@
     "howItWorks": "사용 방법",
     "pricing": "가격",
     "why": "왜 우리인가",
+    "blog": "재무 인사이트",
     "faq": "FAQ",
     "cta": "무료로 시작"
   },
@@ -419,6 +420,15 @@
   "blog": {
     "title": "재무 인사이트",
     "minRead": "분 읽기"
+  },
+  "blogPost": {
+    "onThisPage": "이 페이지에서",
+    "home": "홈",
+    "blog": "블로그",
+    "shareArticle": "이 글 공유하기",
+    "share": "공유",
+    "copyLink": "링크 복사",
+    "copied": "복사됨!"
   },
   "cta": {
     "title": "오늘부터 더 스마트하게 돈을 관리하세요.",

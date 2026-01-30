@@ -15,6 +15,34 @@ export interface Post {
   content: string;
 }
 
+export interface Heading {
+  id: string;
+  text: string;
+  level: number;
+}
+
+// Extract headings from MDX content for Table of Contents
+export function extractHeadings(content: string): Heading[] {
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  const headings: Heading[] = [];
+  let match;
+
+  while ((match = headingRegex.exec(content)) !== null) {
+    const level = match[1].length; // ## = 2, ### = 3
+    const text = match[2].trim();
+    const id = text
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-') // Replace multiple hyphens with single
+      .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+
+    headings.push({ id, text, level });
+  }
+
+  return headings;
+}
+
 const contentDirectory = path.join(process.cwd(), "content");
 
 export function getPostBySlug(slug: string, lang: string): Post {
