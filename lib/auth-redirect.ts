@@ -37,7 +37,7 @@ export const handleAuthRedirect = () => {
   // else -> `${APP_BASE_URL}/${locale}/ai-assistant`
   
   if (typeof window !== 'undefined') {
-    window.location.href = `${APP_BASE_URL}/${locale}`
+    window.open(`${APP_BASE_URL}/${locale}`, '_blank')
   }
 }
 
@@ -54,7 +54,7 @@ export const handlePricingRedirect = () => {
   if (typeof window !== 'undefined') {
     const redirectTo = `/${locale}/paywall`
     const params = new URLSearchParams({ tab: 'signin', redirectTo })
-    window.location.href = `${APP_BASE_URL}/${locale}?${params.toString()}`
+    window.open(`${APP_BASE_URL}/${locale}?${params.toString()}`, '_blank')
   }
 }
 
@@ -62,7 +62,7 @@ export const handlePricingRedirect = () => {
 export const handleLoginRedirect = () => {
   const locale = getCurrentLocale()
   if (typeof window !== 'undefined') {
-    window.location.href = `${APP_BASE_URL}/${locale}`
+    window.open(`${APP_BASE_URL}/${locale}`, '_blank')
   }
 }
 
@@ -77,12 +77,12 @@ export const createAuthRedirect = (
     
     if (typeof window !== 'undefined') {
       if (type === 'paywall') {
-        window.location.href = `${baseUrl}/${locale}/${paywallPath}`
+        window.open(`${baseUrl}/${locale}/${paywallPath}`, '_blank')
       } else if (type === 'dashboard') {
-        window.location.href = `${baseUrl}/${locale}/${dashboardPath}`
+        window.open(`${baseUrl}/${locale}/${dashboardPath}`, '_blank')
       } else {
         // Default to base app URL
-        window.location.href = `${baseUrl}/${locale}`
+        window.open(`${baseUrl}/${locale}`, '_blank')
       }
     }
   }
