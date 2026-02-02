@@ -1,5 +1,5 @@
 'use client'
-import { Heading } from '@/lib/mdx'
+import { Heading } from '@/lib/types'
 import { useTranslations } from 'next-intl'
 
 interface TableOfContentsProps {

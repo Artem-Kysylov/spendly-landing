@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { calculateReadingTime } from "./utils-reading-time";
+import { Heading } from "./types";
 
 export interface PostFrontmatter {
   title: string;
@@ -16,11 +17,8 @@ export interface Post {
   content: string;
 }
 
-export interface Heading {
-  id: string;
-  text: string;
-  level: number;
-}
+// Re-export Heading type for convenience
+export type { Heading } from "./types";
 
 // Extract headings from MDX content for Table of Contents
 export function extractHeadings(content: string): Heading[] {
