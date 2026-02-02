@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { calculateReadingTime } from "./utils-reading-time";
 
 export interface PostFrontmatter {
   title: string;
@@ -42,6 +43,9 @@ export function extractHeadings(content: string): Heading[] {
 
   return headings;
 }
+
+// Calculate estimated reading time in minutes
+export { calculateReadingTime } from "./utils-reading-time";
 
 const contentDirectory = path.join(process.cwd(), "content");
 

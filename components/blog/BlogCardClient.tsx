@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Post } from '@/lib/mdx'
+import { calculateReadingTime } from '@/lib/utils-reading-time'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/components/utils/motion'
@@ -9,13 +10,6 @@ import { fadeUp } from '@/components/utils/motion'
 interface BlogCardClientProps {
   post: Post
   locale: string
-}
-
-// Simple function to estimate reading time
-function calculateReadingTime(content: string): number {
-  const wordsPerMinute = 200
-  const words = content.trim().split(/\s+/).length
-  return Math.ceil(words / wordsPerMinute)
 }
 
 export default function BlogCardClient({ post, locale }: BlogCardClientProps) {

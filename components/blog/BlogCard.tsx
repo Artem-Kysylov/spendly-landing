@@ -2,18 +2,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Post } from '@/lib/mdx'
+import { calculateReadingTime } from '@/lib/utils-reading-time'
 import { useTranslations } from 'next-intl'
 
 interface BlogCardProps {
   post: Post
   locale: string
-}
-
-// Simple function to estimate reading time
-function calculateReadingTime(content: string): number {
-  const wordsPerMinute = 200
-  const words = content.trim().split(/\s+/).length
-  return Math.ceil(words / wordsPerMinute)
 }
 
 export default function BlogCard({ post, locale }: BlogCardProps) {

@@ -1,8 +1,10 @@
 import { getPostBySlug, getAllPosts, extractHeadings } from "@/lib/mdx";
+import { calculateReadingTime } from "@/lib/utils-reading-time";
 import MDXContent from "@/components/blog/MDXContent";
 import TableOfContents from "@/components/blog/TableOfContents";
 import Breadcrumbs from "@/components/blog/Breadcrumbs";
 import ShareButtons from "@/components/blog/ShareButtons";
+import BlogImage from "@/components/blog/BlogImage";
 import { Metadata } from "next";
 
 interface BlogPostPageProps {
@@ -68,6 +70,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { locale, slug } = await params;
   const post = getPostBySlug(slug, locale);
   const headings = extractHeadings(post.content);
+  const readingTime = calculateReadingTime(post.content);
   const url = `https://getspendly.net/${locale}/blog/${slug}`;
   
   const jsonLd = {
@@ -122,19 +125,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <h1 className="text-4xl font-bold mb-4 text-foreground">
                   {post.frontmatter.title}
                 </h1>
-                <time 
-                  className="text-muted-foreground" 
-                  dateTime={post.frontmatter.date}
-                >
-                  {new Date(post.frontmatter.date).toLocaleDateString(locale, {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
+                <div className="flex items-center gap-4 text-muted-foreground">
+                  <time 
+                    dateTime={post.frontmatter.date}
+                  >
+                    {new Date(post.frontmatter.date).toLocaleDateString(locale, {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <span>•</span>
+                  <span>
+                    {readingTime} min read
+                  </span>
+                </div>
               </header>
 
-              <MDXContent source={post.content} />
+              <MDXContent source={post.content} components={{ BlogImage }} />
               
               <ShareButtons 
                 title={post.frontmatter.title} 

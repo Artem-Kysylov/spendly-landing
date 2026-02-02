@@ -5,11 +5,13 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 type PhoneMockupProps = {
-  videoSrc: string
+  videoSrc?: string
+  imageSrc?: string
+  imageAlt?: string
   className?: string
 }
 
-const PhoneMockup: React.FC<PhoneMockupProps> = ({ videoSrc, className }) => {
+const PhoneMockup: React.FC<PhoneMockupProps> = ({ videoSrc, imageSrc, imageAlt, className }) => {
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
@@ -45,14 +47,23 @@ const PhoneMockup: React.FC<PhoneMockupProps> = ({ videoSrc, className }) => {
             className='pointer-events-none z-10 select-none object-contain'
           />
           <div className='absolute left-[11%] right-[11%] top-[7.5%] bottom-[9.5%] rounded-[32px] overflow-hidden z-0 bg-black'>
-            <video
-              src={videoSrc}
-              className='h-full w-full object-cover'
-              muted
-              autoPlay
-              loop
-              playsInline
-            />
+            {videoSrc ? (
+              <video
+                src={videoSrc}
+                className='h-full w-full object-cover'
+                muted
+                autoPlay
+                loop
+                playsInline
+              />
+            ) : imageSrc ? (
+              <Image
+                src={imageSrc}
+                alt={imageAlt ?? ''}
+                fill
+                className='h-full w-full object-cover'
+              />
+            ) : null}
           </div>
         </div>
       </div>
