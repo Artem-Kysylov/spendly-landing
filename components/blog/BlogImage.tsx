@@ -1,55 +1,57 @@
 'use client'
 
 import Image from 'next/image'
-import PhoneMockup from '@/components/ui-elements/PhoneMockup'
 import { cn } from '@/lib/utils'
 
-type AspectRatio = 'video' | 'square'
+type AspectRatio = 'video' | 'square' | 'portrait'
+type Fit = 'cover' | 'contain'
 
 interface BlogImageProps {
   src: string
   alt: string
   caption?: string
-  withMockup?: boolean
   aspectRatio?: AspectRatio
+  fit?: Fit
 }
 
-const aspectRatioClass: Record<AspectRatio, string> = {
-  video: 'aspect-video',
-  square: 'aspect-square',
+const aspectRatioStyle: Record<AspectRatio, string> = {
+  video: '16 / 9',
+  square: '1 / 1',
+  portrait: '9 / 16',
 }
 
 export default function BlogImage({
   src,
   alt,
   caption,
-  withMockup = false,
+  fit = 'cover',
   aspectRatio = 'video',
 }: BlogImageProps) {
-  const ratioClass = aspectRatioClass[aspectRatio] ?? aspectRatioClass.video
-
-  const image = (
-    <div
-      className={cn(
-        'relative w-full overflow-hidden rounded-2xl border border-border bg-card shadow-sm',
-        ratioClass
-      )}
-    >
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        sizes="(max-width: 768px) 100vw, 768px"
-        className="object-cover"
-      />
-    </div>
-  )
+  const ratio = aspectRatioStyle[aspectRatio] ?? aspectRatioStyle.video
+  const isPortrait = aspectRatio === 'portrait'
 
   return (
-    <figure className="my-8">
-      {withMockup ? <PhoneMockup imageSrc={src} imageAlt={alt} /> : image}
+    <figure className="mb-8">
+      <div
+        className={cn(
+          'relative w-full overflow-hidden rounded-2xl border border-border bg-card shadow-sm'
+        )}
+        style={{
+          aspectRatio: ratio,
+          ...(isPortrait ? { maxWidth: 'min(100%, 360px)' } : null),
+        }}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 768px"
+          className={cn('!mt-0')}
+          style={{ objectFit: fit }}
+        />
+      </div>
       {caption ? (
-        <figcaption className="mt-3 text-center text-sm text-muted-foreground">
+        <figcaption className="mt-3 text-left text-sm text-muted-foreground">
           {caption}
         </figcaption>
       ) : null}

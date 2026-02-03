@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Share2, Copy, Check } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -11,6 +11,11 @@ interface ShareButtonsProps {
 export default function ShareButtons({ title, url }: ShareButtonsProps) {
   const t = useTranslations('blogPost')
   const [copied, setCopied] = useState(false)
+  const [hasNativeShare, setHasNativeShare] = useState(false)
+
+  useEffect(() => {
+    setHasNativeShare(typeof navigator !== 'undefined' && 'share' in navigator)
+  }, [])
 
   const handleNativeShare = async () => {
     if (navigator.share) {
@@ -61,7 +66,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
 
       {/* Mobile: Native Share Button */}
       <div className="block md:hidden">
-        {typeof navigator !== 'undefined' && 'share' in navigator ? (
+        {hasNativeShare ? (
           <button
             onClick={handleNativeShare}
             className="w-full px-6 py-3 bg-transparent text-primary border border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-center font-medium"

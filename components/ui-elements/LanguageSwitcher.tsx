@@ -1,6 +1,7 @@
 // /Users/macbookair/Documents/projects/spendly-landing/components/ui-elements/LanguageSwitcher.tsx
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
@@ -26,6 +27,11 @@ export default function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const onChange = (nextLocale: string) => {
     const codes = LANGS.map(l => l.code);
@@ -41,6 +47,14 @@ export default function LanguageSwitcher() {
   };
 
   const current = LANGS.find(l => l.code === locale)?.label || locale;
+
+  if (!mounted) {
+    return (
+      <Button variant="outline" className="h-10 px-3">
+        {current}
+      </Button>
+    );
+  }
 
   return (
     <DropdownMenu>

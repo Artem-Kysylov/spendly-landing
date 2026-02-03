@@ -24,17 +24,26 @@ export type { Heading } from "./types";
 export function extractHeadings(content: string): Heading[] {
   const headingRegex = /^(#{2,3})\s+(.+)$/gm;
   const headings: Heading[] = [];
+  const idCounts = new Map<string, number>();
   let match;
 
   while ((match = headingRegex.exec(content)) !== null) {
     const level = match[1].length; // ## = 2, ### = 3
     const text = match[2].trim();
-    const id = text
+    const baseId = text
       .toLowerCase()
       .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
       .replace(/\s+/g, '-') // Replace spaces with hyphens
       .replace(/-+/g, '-') // Replace multiple hyphens with single
       .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+
+    // Add index if ID already exists
+    let id = baseId;
+    const count = idCounts.get(baseId) || 0;
+    if (count > 0) {
+      id = `${baseId}-${count}`;
+    }
+    idCounts.set(baseId, count + 1);
 
     headings.push({ id, text, level });
   }
