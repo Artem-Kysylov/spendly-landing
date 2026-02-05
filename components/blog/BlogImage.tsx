@@ -28,7 +28,7 @@ export default function BlogImage({
   aspectRatio = 'video',
 }: BlogImageProps) {
   const ratio = aspectRatioStyle[aspectRatio] ?? aspectRatioStyle.video
-  const isPortrait = aspectRatio === 'portrait'
+  const isPortraitOrSquare = aspectRatio === 'portrait' || aspectRatio === 'square'
 
   return (
     <figure className="mb-8">
@@ -38,7 +38,7 @@ export default function BlogImage({
         )}
         style={{
           aspectRatio: ratio,
-          ...(isPortrait ? { maxWidth: 'min(100%, 360px)' } : null),
+          ...(isPortraitOrSquare ? { maxWidth: 'min(100%, 360px)' } : null),
         }}
       >
         <Image
