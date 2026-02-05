@@ -61,10 +61,12 @@ export function getPostBySlug(slug: string, lang: string): Post {
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
 
+  const normalizedContent = content.replace(/^\s*#\s+.*\n+/, "");
+
   return {
     slug,
     frontmatter: data as PostFrontmatter,
-    content,
+    content: normalizedContent,
   };
 }
 
