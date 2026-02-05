@@ -39,7 +39,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { locale, slug } = await params;
   const post = getPostBySlug(slug, locale);
   
-  const url = `https://getspendly.net/${locale}/blog/${slug}`;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+    'https://getspendly.net';
+  const url = `${baseUrl}/${locale}/blog/${slug}`;
   
   return {
     title: post.frontmatter.title,
@@ -71,7 +75,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getPostBySlug(slug, locale);
   const headings = extractHeadings(post.content);
   const readingTime = calculateReadingTime(post.content);
-  const url = `https://getspendly.net/${locale}/blog/${slug}`;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+    'https://getspendly.net';
+  const url = `${baseUrl}/${locale}/blog/${slug}`;
   
   const jsonLd = {
     '@context': 'https://schema.org',
