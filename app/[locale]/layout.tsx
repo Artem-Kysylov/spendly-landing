@@ -22,8 +22,14 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const messages = MESSAGES[locale] ?? en;
+  const baseUrl =
+    process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_SITE_URL ||
+        (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+        (process.env.VERCEL ? 'https://getspendly.net' : 'http://localhost:3000');
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL ? "https://getspendly.net" : "http://localhost:3000")),
+    metadataBase: new URL(baseUrl),
     title: {
       default: messages.metadata.title.default,
       template: messages.metadata.title.template

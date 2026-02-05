@@ -40,10 +40,15 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = getPostBySlug(slug, locale);
   
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
-    'https://getspendly.net';
+    process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_SITE_URL ||
+        (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+        'https://getspendly.net';
   const url = `${baseUrl}/${locale}/blog/${slug}`;
+  const coverImageUrl = post.frontmatter.coverImage
+    ? new URL(post.frontmatter.coverImage, baseUrl).toString()
+    : null;
   
   return {
     title: post.frontmatter.title,
@@ -54,8 +59,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       url,
       type: 'article',
       publishedTime: post.frontmatter.date,
-      images: post.frontmatter.coverImage ? [{
-        url: post.frontmatter.coverImage,
+      images: coverImageUrl ? [{
+        url: coverImageUrl,
         width: 1200,
         height: 630,
         alt: post.frontmatter.title,
@@ -65,7 +70,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       card: 'summary_large_image',
       title: post.frontmatter.title,
       description: post.frontmatter.description,
-      images: post.frontmatter.coverImage ? [post.frontmatter.coverImage] : [],
+      images: coverImageUrl ? [coverImageUrl] : [],
     },
   };
 }
@@ -76,17 +81,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const headings = extractHeadings(post.content);
   const readingTime = calculateReadingTime(post.content);
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
-    'https://getspendly.net';
+    process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_SITE_URL ||
+        (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+        'https://getspendly.net';
   const url = `${baseUrl}/${locale}/blog/${slug}`;
+  const coverImageUrl = post.frontmatter.coverImage
+    ? new URL(post.frontmatter.coverImage, baseUrl).toString()
+    : null;
   
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.frontmatter.title,
     description: post.frontmatter.description,
-    image: post.frontmatter.coverImage,
+    image: coverImageUrl,
     datePublished: post.frontmatter.date,
     dateModified: post.frontmatter.date,
     author: {
