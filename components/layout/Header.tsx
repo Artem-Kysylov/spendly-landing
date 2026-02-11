@@ -76,7 +76,7 @@ const Header = () => {
 
           {/* Mobile Menu */}
           <div 
-            className={`fixed left-0 w-full h-screen bg-background z-50 flex flex-col transition-all duration-300 ${
+            className={`fixed left-0 w-full min-h-[100dvh] bg-background z-50 flex flex-col transition-all duration-300 ${
               showMenu ? 'top-0' : 'top-[-100%]'
             }`}
           >
@@ -114,7 +114,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Button */}
-            <div className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[90%]">
+            <div className="hidden md:block absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[90%]">
               <Button 
                 text={t('cta')}
                 className="w-full"
