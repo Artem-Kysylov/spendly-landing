@@ -25,7 +25,7 @@ const HowItWorks = () => {
             <h4 className='text-[20px] font-semibold text-foreground mb-2'>{t('step2_title')}</h4>
             <p>{t('step2_desc')}</p>
           </motion.div>
-
+          
           <motion.div className='bg-card text-center p-[30px] border border-border rounded-lg w-full h-[260px] flex flex-col items-center' variants={fadeUpSlow(0.1)}>
             <h3 className='text-[30px] mb-4'>📂</h3>
             <h4 className='text-[20px] font-semibold text-foreground mb-2'>{t('step3_title')}</h4>
