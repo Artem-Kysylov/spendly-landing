@@ -383,6 +383,8 @@ body,
 html {
     height: 100%;
     scroll-behavior: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 html.lenis {
@@ -395,7 +397,7 @@ html.lenis {
     overscroll-behavior: contain;
 }
 .lenis [data-lenis-prevent] {
-    touch-action: none;
+    touch-action: pan-y;
 }
 
 input:focus,

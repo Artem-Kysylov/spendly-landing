@@ -15,8 +15,8 @@ const Founder = () => {
             <h2 className='text-[40px] font-semibold text-foreground mb-[20px]'>{t('title')}</h2>
             <p className='text-[16px] text-foreground mb-4'>{t('text')}</p>
           </motion.div>
-          <motion.div className='md:w-1/2 flex justify-center' variants={fadeUpScale(0.15)}>
-            <div className='relative w-full max-w-[400px] aspect-square'>
+          <motion.div className='w-full md:w-1/2 flex justify-center' variants={fadeUpScale(0.15)}>
+            <div className='relative w-full max-w-[400px] h-[320px] sm:h-[400px]'>
               <Image
                 src='/about.png'
                 alt={t('image_alt')}
