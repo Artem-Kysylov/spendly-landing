@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from "lucide-react"
@@ -17,6 +17,25 @@ const Header = () => {
   
 
   const handleGetStarted = handleAuthRedirect
+
+  useEffect(() => {
+    if (!showMenu) return
+
+    const scrollY = window.scrollY
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.width = '100%'
+
+    return () => {
+      const top = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+
+      const restoredScrollY = top ? Math.abs(parseInt(top, 10)) : scrollY
+      window.scrollTo(0, restoredScrollY)
+    }
+  }, [showMenu])
 
 
 
@@ -68,7 +87,6 @@ const Header = () => {
           {/* Mobile Controls */}
           <div className="lg:hidden flex items-center gap-5">
             <ThemeSwitcher />
-            <LanguageSwitcher />
             <button 
               className="text-foreground" 
               onClick={() => setShowMenu(true)}
@@ -78,56 +96,54 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          <div 
-            className={`fixed left-0 w-full h-screen bg-background z-50 flex flex-col transition-all duration-300 ${
-              showMenu ? 'top-0' : 'top-[-100%]'
-            }`}
-          >
-            <button 
-              className="absolute top-[20px] right-[20px] text-foreground" 
-              onClick={() => setShowMenu(false)}
+          {showMenu && (
+            <div
+              className="fixed inset-0 w-full min-h-[100dvh] bg-background z-50 flex flex-col"
             >
-              <X size={30} />
-            </button>
+              <button
+                className="absolute top-[20px] right-[20px] text-foreground"
+                onClick={() => setShowMenu(false)}
+              >
+                <X size={30} />
+              </button>
 
-            {/* Mobile Navigation */}
-            <nav className="flex-1 flex items-center justify-center">
-              <ul className="flex flex-col items-center gap-8">
-                <li>
-                  <a href="#features" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('features')}</a>
-                </li>
-                <li>
-                  <a href="#how-it-works" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('howItWorks')}</a>
-                </li>
-                <li>
-                  <a href="#pricing" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('pricing')}</a>
-                </li>
-                <li>
-                  <a href="#why-choose-us" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('why')}</a>
-                </li>
-                <li>
-                  <a href="#blog" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('blog')}</a>
-                </li>
-                <li>
-                  <a href="#faq" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('faq')}</a>
-                </li>
-              </ul>
-            </nav>
+              {/* Mobile Navigation */}
+              <nav className="flex-1 flex items-center justify-center">
+                <ul className="flex flex-col items-center gap-8">
+                  <li>
+                    <a href="#features" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('features')}</a>
+                  </li>
+                  <li>
+                    <a href="#how-it-works" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('howItWorks')}</a>
+                  </li>
+                  <li>
+                    <a href="#pricing" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('pricing')}</a>
+                  </li>
+                  <li>
+                    <a href="#why-choose-us" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('why')}</a>
+                  </li>
+                  <li>
+                    <a href="#blog" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('blog')}</a>
+                  </li>
+                  <li>
+                    <a href="#faq" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('faq')}</a>
+                  </li>
+                  <li>
+                    <LanguageSwitcher />
+                  </li>
+                </ul>
+              </nav>
 
-            {/* Mobile Language */}
-            <div className="px-[20px] mb-4">
-              <LanguageSwitcher />
+              {/* Mobile Button */}
+              <div className="hidden md:block absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[90%]">
+                <Button
+                  text={t('cta')}
+                  className="w-full"
+                  onClick={handleGetStarted}
+                />
+              </div>
             </div>
-
-            {/* Mobile Button */}
-            <div className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[90%]">
-              <Button 
-                text={t('cta')}
-                className="w-full"
-                onClick={handleGetStarted}
-              />       
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </header>
