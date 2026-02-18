@@ -15,6 +15,7 @@
     "howItWorks": "使い方",
     "pricing": "料金",
     "why": "選ばれる理由",
+    "blog": "金融インサイト",
     "faq": "FAQ",
     "cta": "無料で始める"
   },
@@ -415,6 +416,19 @@
         "body": "すべての返金要求は、当社の Merchant of Record である Paddle.com によって処理されます。"
       }
     }
+  },
+  "blog": {
+    "title": "金融インサイト",
+    "minRead": "分で読める"
+  },
+  "blogPost": {
+    "onThisPage": "このページで",
+    "home": "ホーム",
+    "blog": "ブログ",
+    "shareArticle": "この記事をシェア",
+    "share": "シェア",
+    "copyLink": "リンクをコピー",
+    "copied": "コピーしました！"
   },
   "cta": {
     "title": "今日からもっとスマートにお金を管理しましょう。",

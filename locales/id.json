@@ -15,6 +15,7 @@
     "howItWorks": "Cara kerja",
     "pricing": "Harga",
     "why": "Mengapa memilih kami",
+    "blog": "Wawasan Keuangan",
     "faq": "FAQ",
     "cta": "Mulai gratis"
   },
@@ -416,6 +417,19 @@
         "body": "Semua permintaan pengembalian dana diproses oleh Merchant of Record kami, Paddle.com."
       }
     }
+  },
+  "blog": {
+    "title": "Wawasan Keuangan",
+    "minRead": "menit baca"
+  },
+  "blogPost": {
+    "onThisPage": "Di halaman ini",
+    "home": "Beranda",
+    "blog": "Blog",
+    "shareArticle": "Bagikan artikel ini",
+    "share": "Bagikan",
+    "copyLink": "Salin Tautan",
+    "copied": "Tersalin!"
   },
   "cta": {
     "title": "Mulai mengelola uang Anda dengan lebih cerdas — hari ini.",

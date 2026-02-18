@@ -51,6 +51,9 @@ const Header = () => {
                 <a href="#why-choose-us" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{t('why')}</a>
               </li>
               <li>
+                <a href="#blog" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{t('blog')}</a>
+              </li>
+              <li>
                 <a href="#faq" className="font-medium text-foreground hover:text-primary transition-colors duration-200">{t('faq')}</a>
               </li>
             </ul>
@@ -100,6 +103,9 @@ const Header = () => {
                   </li>
                   <li>
                     <a href="#why-choose-us" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('why')}</a>
+                  </li>
+                  <li>
+                    <a href="#blog" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('blog')}</a>
                   </li>
                   <li>
                     <a href="#faq" className="font-semibold text-foreground text-[20px] hover:text-primary transition-colors duration-200" onClick={() => setShowMenu(false)}>{t('faq')}</a>

@@ -15,6 +15,7 @@
     "howItWorks": "Как это работает",
     "pricing": "Цены",
     "why": "Почему нас выбирают",
+    "blog": "Финансовые инсайты",
     "faq": "Вопросы и ответы",
     "cta": "Начать бесплатно"
   },
@@ -415,6 +416,19 @@
         "body": "All refund requests are processed by our Merchant of Record, Paddle.com."
       }
     }
+  },
+  "blog": {
+    "title": "Финансовые инсайты",
+    "minRead": "мин чтения"
+  },
+  "blogPost": {
+    "onThisPage": "На этой странице",
+    "home": "Главная",
+    "blog": "Блог",
+    "shareArticle": "Поделиться статьей",
+    "share": "Поделиться",
+    "copyLink": "Копировать ссылку",
+    "copied": "Скопировано!"
   },
   "cta": {
     "title": "Начните управлять деньгами умнее — уже сегодня.",
