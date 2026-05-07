@@ -43,10 +43,10 @@ const Faq = () => {
         <Accordion type="single" collapsible className="space-y-4">
           {FAQ_ITEMS.map(({ q, a }, i) => (
             <AccordionItem key={i} value={`q${i}`}>
-              <AccordionTrigger className="text-[18px] font-semibold hover:no-underline transition-colors duration-200 hover:text-primary data-[state=open]:text-primary text-left">
+              <AccordionTrigger className="text-[18px] font-semibold text-foreground hover:no-underline transition-colors duration-200 hover:text-primary data-[state=open]:text-primary text-left">
                 {q}
               </AccordionTrigger>
-              <AccordionContent className="text-[16px] text-muted-foreground leading-relaxed">
+              <AccordionContent className="text-[16px] text-foreground leading-relaxed">
                 {a}
               </AccordionContent>
             </AccordionItem>

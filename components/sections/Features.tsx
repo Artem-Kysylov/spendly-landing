@@ -35,7 +35,7 @@ const Features = () => {
           What Spendly feels like
         </motion.h2>
         <motion.p
-          className="text-[17px] text-muted-foreground text-center mb-[56px] max-w-lg mx-auto leading-relaxed"
+          className="text-[17px] text-foreground text-center mb-[56px] max-w-lg mx-auto leading-relaxed"
           initial="hidden"
           whileInView="visible"
           viewport={viewportDefault}
@@ -63,7 +63,7 @@ const Features = () => {
               <h3 className="text-[20px] font-bold text-foreground leading-snug tracking-tight">
                 {title}
               </h3>
-              <p className="text-[15px] text-muted-foreground leading-relaxed">{desc}</p>
+              <p className="text-[15px] text-foreground leading-relaxed">{desc}</p>
             </motion.div>
           ))}
         </motion.div>

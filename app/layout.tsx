@@ -1,11 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { NextIntlClientProvider } from 'next-intl'
 import { MotionConfig, LazyMotion, domAnimation } from 'framer-motion'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { ThemeProvider } from '@/context/ThemeContext'
 import SmoothScroll from '@/components/utils/SmoothScroll'
 import en from '@/locales/en.json'
 
@@ -82,18 +80,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           backgroundPosition: 'top center',
         }}
       >
-        <NextIntlClientProvider locale="en" messages={en}>
-          <MotionConfig reducedMotion="user">
-            <LazyMotion features={domAnimation}>
-              <ThemeProvider>
-                <SmoothScroll />
-                <Header />
-                {children}
-                <Footer />
-              </ThemeProvider>
-            </LazyMotion>
-          </MotionConfig>
-        </NextIntlClientProvider>
+        <MotionConfig reducedMotion="user">
+          <LazyMotion features={domAnimation}>
+            <SmoothScroll />
+            <Header />
+            {children}
+            <Footer />
+          </LazyMotion>
+        </MotionConfig>
       </body>
     </html>
   )

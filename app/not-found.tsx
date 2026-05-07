@@ -1,13 +1,10 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { fadeUp, fadeUpDelayed, viewportDefault } from '@/components/utils/motion'
 
 export default function NotFound() {
-  const t = useTranslations('notFound')
-
   return (
     <div 
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
@@ -38,7 +35,7 @@ export default function NotFound() {
             className="text-8xl sm:text-9xl md:text-[12rem] font-bold text-foreground mb-4 leading-none"
             variants={fadeUp(0)}
           >
-            {t('title')}
+            404
           </motion.h1>
 
           {/* Subtitle */}
@@ -46,7 +43,7 @@ export default function NotFound() {
             className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground mb-4"
             variants={fadeUp(0.1)}
           >
-            {t('subtitle')}
+            Page not found
           </motion.h2>
 
           {/* Description */}
@@ -54,7 +51,7 @@ export default function NotFound() {
             className="text-base sm:text-lg text-muted-foreground mb-8 max-w-sm mx-auto"
             variants={fadeUp(0.2)}
           >
-            {t('description')}
+            The page you are looking for doesn&apos;t exist or has been moved.
           </motion.p>
 
           {/* Back to Home Button */}
@@ -63,7 +60,7 @@ export default function NotFound() {
               href="/"
               className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-primary-foreground bg-primary hover:bg-primary/90 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
             >
-              {t('button')}
+              Back to Home Page
             </Link>
           </motion.div>
         </motion.div>

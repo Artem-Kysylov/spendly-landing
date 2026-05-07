@@ -21,7 +21,6 @@
   },
   "footer": {
     "privacy": "Privacy Policy",
-    "refund": "Refund Policy",
     "terms": "Terms & Conditions",
     "copyright": "Copyright. All rights reserved",
     "linkedin": "LinkedIn",
@@ -236,56 +235,56 @@
         "title": "Information We Collect",
         "youProvide": {
           "title": "Information You Provide to Us",
-          "body": "We collect your email (including Google OAuth), hashed password, and any financial data you enter manually such as budgets, categories, goals, transaction amounts, and notes."
+          "body": "When you join our waitlist, we collect your email address. For legacy users of our web app, we collect your email (including Google OAuth), hashed password, and any financial data you enter manually such as budgets, categories, goals, transaction amounts, and notes."
         },
         "auto": {
           "title": "Automatically Collected Data",
-          "body": "We may collect device info, IP address, usage logs, cookies/local storage data, and anonymous analytics (e.g., privacy‑focused tools like Plausible or Umami)."
+          "body": "We may collect device info, IP address, usage logs, cookies/local storage data, and anonymous, privacy-focused analytics to improve our website and waitlist experience."
         },
         "ai": {
-          "title": "AI‑Generated or AI‑Processed Data",
-          "body": "If you use AI features, we process text you provide to the assistant and automatically generated categories or insights. We do not use your data to train third‑party AI models."
+          "title": "AI-Generated or AI-Processed Data",
+          "body": "If you use our AI features, we process text you provide to the assistant. We do not use your personal financial data to train third-party AI models."
         }
       },
       "use": {
         "title": "How We Use Your Information",
-        "body": "We use your information to create and manage your account, store financial data securely, provide budgeting and tracking features, generate AI assistance and insights, personalize your experience, maintain and improve the Service, ensure security, and comply with legal obligations. We do not sell your personal data to third parties."
+        "body": "We use your information to manage your waitlist status, notify you about the iOS app launch, maintain accounts for legacy web users, store financial data securely, and ensure security. We do not sell your personal data to third parties."
       },
       "storage": {
         "title": "How Your Information Is Stored",
-        "body": "Your data is stored via Supabase with HTTPS during transfer and encrypted storage for sensitive information. Passwords are hashed using industry‑standard algorithms and cannot be recovered in readable form."
+        "body": "Your data is stored via Supabase with HTTPS during transfer and encrypted storage for sensitive information. Passwords are hashed using industry-standard algorithms and cannot be recovered in readable form."
       },
       "aiPrivacy": {
         "title": "AI Processing and Data Privacy",
-        "body": "When you use AI features, data you submit may be sent to trusted AI providers and is used only to generate the requested output. Data is not stored by these providers for training purposes, and we avoid retaining AI logs with sensitive information."
+        "body": "When you use AI features, data you submit may be sent to trusted AI providers and is used only to generate the requested output. Data is not stored by these providers for training purposes, and we do not retain AI logs with sensitive information."
       },
       "cookies": {
         "title": "Cookies and Similar Technologies",
-        "body": "We use cookies and local storage to maintain sessions, remember login state, improve performance, and analyze overall usage patterns. Disabling cookies may affect functionality."
+        "body": "We use cookies to manage waitlist sign-ups, maintain sessions for legacy users, and analyze overall usage patterns."
       },
       "share": {
         "title": "When We Share Information",
-        "body": "We share data only with service providers (hosting, analytics, authentication), AI processing providers when you request AI features, and legal authorities when required. We do not share your financial information for advertising purposes.",
+        "body": "We share data only with trusted service providers (hosting, analytics, authentication), AI processing providers when requested, and legal authorities when strictly required. We do not share your information for advertising purposes.",
         "payments": {
-          "title": "Payments",
-          "body": "We use Paddle.com for payments and subscriptions. Paddle acts as the Merchant of Record. When you make a purchase, you agree to Paddle’s Terms and Privacy Policy. We do not store your full credit card information on our servers."
+          "title": "Payments and Billing",
+          "body": "We do not collect, process, or store payment information (such as credit card numbers) on our website. Future subscriptions for our native application will be handled securely and exclusively through the Apple App Store."
         }
       },
       "retention": {
         "title": "Data Retention",
-        "body": "We keep your data while your account is active. Upon deletion, all personal and financial data in Supabase is permanently removed, session and authentication tokens are revoked, and AI inputs are not retained after processing."
+        "body": "We keep your email on our waitlist until you opt out or the app launches. For legacy accounts, we keep your data while your account is active. Upon deletion, all personal and financial data is permanently removed."
       },
       "rights": {
         "title": "Your Rights",
         "body": "Depending on your location, you may have rights to access, correct, delete, export, or restrict processing of your data. Contact us to exercise these rights."
       },
       "children": {
-        "title": "Children’s Privacy",
+        "title": "Children's Privacy",
         "body": "Spendly is not intended for children under 16, and we do not knowingly collect information from children."
       },
       "changes": {
         "title": "Changes to This Privacy Policy",
-        "body": "We may update this Privacy Policy. The “Last Updated” date reflects the latest version. Continued use of the Service constitutes acceptance of changes."
+        "body": "We may update this Privacy Policy as we transition to the App Store. The \"Last Updated\" date reflects the latest version."
       },
       "contact": {
         "title": "Contact Us",
@@ -299,7 +298,7 @@
     "sections": {
       "acceptance": {
         "title": "1. Acceptance of Terms",
-        "body": "By accessing or using Spendly (the Service), you agree to these Terms. If you do not agree, do not use the Service. Spendly is operated by Spendly."
+        "body": "By accessing or using the Spendly website, waitlist, or legacy web service (the \"Service\"), you agree to these Terms. If you do not agree, do not use the Service."
       },
       "eligibility": {
         "title": "2. Eligibility",
@@ -307,74 +306,66 @@
       },
       "description": {
         "title": "3. Description of the Service",
-        "body": "Spendly is a personal finance management app. You can add expenses and income, create budgets and categories, receive insights and analytics, access optional AI features, and sync data across devices. Spendly does not connect to banks and does not provide official financial advice."
+        "body": "Currently, the Spendly website operates primarily as a waitlist for our upcoming native iOS application. We also maintain a legacy web-based personal finance management app for existing users. Spendly does not connect to banks and does not provide official financial advice."
       },
       "accounts": {
-        "title": "4. User Accounts",
-        "registration": {
-          "title": "4.1 Registration",
-          "body": "Create an account using email/password or Google OAuth. Provide accurate information and keep it up to date."
+        "title": "4. User Accounts and Waitlist",
+        "waitlist": {
+          "title": "4.1 Waitlist",
+          "body": "By joining the waitlist, you agree to receive email updates regarding the launch of our iOS application and related early-access discounts. You can unsubscribe at any time."
         },
-        "security": {
-          "title": "4.2 Account Security",
-          "body": "You are responsible for confidentiality of credentials and all activity under your account. Notify us immediately of unauthorized access."
+        "legacy": {
+          "title": "4.2 Legacy Accounts",
+          "body": "Existing users are responsible for the confidentiality of their credentials. Notify us immediately of unauthorized access."
         }
       },
       "payments": {
-        "title": "5. Subscription & Payments",
-        "orderProcess": {
-          "title": "Order Process & Merchant of Record",
-          "body": "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns."
+        "title": "5. Subscriptions, Payments & Apple App Store",
+        "noWeb": {
+          "title": "5.1 No Web Payments",
+          "body": "Spendly does not currently process payments, subscriptions, or collect credit card information on this website."
         },
-        "pricing": {
-          "title": "5.1 Pricing",
-          "body": "Spendly offers a Pro subscription billed at $7/month. Pro may include unlimited budgets, advanced analytics, AI insights, priority updates, and extra customization."
-        },
-        "billing": {
-          "title": "5.2 Billing",
-          "body": "Subscriptions renew automatically unless canceled before the next cycle."
-        },
-        "refunds": {
-          "title": "5.3 Refunds",
-          "body": "No refunds for partial or unused periods unless required by law."
+        "futureIos": {
+          "title": "5.2 Future iOS App",
+          "body": "Upon the launch of our native iOS application, all purchases, subscriptions, and refunds will be managed directly by Apple as the Merchant of Record, subject to the Apple App Store Terms of Service."
         }
       },
       "aiUse": {
         "title": "6. Use of AI Features",
-        "body": "AI‑powered functions (insights, categorization, chat) are informational only. AI may produce incorrect or incomplete information; outputs are not financial, legal, or tax advice. You are responsible for decisions based on AI content."
+        "body": "AI-powered functions (insights, categorization, chat) are informational only. AI may produce incorrect or incomplete information; outputs are not financial, legal, or tax advice. You are responsible for decisions based on AI content."
       },
       "userContent": {
         "title": "7. User Content",
-        "body": "You retain ownership of data you add (expenses, income, budgets, categories). You grant Spendly a limited, non‑exclusive license to process your data solely to provide the Service."
+        "body": "You retain ownership of any data you add to the Service. You grant Spendly a limited, non-exclusive license to process your data solely to provide the Service."
       },
       "storage": {
         "title": "8. Data Storage & Security",
-        "body": "Spendly uses Supabase for storage with encryption in transit and at rest. No system is perfectly secure; we cannot guarantee absolute protection from unauthorized access. See our Privacy Policy for details."
+        "body": "Spendly uses secure backend providers (such as Supabase) with encryption in transit and at rest. No system is perfectly secure; we cannot guarantee absolute protection from unauthorized access. See our Privacy Policy for details."
       },
       "acceptableUse": {
         "title": "9. Acceptable Use",
         "list": [
-          "Do not misuse the Service for illegal purposes",
-          "Do not attempt to access other users’ data",
-          "Do not reverse‑engineer or interfere with servers/APIs",
-          "Do not use automated tools (scrapers/bots) without permission"
+          "Do not misuse the Service for illegal purposes.",
+          "Do not attempt to access other users' data.",
+          "Do not reverse-engineer or interfere with servers/APIs.",
+          "Do not use automated tools (scrapers/bots) without permission."
         ]
       },
       "availability": {
         "title": "10. Availability & Updates",
-        "body": "We may update, modify, or discontinue parts of the Service at any time (features, pricing, interface, AI functionality). We are not liable for downtime or interruptions."
+        "body": "We are actively transitioning our focus to a native iOS application. We may update, modify, or discontinue parts of the legacy web Service at any time. We are not liable for downtime or interruptions."
       },
       "thirdParty": {
-        "title": "11. Third‑Party Services",
-        "body": "Spendly uses third parties including Supabase (auth & DB), Google OAuth (optional login), and AI providers (OpenAI or others). Your use is subject to their terms."
+        "title": "11. Third-Party Services",
+        "body": "Spendly uses third parties including Supabase (auth & DB) and AI providers. Your use is subject to their respective terms."
       },
       "termination": {
         "title": "12. Termination",
-        "body": "We may suspend or terminate your account for violations, suspected fraud/abuse, or risks to others. You may delete your account at any time from settings."
+        "body": "We may suspend or terminate your legacy account or remove you from the waitlist for violations, suspected fraud, or abuse."
       },
       "liability": {
         "title": "13. Limitation of Liability",
-        "body": "Spendly is provided ‘AS IS’ without warranties. To the maximum extent permitted by law, Spendly is not liable for lost profits, inaccurate AI outputs, data loss, errors, or interruptions."
+        "body": "Spendly is provided 'AS IS' without warranties. To the maximum extent permitted by law, Spendly is not liable for lost profits, inaccurate AI outputs, data loss, errors, or interruptions."
       },
       "disclaimer": {
         "title": "14. Disclaimer",
@@ -382,38 +373,15 @@
       },
       "law": {
         "title": "15. Governing Law",
-        "body": "These Terms are governed by the laws of the jurisdiction where your company is registered (e.g., Estonia). This may be updated later."
+        "body": "These Terms are governed by the laws of the jurisdiction where Spendly is registered. This may be updated upon the official App Store launch."
       },
       "changes": {
         "title": "16. Changes to Terms",
-        "body": "We may update these Terms at any time. If changes are significant, we may notify users via email or in‑app notification. Continued use after changes means acceptance."
+        "body": "We may update these Terms at any time to reflect our transition to the App Store. Continued use after changes means acceptance."
       },
       "contact": {
         "title": "17. Contact Us",
         "body": "Questions about these Terms: support@getspendly.net"
-      }
-    }
-  },
-  "refundPolicy": {
-    "title": "Refund Policy",
-    "lastUpdated": "Last updated: January 16, 2026",
-    "sections": {
-      "digitalProducts": {
-        "title": "1. Digital Products",
-        "body": "Spendly provides digital services (software as a service). Due to the nature of digital content, we generally do not offer refunds once the subscription period has started and the service has been accessed."
-      },
-      "moneyBack": {
-        "title": "2. 14-Day Money-Back Guarantee",
-        "body": "If you are not satisfied with Spendly Pro, you may request a no-questions-asked full refund within 14 days of your initial purchase (monthly $7, yearly $49, or lifetime $99). Please contact us at hello@getspendly.net with your order number.",
-        "note": "Note: This applies only to your first purchase."
-      },
-      "cancellations": {
-        "title": "3. Cancellations",
-        "body": "You can cancel your subscription at any time in your account settings. Your access to Pro features will continue until the end of the current billing period. No partial refunds are given for unused time."
-      },
-      "merchantOfRecord": {
-        "title": "4. Merchant of Record",
-        "body": "All refund requests are processed by our Merchant of Record, Paddle.com."
       }
     }
   },

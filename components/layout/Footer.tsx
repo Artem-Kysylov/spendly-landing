@@ -58,9 +58,6 @@ const Footer = () => {
             <Link href="/terms-and-conditions" className="text-[13px] text-foreground hover:text-primary transition-colors duration-200">
               Terms &amp; Conditions
             </Link>
-            <Link href="/refund-policy" className="text-[13px] text-foreground hover:text-primary transition-colors duration-200">
-              Refund Policy
-            </Link>
           </div>
           <span className="text-[13px] text-muted-foreground">Copyright. All rights reserved</span>
         </div>

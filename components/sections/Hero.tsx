@@ -60,10 +60,10 @@ const Hero = () => {
             financially mindful. Clarity, without the noise.
           </motion.p>
 
-          {/* Email form */}
+          {/* Email form — same proportions as final CTA (pill + input wider than button) */}
           <motion.form
             onSubmit={handleSubmit}
-            className="w-full max-w-md flex flex-col sm:flex-row gap-3 mt-2"
+            className="mt-2 flex w-full max-w-[600px] flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
             variants={fadeUpDelayed(0.1)}
           >
             <input
@@ -72,12 +72,12 @@ const Hero = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="flex-1 h-[54px] px-5 rounded-lg border border-border bg-white text-foreground placeholder:text-muted-foreground text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+              className="h-[54px] w-full shrink-0 rounded-full border border-border bg-white px-6 text-base text-foreground shadow-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 sm:w-[320px] sm:max-w-[320px]"
             />
             <button
               type="submit"
               disabled={status === 'loading' || status === 'success'}
-              className="h-[54px] px-7 rounded-lg bg-primary text-primary-foreground font-semibold tracking-wide text-base flex items-center justify-center gap-2 shadow-sm hover:bg-primary/90 transition-colors disabled:opacity-60 whitespace-nowrap"
+              className="flex h-[54px] w-full shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-semibold tracking-wide text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 disabled:opacity-60 sm:w-[260px] sm:max-w-[260px] whitespace-nowrap"
             >
               {status === 'loading' ? (
                 <Loader2 className="h-4 w-4 animate-spin" />

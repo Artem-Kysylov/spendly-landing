@@ -1,7 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { Share2, Copy, Check } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useState } from 'react'
 
 interface ShareButtonsProps {
   title: string
@@ -9,13 +7,7 @@ interface ShareButtonsProps {
 }
 
 export default function ShareButtons({ title, url }: ShareButtonsProps) {
-  const t = useTranslations('blogPost')
   const [copied, setCopied] = useState(false)
-  const [hasNativeShare, setHasNativeShare] = useState(false)
-
-  useEffect(() => {
-    setHasNativeShare(typeof navigator !== 'undefined' && 'share' in navigator)
-  }, [])
 
   const handleNativeShare = async () => {
     if (navigator.share) {
@@ -24,10 +16,13 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
           title,
           url,
         })
-      } catch (error) {
+      } catch {
         // User cancelled or error occurred
       }
+      return
     }
+
+    await handleCopyLink()
   }
 
   const handleCopyLink = async () => {
@@ -35,7 +30,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
       await navigator.clipboard.writeText(url)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-    } catch (error) {
+    } catch {
       // Fallback for older browsers
       const textArea = document.createElement('textarea')
       textArea.value = url
@@ -61,26 +56,17 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
   return (
     <div className="border-t border-border pt-8 mt-16 mb-16">
       <h3 className="text-lg font-semibold mb-4 text-foreground">
-        {t('shareArticle')}
+        Share this article
       </h3>
 
       {/* Mobile: Native Share Button */}
       <div className="block md:hidden">
-        {hasNativeShare ? (
-          <button
-            onClick={handleNativeShare}
-            className="w-full px-6 py-3 bg-transparent text-primary border border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-center font-medium"
-          >
-            {t('share')}
-          </button>
-        ) : (
-          <button
-            onClick={handleCopyLink}
-            className="w-full px-6 py-3 bg-transparent text-primary border border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-center font-medium"
-          >
-            {copied ? t('copied') : t('copyLink')}
-          </button>
-        )}
+        <button
+          onClick={handleNativeShare}
+          className="w-full px-6 py-3 bg-transparent text-primary border border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-center font-medium"
+        >
+          {copied ? 'Copied!' : 'Share'}
+        </button>
       </div>
 
       {/* Desktop: Individual Share Buttons */}
@@ -103,7 +89,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
           onClick={handleCopyLink}
           className="flex-1 px-6 py-3 bg-transparent text-primary border border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-center font-medium"
         >
-          {copied ? t('copied') : t('copyLink')}
+          {copied ? 'Copied!' : 'Copy Link'}
         </button>
       </div>
     </div>

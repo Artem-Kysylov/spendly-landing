@@ -1,14 +1,11 @@
 'use client'
 import { Heading } from '@/lib/types'
-import { useTranslations } from 'next-intl'
 
 interface TableOfContentsProps {
   headings: Heading[]
 }
 
 export default function TableOfContents({ headings }: TableOfContentsProps) {
-  const t = useTranslations('blogPost')
-
   if (headings.length === 0) {
     return null
   }
@@ -25,7 +22,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
     <aside className="lg:sticky lg:top-8 lg:self-start">
       <div className="bg-card border border-border rounded-xl p-6">
         <h3 className="text-lg font-semibold mb-4 text-foreground">
-          {t('onThisPage')}
+          On this page
         </h3>
         
         <nav>

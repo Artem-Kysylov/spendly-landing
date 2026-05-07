@@ -25,17 +25,17 @@ const Founder = () => {
               Why I killed the web app to build something better.
             </h2>
             <p className="text-[16px] text-foreground leading-relaxed mb-4">
-              The web version worked — but "fast for a website" is a compromise I was no longer
+              The web version worked — but &quot;fast for a website&quot; is a compromise I was no longer
               willing to make. Every PWA limitation pulled me away from the experience I wanted
               to give you: instant, effortless, and deeply personal.
             </p>
             <p className="text-[16px] text-foreground leading-relaxed mb-4">
-              Going native iOS isn't just a technical decision. It's about FaceID-level privacy,
-              the Taptic Engine's satisfying feedback on every tap, and a 120Hz interface that
+              Going native iOS isn&apos;t just a technical decision. It&apos;s about FaceID-level privacy,
+              the Taptic Engine&apos;s satisfying feedback on every tap, and a 120Hz interface that
               feels like it belongs on your phone — because it was built only for your phone.
             </p>
             <p className="text-[16px] text-muted-foreground leading-relaxed">
-              Quality over quantity. One platform, done perfectly. That's the promise behind
+              Quality over quantity. One platform, done perfectly. That&apos;s the promise behind
               everything we are building this summer.
             </p>
           </motion.div>

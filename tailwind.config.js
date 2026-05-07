@@ -1,4 +1,5 @@
 // /Users/macbookair/Documents/projects/spendly-landing/tailwind.config.js
+/* eslint-disable @typescript-eslint/no-require-imports */
 module.exports = {
   darkMode: ["class"],
   content: [

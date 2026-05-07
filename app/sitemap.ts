@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/privacy-policy`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/terms-and-conditions`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${base}/refund-policy`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
   ]
 
   const posts = getAllPosts('en')
