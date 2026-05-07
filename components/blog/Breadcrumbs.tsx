@@ -1,38 +1,22 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
 import { ChevronRight } from 'lucide-react'
 
 interface BreadcrumbsProps {
-  locale: string
   title: string
 }
 
-export default function Breadcrumbs({ locale, title }: BreadcrumbsProps) {
-  const t = useTranslations('blogPost')
-
+export default function Breadcrumbs({ title }: BreadcrumbsProps) {
   return (
     <nav className="flex items-center space-x-2 text-sm text-muted-foreground mb-6">
-      <Link 
-        href={`/${locale}`}
-        className="hover:text-primary transition-colors"
-      >
-        {t('home')}
+      <Link href="/" className="hover:text-primary transition-colors">
+        Home
       </Link>
-      
       <ChevronRight className="w-4 h-4" />
-      
-      <Link 
-        href={`/${locale}/blog`}
-        className="hover:text-primary transition-colors"
-      >
-        {t('blog')}
+      <Link href="/blog" className="hover:text-primary transition-colors">
+        Blog
       </Link>
-      
       <ChevronRight className="w-4 h-4" />
-      
-      <span className="text-foreground font-medium truncate">
-        {title}
-      </span>
+      <span className="text-foreground font-medium truncate">{title}</span>
     </nav>
   )
 }

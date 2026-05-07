@@ -56,12 +56,32 @@ export { calculateReadingTime } from "./utils-reading-time";
 
 const contentDirectory = path.join(process.cwd(), "content");
 
+/**
+ * Frontmatter `title` is rendered as the page <h1>. Strip an optional leading
+ * “update” blockquote and a duplicate markdown H1 so MDX matches older posts.
+ */
+function stripLeadingDuplicateTitleHeading(content: string): string {
+  let text = content.replace(/^\uFEFF/, "").replace(/^\s+/, "");
+
+  while (text.startsWith(">")) {
+    const lineEnd = text.indexOf("\n");
+    if (lineEnd === -1) {
+      return "";
+    }
+    text = text.slice(lineEnd + 1).replace(/^\s+/, "");
+  }
+
+  text = text.replace(/^#\s+[^\n]+\n\s*/, "");
+
+  return text;
+}
+
 export function getPostBySlug(slug: string, lang: string): Post {
   const filePath = path.join(contentDirectory, lang, `${slug}.mdx`);
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
 
-  const normalizedContent = content.replace(/^\s*#\s+.*\n+/, "");
+  const normalizedContent = stripLeadingDuplicateTitleHeading(content);
 
   return {
     slug,

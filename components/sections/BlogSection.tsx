@@ -1,35 +1,34 @@
-import React from 'react'
 import { getAllPosts } from '@/lib/mdx'
 import BlogCardClient from '@/components/blog/BlogCardClient'
+import Button from '@/components/ui-elements/Button'
+import { ArrowRightIcon } from 'lucide-react'
 
-interface BlogSectionProps {
-  locale: string
-}
+export default function BlogSection() {
+  const posts = getAllPosts('en').slice(0, 3)
 
-export default function BlogSection({ locale }: BlogSectionProps) {
-  // Get latest 3 posts
-  const posts = getAllPosts(locale).slice(0, 3)
-
-  // Don't render if no posts
-  if (posts.length === 0) {
-    return null
-  }
+  if (posts.length === 0) return null
 
   return (
     <section className="mt-[120px]" id="blog">
       <div className="landing__container">
         <h2 className="text-[40px] font-semibold text-foreground text-center mb-[60px]">
-          {locale === 'ru' ? 'Финансовые инсайты' : 
-           locale === 'hi' ? 'वित्तीय अंतर्दृष्टि' :
-           locale === 'id' ? 'Wawasan Keuangan' :
-           locale === 'ja' ? '金融インサイト' :
-           'Financial Insights'}
+          Financial Insights
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {posts.map((post) => (
-            <BlogCardClient key={post.slug} post={post} locale={locale} />
+            <BlogCardClient key={post.slug} post={post} />
           ))}
+        </div>
+
+        <div className="flex justify-center">
+          <Button
+            text="View All Articles"
+            href="/blog"
+            variant="primary"
+            className="text-base font-semibold px-8 py-4 h-auto"
+            icon={<ArrowRightIcon className="h-4 w-4" />}
+          />
         </div>
       </div>
     </section>

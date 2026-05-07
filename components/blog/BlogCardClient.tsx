@@ -3,26 +3,22 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Post } from '@/lib/mdx'
 import { calculateReadingTime } from '@/lib/utils-reading-time'
-import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/components/utils/motion'
 
 interface BlogCardClientProps {
   post: Post
-  locale: string
 }
 
-export default function BlogCardClient({ post, locale }: BlogCardClientProps) {
-  const t = useTranslations('blog')
+export default function BlogCardClient({ post }: BlogCardClientProps) {
   const readingTime = calculateReadingTime(post.content)
 
   return (
     <motion.div variants={fadeUp(0)}>
-      <Link 
-        href={`/${locale}/blog/${post.slug}`}
+      <Link
+        href={`/blog/${post.slug}`}
         className="group block bg-card border border-border rounded-2xl overflow-hidden dark:hover:bg-card/80 transition-all duration-300 hover:-translate-y-1"
       >
-        {/* Cover Image */}
         <div className="relative aspect-video overflow-hidden rounded-t-2xl">
           {post.frontmatter.coverImage ? (
             <Image
@@ -40,15 +36,11 @@ export default function BlogCardClient({ post, locale }: BlogCardClientProps) {
           )}
         </div>
 
-        {/* Content */}
         <div className="p-6">
           <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
             {post.frontmatter.title}
           </h3>
-          
-          <div className="text-sm text-muted-foreground">
-            {readingTime} {t('minRead')}
-          </div>
+          <div className="text-sm text-muted-foreground">{readingTime} min read</div>
         </div>
       </Link>
     </motion.div>
