@@ -5,6 +5,10 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: process.env.VERCEL_ENV === 'preview',
+  images: {
+    // Все пути из /public для next/image (обложки /blog/**, логотипы, about.png, …)
+    localPatterns: [{ pathname: '/**' }],
+  },
   async headers() {
     return [
       {

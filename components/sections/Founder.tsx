@@ -4,6 +4,12 @@ import { motion } from 'framer-motion'
 import { fadeUp, fadeUpScale, viewportDefault, containerStagger } from '@/components/utils/motion'
 
 const Founder = () => {
+  /**
+   * next/image кеширует оптимизированный файл по URL. При замене public/about.png
+   * с тем же именем увеличьте число ниже — иначе может показываться старое изображение.
+   */
+  const aboutImageSrc = `/about.png?v=2`
+
   return (
     <section className="mt-[120px]" id="founder">
       <div className="landing__container">
@@ -40,7 +46,7 @@ const Founder = () => {
           >
             <div className="relative w-full max-w-[400px] h-[320px] sm:h-[400px]">
               <Image
-                src="/about.png"
+                src={aboutImageSrc}
                 alt="Artem - Creator of Spendly"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -1,6 +1,5 @@
 import Hero from '@/components/sections/Hero'
 import Features from '@/components/sections/Features'
-import WhyChooseSpendly from '@/components/sections/WhyChooseSpendly'
 import Founder from '@/components/sections/Founder'
 import BlogSection from '@/components/sections/BlogSection'
 import Faq from '@/components/sections/Faq'
@@ -11,7 +10,6 @@ export default function Home() {
     <div>
       <Hero />
       <Features />
-      <WhyChooseSpendly />
       <Founder />
       <BlogSection />
       <Faq />

@@ -4,8 +4,6 @@ import Link from 'next/link'
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
-  { label: 'How it works', href: '#how-it-works' },
-  { label: 'Why choose us', href: '#why-choose-us' },
   { label: 'Financial Insights', href: '#blog' },
   { label: 'FAQ', href: '#faq' },
 ]
