@@ -39,20 +39,11 @@ export const metadata: Metadata = {
     description: en.metadata.openGraph.description,
     siteName: 'Spendly',
     type: 'website',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: en.metadata.openGraph.imagesAlt,
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: en.metadata.twitter.title,
     description: en.metadata.twitter.description,
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
