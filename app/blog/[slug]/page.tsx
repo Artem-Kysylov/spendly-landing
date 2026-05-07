@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/blog/Breadcrumbs'
 import ShareButtons from '@/components/blog/ShareButtons'
 import BlogImage from '@/components/blog/BlogImage'
 import ChatDemo from '@/components/blog/ChatDemo'
+import WaitlistCta from '@/components/blog/WaitlistCta'
 import type { Metadata } from 'next'
 
 interface BlogPostPageProps {
@@ -127,7 +128,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <TableOfContents headings={headings} />
               </div>
 
-              <MDXContent source={post.content} components={{ BlogImage, ChatDemo }} />
+              <MDXContent source={post.content} components={{ BlogImage, ChatDemo, WaitlistCta }} />
 
               <ShareButtons title={post.frontmatter.title} url={url} />
             </article>

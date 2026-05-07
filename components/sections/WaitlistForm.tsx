@@ -111,12 +111,12 @@ export default function WaitlistForm({
             if (status === 'error') setStatus('idle')
           }}
           placeholder="Enter your email"
-          className={`h-[54px] w-full shrink-0 rounded-full border border-border bg-white px-6 text-base text-foreground shadow-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 ${inputWidth}`}
+          className={`h-[54px] w-full shrink-0 rounded-lg border border-border bg-white px-6 text-base text-foreground shadow-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 ${inputWidth}`}
         />
         <button
           type="submit"
           disabled={isDisabled}
-          className={`flex h-[54px] w-full shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-semibold tracking-wide text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 disabled:opacity-60 whitespace-nowrap ${buttonWidth}`}
+          className={`flex h-[54px] w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-base font-semibold tracking-wide text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 disabled:opacity-60 whitespace-nowrap ${buttonWidth}`}
         >
           {isSubmitting ? (
             <Loader2 className="h-4 w-4 animate-spin" />
@@ -180,7 +180,7 @@ export default function WaitlistForm({
 
               <button
                 onClick={handleCloseModal}
-                className="mt-8 h-[50px] w-full rounded-full bg-primary text-primary-foreground text-base font-semibold tracking-wide transition-colors hover:bg-primary/90"
+                className="mt-8 h-[50px] w-full rounded-lg bg-primary text-primary-foreground text-base font-semibold tracking-wide transition-colors hover:bg-primary/90"
               >
                 Close
               </button>
