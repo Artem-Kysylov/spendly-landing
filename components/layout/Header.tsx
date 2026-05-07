@@ -3,14 +3,10 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
-import Button from '../ui-elements/Button'
-import ThemeSwitcher from '../ui-elements/ThemeSwitcher'
-import { handleAuthRedirect } from '@/lib/auth-redirect'
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
   { label: 'How it works', href: '#how-it-works' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'Why choose us', href: '#why-choose-us' },
   { label: 'Financial Insights', href: '#blog' },
   { label: 'FAQ', href: '#faq' },
@@ -21,41 +17,34 @@ const Header = () => {
 
   useEffect(() => {
     if (!showMenu) return
-
     const scrollY = window.scrollY
     document.body.style.position = 'fixed'
     document.body.style.top = `-${scrollY}px`
     document.body.style.width = '100%'
-
     return () => {
       const top = document.body.style.top
       document.body.style.position = ''
       document.body.style.top = ''
       document.body.style.width = ''
-      const restoredScrollY = top ? Math.abs(parseInt(top, 10)) : scrollY
-      window.scrollTo(0, restoredScrollY)
+      window.scrollTo(0, top ? Math.abs(parseInt(top, 10)) : scrollY)
     }
   }, [showMenu])
 
   return (
-    <header className="border-b">
+    <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-40">
       <div className="landing__container">
-        <div className="pt-[20px] pb-[20px] flex justify-between items-center">
-          <div className="flex items-center">
-            <Link href="/">
-              <Image src="/Spendly-logo.svg" alt="Spendly Logo" width={130} height={50} />
-            </Link>
-          </div>
+        <div className="pt-[16px] pb-[16px] flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/">
+            <Image src="/Spendly-logo.svg" alt="Spendly Logo" width={120} height={44} />
+          </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop nav */}
           <nav className="hidden lg:block">
             <ul className="flex items-center gap-8">
               {NAV_LINKS.map(({ label, href }) => (
                 <li key={href}>
-                  <a
-                    href={href}
-                    className="font-medium text-foreground hover:text-primary transition-colors duration-200"
-                  >
+                  <a href={href} className="text-sm font-medium text-foreground hover:text-primary transition-colors duration-200">
                     {label}
                   </a>
                 </li>
@@ -63,29 +52,38 @@ const Header = () => {
             </ul>
           </nav>
 
-          {/* Desktop Controls */}
-          <div className="hidden lg:flex items-center gap-4">
-            <ThemeSwitcher />
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex items-center">
+            <a
+              href="#hero"
+              className="h-[42px] px-6 rounded-lg bg-primary text-primary-foreground text-sm font-semibold tracking-wide flex items-center hover:bg-primary/90 transition-colors shadow-sm"
+            >
+              Join Waitlist
+            </a>
           </div>
 
-          {/* Mobile Controls */}
-          <div className="lg:hidden flex items-center gap-5">
-            <ThemeSwitcher />
+          {/* Mobile burger */}
+          <div className="lg:hidden flex items-center gap-4">
+            <a
+              href="#hero"
+              className="h-[38px] px-5 rounded-lg bg-primary text-primary-foreground text-sm font-semibold tracking-wide flex items-center hover:bg-primary/90 transition-colors shadow-sm"
+            >
+              Join Waitlist
+            </a>
             <button className="text-foreground" onClick={() => setShowMenu(true)}>
-              <Menu size={24} />
+              <Menu size={22} />
             </button>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile menu */}
           {showMenu && (
             <div className="fixed inset-0 w-full min-h-[100dvh] bg-background z-50 flex flex-col">
               <button
-                className="absolute top-[20px] right-[20px] text-foreground"
+                className="absolute top-[18px] right-[20px] text-foreground"
                 onClick={() => setShowMenu(false)}
               >
-                <X size={30} />
+                <X size={28} />
               </button>
-
               <nav className="flex-1 flex items-center justify-center">
                 <ul className="flex flex-col items-center gap-8">
                   {NAV_LINKS.map(({ label, href }) => (
@@ -99,12 +97,17 @@ const Header = () => {
                       </a>
                     </li>
                   ))}
+                  <li>
+                    <a
+                      href="#hero"
+                      onClick={() => setShowMenu(false)}
+                      className="h-[50px] px-8 rounded-lg bg-primary text-primary-foreground font-semibold tracking-wide text-[18px] flex items-center hover:bg-primary/90 transition-colors"
+                    >
+                      Join Waitlist
+                    </a>
+                  </li>
                 </ul>
               </nav>
-
-              <div className="hidden md:block absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[90%]">
-                <Button text="Get started for FREE" className="w-full" onClick={handleAuthRedirect} />
-              </div>
             </div>
           )}
         </div>

@@ -11,7 +11,7 @@ export default function BlogSection() {
   return (
     <section className="mt-[120px]" id="blog">
       <div className="landing__container">
-        <h2 className="text-[40px] font-semibold text-foreground text-center mb-[60px]">
+        <h2 className="text-[40px] font-bold text-foreground text-center mb-[50px] tracking-tight">
           Financial Insights
         </h2>
 

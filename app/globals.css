@@ -11,20 +11,21 @@
     --card-foreground: 0 0% 7%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 7%;
-    --primary: 227 73% 54%;
+    /* Soft Indigo #5B6CFF → hsl(235, 100%, 68%) */
+    --primary: 235 100% 68%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 226 81% 98%;
+    --secondary: 235 100% 97%;
     --secondary-foreground: 0 0% 7%;
-    --muted: 226 81% 98%;
+    --muted: 235 60% 97%;
     --muted-foreground: 0 0% 60%;
-    --accent: 226 81% 98%;
+    --accent: 235 60% 97%;
     --accent-foreground: 0 0% 7%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 96%;
-    --input: 0 0% 96%;
-    --ring: 227 73% 54%;
-    --radius: 0.5rem;
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 235 100% 68%;
+    --radius: 1.25rem; /* 20px — premium rounded feel */
     
     --error: 357 100% 65%; /* #FF4E56 */
     --error-foreground: 0 0% 100%;
@@ -37,17 +38,17 @@
     --notification: 25 100% 55%; /* #FF8D1B */
     --notification-foreground: 0 0% 100%;
 
-    /* Primary scale (light) */
-    --primary-50: 227 100% 97%;
-    --primary-100: 227 95% 90%;
-    --primary-200: 227 90% 80%;
-    --primary-300: 227 85% 70%;
-    --primary-400: 227 80% 60%;
-    --primary-500: 227 75% 58%;
-    --primary-600: 227 73% 54%; /* base */
-    --primary-700: 227 65% 46%;
-    --primary-800: 227 60% 38%;
-    --primary-900: 227 55% 30%;
+    /* Primary scale — Soft Indigo */
+    --primary-50: 235 100% 97%;
+    --primary-100: 235 100% 92%;
+    --primary-200: 235 100% 85%;
+    --primary-300: 235 100% 78%;
+    --primary-400: 235 100% 73%;
+    --primary-500: 235 100% 70%;
+    --primary-600: 235 100% 68%; /* base #5B6CFF */
+    --primary-700: 235 90% 58%;
+    --primary-800: 235 80% 48%;
+    --primary-900: 235 75% 38%;
 
     /* Neutral scale (light) — вместо классов gray/neutral/slate */
     --neutral-50: 0 0% 98%;
@@ -118,129 +119,6 @@
     --notification-700: 25 90% 40%;
     --notification-800: 25 85% 32%;
     --notification-900: 25 80% 25%;
-  }
-
-  .dark {
-    /* Base surfaces */
-    --background: 0 0% 6%;         /* light-black for grayish backgrounds */
-    --foreground: 0 0% 95%;        /* near white text */
-    --card: 0 0% 3%;               /* pure black for radically white surfaces in light theme */
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 0%;            /* pure black */
-    --popover-foreground: 0 0% 95%;
-
-    /* Brand */
-    --primary: 227 73% 60%;        /* slightly lighter than light theme primary */
-    --primary-foreground: 0 0% 100%;
-
-    /* Secondary/accent surfaces */
-    --secondary: 0 0% 12%;         /* slightly lighter black for secondary areas */
-    --secondary-foreground: 0 0% 95%;
-    --muted: 0 0% 18%;             /* lighten greys a bit */
-    --muted-foreground: 0 0% 75%;  /* lighter grey for readability */
-    --accent: 0 0% 14%;
-    --accent-foreground: 0 0% 95%;
-
-    /* Feedback */
-    --destructive: 0 84% 55%;      /* keep vivid red but slightly dimmed in dark */
-    --destructive-foreground: 0 0% 100%;
-
-    /* Controls */
-    --border: 0 0% 18%;            /* lighten border grey */
-    --input: 0 0% 18%;
-    --ring: 227 73% 60%;
-
-    /* Domain-specific tokens keep brand hues */
-    --error: 357 100% 65%;
-    --error-foreground: 0 0% 100%;
-    --success: 158 100% 31%;
-    --success-foreground: 0 0% 100%;
-    --expense: 357 100% 65%;
-    --expense-foreground: 0 0% 100%;
-    --income: 158 100% 31%;
-    --income-foreground: 0 0% 100%;
-    --notification: 25 100% 55%;
-    --notification-foreground: 0 0% 100%;
-
-    /* Primary scale (dark) — смещённые L для контраста на тёмном фоне */
-    --primary-50: 227 90% 18%;
-    --primary-100: 227 90% 22%;
-    --primary-200: 227 85% 28%;
-    --primary-300: 227 80% 36%;
-    --primary-400: 227 75% 44%;
-    --primary-500: 227 74% 50%;
-    --primary-600: 227 73% 54%; /* base */
-    --primary-700: 227 70% 60%;
-    --primary-800: 227 65% 68%;
-    --primary-900: 227 60% 76%;
-
-    /* Neutral scale (dark) */
-    --neutral-50: 0 0% 6%;
-    --neutral-100: 0 0% 10%;
-    --neutral-200: 0 0% 12%;
-    --neutral-300: 0 0% 14%;
-    --neutral-400: 0 0% 18%;
-    --neutral-500: 0 0% 24%;
-    --neutral-600: 0 0% 32%;
-    --neutral-700: 0 0% 42%;
-    --neutral-800: 0 0% 70%;
-    --neutral-900: 0 0% 92%;
-
-    /* Status scales (dark) — адаптированные L для читабельности */
-    --success-50: 158 100% 18%;
-    --success-100: 158 100% 22%;
-    --success-200: 158 100% 26%;
-    --success-300: 158 95% 30%;
-    --success-400: 158 95% 34%;
-    --success-500: 158 95% 36%;
-    --success-600: 158 100% 41%;
-    --success-700: 158 100% 55%;
-    --success-800: 158 100% 70%;
-    --success-900: 158 100% 85%;
-
-    --error-50: 357 100% 18%;
-    --error-100: 357 100% 22%;
-    --error-200: 357 100% 28%;
-    --error-300: 357 95% 34%;
-    --error-400: 357 95% 50%;
-    --error-500: 357 100% 65%;
-    --error-600: 357 95% 72%;
-    --error-700: 357 90% 78%;
-    --error-800: 357 85% 85%;
-    --error-900: 357 80% 92%;
-
-    --income-50: var(--success-50);
-    --income-100: var(--success-100);
-    --income-200: var(--success-200);
-    --income-300: var(--success-300);
-    --income-400: var(--success-400);
-    --income-500: var(--success-500);
-    --income-600: var(--success-600);
-    --income-700: var(--success-700);
-    --income-800: var(--success-800);
-    --income-900: var(--success-900);
-
-    --expense-50: var(--error-50);
-    --expense-100: var(--error-100);
-    --expense-200: var(--error-200);
-    --expense-300: var(--error-300);
-    --expense-400: var(--error-400);
-    --expense-500: var(--error-500);
-    --expense-600: var(--error-600);
-    --expense-700: var(--error-700);
-    --expense-800: var(--error-800);
-    --expense-900: var(--error-900);
-
-    --notification-50: 25 100% 18%;
-    --notification-100: 25 100% 22%;
-    --notification-200: 25 100% 28%;
-    --notification-300: 25 95% 36%;
-    --notification-400: 25 95% 44%;
-    --notification-500: 25 100% 55%;
-    --notification-600: 25 95% 62%;
-    --notification-700: 25 90% 70%;
-    --notification-800: 25 85% 78%;
-    --notification-900: 25 80% 86%;
   }
 }
 

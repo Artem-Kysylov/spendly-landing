@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useMemo, useState, useSyncExternalStore } from "react"
+import React, { createContext, useContext, useEffect, useMemo } from "react"
 
 type Theme = "light" | "dark" | "system"
 
@@ -12,72 +12,21 @@ type ThemeContextValue = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null)
 
-const STORAGE_KEY = "app-theme"
-
-function subscribeSystemTheme(listener: () => void) {
-  if (typeof window === "undefined") return () => {}
-  const media = window.matchMedia("(prefers-color-scheme: dark)")
-  media.addEventListener?.("change", listener)
-  return () => media.removeEventListener?.("change", listener)
-}
-
-function getSystemIsDarkSnapshot() {
-  if (typeof window === "undefined") return false
-  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
-}
-
-function getServerSnapshot() {
-  return false
-}
-
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window !== "undefined") {
-      const stored = window.localStorage.getItem(STORAGE_KEY) as Theme | null
-      if (stored === "light" || stored === "dark" || stored === "system") {
-        return stored
-      }
-    }
-    return "system"
-  })
-
-  const systemIsDark = useSyncExternalStore(subscribeSystemTheme, getSystemIsDarkSnapshot, getServerSnapshot)
-  const resolvedTheme = theme === "system" ? (systemIsDark ? "dark" : "light") : theme
+  // Dark mode is disabled — always light
+  const theme: Theme = "light"
+  const resolvedTheme: "light" | "dark" = "light"
 
   useEffect(() => {
     if (typeof document !== "undefined") {
-      document.documentElement.classList.toggle("dark", resolvedTheme === "dark")
+      document.documentElement.classList.remove("dark")
     }
-    try {
-      window.localStorage.setItem(STORAGE_KEY, theme)
-    } catch {}
-  }, [theme, resolvedTheme])
-
-  useEffect(() => {
-    if (typeof document === "undefined") return
-    if (theme !== "system") return
-    document.documentElement.classList.toggle("dark", resolvedTheme === "dark")
-  }, [theme, resolvedTheme])
-
-  // Слушаем «внешние» обновления темы (например, из AuthContext) через custom event
-  useEffect(() => {
-    const handler = () => {
-      const stored = window.localStorage.getItem(STORAGE_KEY) as Theme | null
-      if (stored === "light" || stored === "dark" || stored === "system") {
-        setThemeState(stored)
-      }
-    }
-    window.addEventListener("theme-preference-updated", handler as EventListener)
-    return () => window.removeEventListener("theme-preference-updated", handler as EventListener)
   }, [])
-
 
   const value = useMemo<ThemeContextValue>(() => ({
     theme,
     resolvedTheme,
-    setTheme: (next: Theme) => {
-      setThemeState(next)
-    },
+    setTheme: () => {},
   }), [theme, resolvedTheme])
 
   return (

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { NextIntlClientProvider } from 'next-intl'
 import { MotionConfig, LazyMotion, domAnimation } from 'framer-motion'
@@ -9,7 +9,7 @@ import { ThemeProvider } from '@/context/ThemeContext'
 import SmoothScroll from '@/components/utils/SmoothScroll'
 import en from '@/locales/en.json'
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} antialiased`}
+        className={`${inter.className} antialiased`}
         style={{
           backgroundImage: 'url(/bg.png)',
           backgroundRepeat: 'no-repeat',

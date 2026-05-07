@@ -1,115 +1,72 @@
 'use client'
-import React from 'react'
-
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
-import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { fadeUp, fadeUpScale, viewportDefault, containerStagger } from '@/components/utils/motion'
+import { fadeUp, viewportDefault, containerStagger } from '@/components/utils/motion'
+import { Sparkles, Radar, Smartphone } from 'lucide-react'
+
+const FEATURES = [
+  {
+    icon: Sparkles,
+    title: 'Calm by Design',
+    desc: 'Spendly helps you understand your finances without dashboard overload. We replaced complex spreadsheets with an airy, minimalist interface.',
+  },
+  {
+    icon: Radar,
+    title: 'Smart Radar',
+    desc: 'Quietly notices unusual spending patterns and recurring habits before they become routines. Financial awareness that works for you.',
+  },
+  {
+    icon: Smartphone,
+    title: 'Built for iPhone',
+    desc: 'Designed exclusively for iOS. Experience zero-compromise native speed, FaceID privacy, and subtle haptic feedback on every tap.',
+  },
+]
 
 const Features = () => {
-  const t = useTranslations('features')
   return (
-    <section className='mt-[120px]' id='features'>
-      <div className='landing__container'>
-        <motion.h2 className='text-[40px] font-semibold text-foreground text-center mb-[30px]'
-          initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUp(0)}>{t('title')}</motion.h2>
-        <Tabs defaultValue='ai'>
-          <motion.div className='mb-6 w-full h-14 rounded-lg p-2 bg-transparent border border-primary/30'
-            initial='hidden' whileInView='visible' viewport={viewportDefault} variants={containerStagger(0.06)}>
-            <TabsList className='w-full h-full'>
-              <TabsTrigger value='ai' className='flex-1 h-full text-base font-semibold'>{t('tabs.ai')}</TabsTrigger>
-              <TabsTrigger value='core' className='flex-1 h-full text-base font-semibold'>{t('tabs.core')}</TabsTrigger>
-              <TabsTrigger value='experience' className='flex-1 h-full text-base font-semibold'>{t('tabs.experience')}</TabsTrigger>
-            </TabsList>
-          </motion.div>
+    <section className="mt-[120px]" id="features">
+      <div className="landing__container">
+        <motion.h2
+          className="text-[40px] font-bold text-foreground text-center mb-4 tracking-tight"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportDefault}
+          variants={fadeUp(0)}
+        >
+          What Spendly feels like
+        </motion.h2>
+        <motion.p
+          className="text-[17px] text-muted-foreground text-center mb-[56px] max-w-lg mx-auto leading-relaxed"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportDefault}
+          variants={fadeUp(0.05)}
+        >
+          Everything you need to stay financially mindful — nothing you don&apos;t.
+        </motion.p>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
-            <div>
-              <TabsContent value='ai'>
-                <motion.div className='space-y-10' initial='hidden' whileInView='visible' viewport={viewportDefault} variants={containerStagger(0.06)}>
-                  <motion.div variants={fadeUp(0)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('ai.chat.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('ai.chat.desc')}</p>
-                  </motion.div>
-                  <motion.div variants={fadeUp(0.05)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('ai.insights.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('ai.insights.desc')}</p>
-                  </motion.div>
-                </motion.div>
-              </TabsContent>
-              <TabsContent value='core'>
-                <motion.div className='space-y-10' initial='hidden' whileInView='visible' viewport={viewportDefault} variants={containerStagger(0.06)}>
-                  <motion.div variants={fadeUp(0)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('core.add.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('core.add.desc')}</p>
-                  </motion.div>
-                  <motion.div variants={fadeUp(0.05)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('core.recurring.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('core.recurring.desc')}</p>
-                  </motion.div>
-                  <motion.div variants={fadeUp(0.1)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('core.budgets.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('core.budgets.desc')}</p>
-                  </motion.div>
-                </motion.div>
-              </TabsContent>
-              <TabsContent value='experience'>
-                <motion.div className='space-y-10' initial='hidden' whileInView='visible' viewport={viewportDefault} variants={containerStagger(0.06)}>
-                  <motion.div variants={fadeUp(0)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('experience.themes.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('experience.themes.desc')}</p>
-                  </motion.div>
-                  <motion.div variants={fadeUp(0.05)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('experience.languages.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('experience.languages.desc')}</p>
-                  </motion.div>
-                  <motion.div variants={fadeUp(0.1)}>
-                    <h3 className='text-[20px] font-semibold text-foreground mb-2'>{t('experience.notifications.title')}</h3>
-                    <p className='text-[16px] text-foreground'>{t('experience.notifications.desc')}</p>
-                  </motion.div>
-                </motion.div>
-              </TabsContent>
-            </div>
-            <div className='flex justify-center'>
-              <TabsContent value='ai'>
-                <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <video
-                    src="/features-ai-first-tab.mp4"
-                    className="w-full max-w-[250px] h-auto rounded-[28px] border-[5px] border-neutral-400 dark:border-neutral-600"
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                  />
-                </motion.div>
-              </TabsContent>
-              <TabsContent value='core'>
-                <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <video
-                    src="/features-core-tab.mp4"
-                    className="w-full max-w-[250px] h-auto rounded-[28px] border-[5px] border-neutral-400 dark:border-neutral-600"
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                  />
-                </motion.div>
-              </TabsContent>
-              <TabsContent value='experience'>
-                <motion.div initial='hidden' whileInView='visible' viewport={viewportDefault} variants={fadeUpScale(0.1)}>
-                  <video
-                    src="/features-experience-tab.mp4"
-                    className="w-full max-w-[250px] h-auto rounded-[28px] border-[5px] border-neutral-400 dark:border-neutral-600"
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                  />
-                </motion.div>
-              </TabsContent>
-            </div>
-          </div>
-        </Tabs>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportDefault}
+          variants={containerStagger(0.1)}
+        >
+          {FEATURES.map(({ icon: Icon, title, desc }, i) => (
+            <motion.div
+              key={title}
+              variants={fadeUp(i * 0.08)}
+              className="bg-card p-10 flex flex-col gap-5"
+            >
+              <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/10">
+                <Icon className="text-primary" size={22} />
+              </div>
+              <h3 className="text-[20px] font-bold text-foreground leading-snug tracking-tight">
+                {title}
+              </h3>
+              <p className="text-[15px] text-muted-foreground leading-relaxed">{desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )
