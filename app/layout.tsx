@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import SmoothScroll from '@/components/utils/SmoothScroll'
 import en from '@/locales/en.json'
+import { absoluteUrl, resolveSiteBaseUrl } from '@/lib/site-url'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,18 +14,8 @@ const inter = Inter({
   display: 'swap',
 })
 
-function resolveSiteBaseUrl(): string {
-  if (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`
-  }
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
-    (process.env.VERCEL ? 'https://getspendly.net' : 'http://localhost:3000')
-  )
-}
-
 export const metadata: Metadata = {
+  /** Canonical and relative OG URLs resolve against this origin (`NEXT_PUBLIC_SITE_URL` on Vercel). */
   metadataBase: new URL(resolveSiteBaseUrl()),
   title: {
     default: en.metadata.title.default,
@@ -32,7 +23,7 @@ export const metadata: Metadata = {
   },
   description: en.metadata.description,
   alternates: {
-    canonical: '/',
+    canonical: absoluteUrl('/'),
   },
   openGraph: {
     title: en.metadata.openGraph.title,

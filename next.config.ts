@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: process.env.VERCEL_ENV === 'preview',
@@ -24,8 +24,8 @@ const nextConfig: NextConfig = {
           }
         ]
       }
-    ];
-  }
-};
+    ]
+  },
+}
 
-export default nextConfig;
+export default nextConfig

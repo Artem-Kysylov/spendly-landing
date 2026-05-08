@@ -1,4 +1,14 @@
+import type { Metadata } from 'next'
 import en from '@/locales/en.json'
+import { absoluteUrl } from '@/lib/site-url'
+
+export const metadata: Metadata = {
+  title: { absolute: en.terms.title },
+  description:
+    'Terms governing use of the Spendly website, waitlist, and related services.',
+  alternates: { canonical: absoluteUrl('/terms-and-conditions') },
+  robots: { index: true, follow: true },
+}
 
 export default function TermsPage() {
   const content = en.terms

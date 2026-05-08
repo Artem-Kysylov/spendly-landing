@@ -1,8 +1,13 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/mdx'
+import { resolveSiteBaseUrl } from '@/lib/site-url'
 
+/**
+ * Sitemap entries are absolute URLs. Origin comes from `NEXT_PUBLIC_SITE_URL`
+ * (see `resolveSiteBaseUrl` in `@/lib/site-url`).
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://getspendly.net'
+  const base = resolveSiteBaseUrl()
   const now = new Date()
 
   const staticPages: MetadataRoute.Sitemap = [

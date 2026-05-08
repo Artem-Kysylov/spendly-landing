@@ -1,6 +1,9 @@
 import { getAllPosts } from '@/lib/mdx'
 import type { Metadata } from 'next'
 import BlogGrid from '@/components/blog/BlogGrid'
+import { absoluteUrl } from '@/lib/site-url'
+
+const blogIndexUrl = absoluteUrl('/blog')
 
 export const metadata: Metadata = {
   title: 'Financial Insights | Spendly Blog',
@@ -8,13 +11,13 @@ export const metadata: Metadata = {
     'Discover expert financial insights, budgeting tips, and personal finance strategies to take control of your money.',
   keywords:
     'personal finance, budgeting tips, financial planning, money management, financial insights, expense tracking',
-  alternates: { canonical: '/blog' },
+  alternates: { canonical: blogIndexUrl },
   openGraph: {
     title: 'Financial Insights | Spendly Blog',
     description:
       'Discover expert financial insights, budgeting tips, and personal finance strategies to take control of your money.',
     type: 'website',
-    url: '/blog',
+    url: blogIndexUrl,
     siteName: 'Spendly',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Spendly Blog' }],
   },

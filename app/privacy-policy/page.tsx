@@ -1,4 +1,14 @@
+import type { Metadata } from 'next'
 import en from '@/locales/en.json'
+import { absoluteUrl } from '@/lib/site-url'
+
+export const metadata: Metadata = {
+  title: { absolute: en.privacy.title },
+  description:
+    'How Spendly collects, uses, stores, and protects your information when you use our website and waitlist.',
+  alternates: { canonical: absoluteUrl('/privacy-policy') },
+  robots: { index: true, follow: true },
+}
 
 export default function PrivacyPolicyPage() {
   const content = en.privacy

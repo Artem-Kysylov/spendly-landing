@@ -8,20 +8,10 @@ import BlogImage from '@/components/blog/BlogImage'
 import ChatDemo from '@/components/blog/ChatDemo'
 import WaitlistCta from '@/components/blog/WaitlistCta'
 import type { Metadata } from 'next'
+import { absoluteUrl, resolveSiteBaseUrl } from '@/lib/site-url'
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
-}
-
-function resolveSiteBaseUrl(): string {
-  if (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`
-  }
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
-    'https://getspendly.net'
-  )
 }
 
 export async function generateStaticParams() {
@@ -33,7 +23,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params
   const post = getPostBySlug(slug, 'en')
   const baseUrl = resolveSiteBaseUrl()
-  const url = `${baseUrl}/blog/${slug}`
+  const canonicalUrl = absoluteUrl(`/blog/${slug}`)
   const coverImageUrl = post.frontmatter.coverImage
     ? new URL(post.frontmatter.coverImage, baseUrl).toString()
     : null
@@ -41,11 +31,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
-    alternates: { canonical: url },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.description,
-      url,
+      url: canonicalUrl,
       type: 'article',
       publishedTime: post.frontmatter.date,
       images: coverImageUrl
@@ -67,7 +57,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const headings = extractHeadings(post.content)
   const readingTime = calculateReadingTime(post.content)
   const baseUrl = resolveSiteBaseUrl()
-  const url = `${baseUrl}/blog/${slug}`
+  const canonicalUrl = absoluteUrl(`/blog/${slug}`)
   const coverImageUrl = post.frontmatter.coverImage
     ? new URL(post.frontmatter.coverImage, baseUrl).toString()
     : null
@@ -84,10 +74,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     publisher: {
       '@type': 'Organization',
       name: 'Spendly',
-      logo: { '@type': 'ImageObject', url: 'https://getspendly.net/Spendly-logo.svg' },
+      logo: { '@type': 'ImageObject', url: absoluteUrl('/Spendly-logo.svg') },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    url: canonicalUrl,
   }
 
   return (
@@ -130,7 +120,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
               <MDXContent source={post.content} components={{ BlogImage, ChatDemo, WaitlistCta }} />
 
-              <ShareButtons title={post.frontmatter.title} url={url} />
+              <ShareButtons title={post.frontmatter.title} url={canonicalUrl} />
             </article>
           </div>
         </div>
