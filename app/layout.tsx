@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { MotionConfig, LazyMotion, domAnimation } from 'framer-motion'
-import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import { StickyHeaderBlock } from '@/components/layout/StickyHeaderBlock'
 import SmoothScroll from '@/components/utils/SmoothScroll'
 import en from '@/locales/en.json'
 import { absoluteUrl, resolveSiteBaseUrl } from '@/lib/site-url'
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <MotionConfig reducedMotion="user">
           <LazyMotion features={domAnimation}>
             <SmoothScroll />
-            <Header />
+            <StickyHeaderBlock />
             {children}
             <Footer />
           </LazyMotion>

@@ -29,7 +29,7 @@ const Header = () => {
   }, [showMenu])
 
   return (
-    <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-40">
+    <header className="border-b bg-background/80 backdrop-blur-sm">
       <div className="landing__container">
         <div className="pt-[16px] pb-[16px] flex justify-between items-center">
           {/* Logo */}
