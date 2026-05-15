@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { MotionConfig, LazyMotion, domAnimation } from 'framer-motion'
+import CookieConsent from '@/src/components/CookieConsent'
 import Footer from '@/components/layout/Footer'
 import { StickyHeaderBlock } from '@/components/layout/StickyHeaderBlock'
 import SmoothScroll from '@/components/utils/SmoothScroll'
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <StickyHeaderBlock />
             {children}
             <Footer />
+            <CookieConsent />
           </LazyMotion>
         </MotionConfig>
       </body>
